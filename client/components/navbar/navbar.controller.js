@@ -8,7 +8,7 @@ class NavbarController {
       'state': 'login'
     },    
     {
-      'title': 'CodeGorilla\'s',
+      'title': 'CodeGorillas',
       'state': 'profiles'
     },    
     {

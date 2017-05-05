@@ -1,11 +1,18 @@
 <section class="cg-col cg-center" id="cg-landing">
-  	<video src="assets/video/aap.mp4" autoplay cg-video-on-scroll="reverse">
+  	<video src="assets/video/gorilla.webm" autoplay>
   	</video>
 	<div class="remove-line">&nbsp;</div>
 	<h2>Do you need some code? We’ve got CodeGorillas!</h2>
-    <p> A company which trains students without any prior knowledge in a bootcamp. 
-    	Goal is to become full-stack webdevelopers by agile working and entrepreneurial learning. 
-    	As the CodeGorillas state themselves: It’s a way of life.
+    <p>
+    	CodeGorilla is a bootcamp training company. 
+    	We transform people without any coding knowledge into 
+    	full stack web developers over a course of three months. 
+    	As the CodeGorillas state themselves: It’s a way of life!.
+    </p>
+    <p>
+    	The CodeGorillas have started coding {{$ctrl.startDate}}, 
+    	implementing agile working and entrepreneurial learning. 
+    	This website is what the CodeGorillas made so far!
     </p>
     <ul class="left hand">
     	<li class="finger">&nbsp;</li>
@@ -22,5 +29,9 @@
     </ul>
 </section>
 <section id="cg-video-container">
-	<video src="assets/video/code_gorilla.mp4" muted type="video/mp4" controls cg-video-on-scroll></video>
+	<video id="teaser" src="assets/video/code_gorilla.mp4" muted type="video/mp4" cg-video-on-scroll></video>
+	<div id="video-controls">
+	    <button ng-click="$ctrl.toggleMute()" id="mute"><ng-md-icon icon="{{$ctrl.soundIcon}}"></ng-md-icon></button>
+	    <input type="range" id="volume-bar" min="0" max="1" step="0.1" value="1">
+    </div>
 </section>

@@ -1,5 +1,4 @@
 <section class="cg-settings-page cg-row cg-center">
-  <img class="cg-login-logo" src="assets/images/home_button.png" alt="CodeGorila logo">
 
     <form class="cg-col cg-half-width cg-center" name="settingsForm" ng-submit="vm.saveSettings(settingsForm)" novalidate>
 
@@ -59,11 +58,11 @@
         {{ vm.errors.email }}
       </p>
     </div>
-    <div class="input-container">
       <div class="droppable-area" ng-repeat="(name, list) in vm.models.lists">
         <h4>{{name}}</h4>
         <ul class="caps-list" dnd-list="list">
-            <li ng-repeat="item in list"
+            <li class="banana"
+                ng-repeat="item in list"
                 dnd-draggable="item"
                 dnd-moved="list.splice($index, 1)"
                 dnd-dragstart="vm.onDragstart(list, event)"
@@ -76,7 +75,6 @@
         </ul>
         {{selected}}
       </div>
-    </div>
     <div class="input-container button-grp cg-col">
       <p class="help-block"> {{ vm.message }} </p>
       <button class="btn btn-inverse btn-lg btn-register" type="submit">
@@ -95,6 +93,7 @@
 
       <input type="password" name="password" class="form-control" ng-model="vm.user.oldPassword"
                  mongoose-error/>
+      <span>&nbsp;/&gt;</span> 
           <p class="help-block" ng-show="form.password.$error.mongoose">
               {{ vm.errors.other }}
           </p>
@@ -106,6 +105,7 @@
       <input type="password" name="newPassword" class="form-control" ng-model="vm.user.newPassword"
                  ng-minlength="3"
                  required/>
+      <span>&nbsp;/&gt;</span> 
           <p class="help-block"
              ng-show="(form.newPassword.$error.minlength || form.newPassword.$error.required) && (form.newPassword.$dirty || vm.submitted)">
             Password must be at least 3 characters.
@@ -120,6 +120,7 @@
                  match="vm.user.newPassword"
                  ng-minlength="3"
                  required=""/>
+      <span>&nbsp;/&gt;</span> 
           <p class="help-block"
              ng-show="form.confirmPassword.$error.match && vm.submitted">
             Passwords must match.

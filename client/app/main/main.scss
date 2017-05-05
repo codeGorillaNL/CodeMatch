@@ -12,7 +12,7 @@
 
 // First define the global colors used throughout the page with SASS variables.
 
-$cg-blue: #7dcad6;
+$cg-blue: #78c3d8;
 $cg-red: #e15054;
 
 // Define overall reusable styles. Prefix all reusable objects with "cg-".
@@ -182,14 +182,31 @@ section {
 
 #cg-landing {
     background-color: $cg-blue;
+    margin-top: 10vh;
+    height: 90vh;
+
+    h2 {
+        text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+
+        font-size: 1.6em;
+
+        -webkit-font-smoothing: antialiased !important;
+        -moz-osx-font-smoothing: grayscale;
+
+    }
 
     p {
-        text-align: center;
+       text-align: center;
+       font-size: 1em;
     }
 
     video {
         position: relative;
-        height: 50vh;
+        height: 30vh;
         width: auto;
     }
 
@@ -303,11 +320,80 @@ section {
 
 #cg-video-container {
     background-color: $cg-red;
+    z-index: 50;
 
     video {
         width: 100vw;
         height: auto;
         object-fit: cover;
+    }
+
+    #video-controls {
+        position: absolute;
+        top: 195vh;
+        right: 5vw;
+
+        #mute {
+            background-color: transparent;
+            border: 0;
+
+            ng-md-icon {
+                fill: #FFF;
+            }            
+        }
+
+        #volume-bar {
+            position: relative;
+            background: transparent;
+            -webkit-appearance: none;
+        }
+
+        #volume-bar::before {
+            position: absolute;
+            display: block;
+            content: '';
+            top: 50%;
+            bottom: 50%;
+            border-radius: 2px;
+            width: 100%;
+            height: 2px;
+            border: 1px solid #FFF;
+        }
+
+        #volume-bar::-webkit-slider-thumb {
+          box-shadow: 0px 0px 0px #000000;
+          border: 1px solid #FFFFFF;
+          height: 14px;
+          width: 14px;
+          transform: translateY(5px);
+          border-radius: 7px;
+          background: #FFFFFF;
+          cursor: pointer;
+          -webkit-appearance: none;
+          margin-top: -7px;
+        }
+
+        #volume-bar::-moz-range-thumb {
+          box-shadow: 0px 0px 0px #000000;
+          border: 1px solid #FFFFFF;
+          height: 14px;
+          width: 14px;
+          transform: translateY(5px);
+          border-radius: 7px;
+          background: #FFFFFF;
+          cursor: pointer;
+        }
+
+        #volume-bar::-ms-thumb {
+          box-shadow: 0px 0px 0px #000000;
+          border: 1px solid #FFFFFF;
+          height: 14px;
+          width: 14px;
+          transform: translateY(5px);
+          border-radius: 7px;
+          background: #FFFFFF;
+          cursor: pointer;
+        }
     }
 }
 
@@ -331,8 +417,9 @@ section {
 
         .input-container {
             flex: 0 1 100%;
+            height: 1.4em;
             margin-bottom: 1em;
-            justify-content: flex-end;
+            justify-content: center;
         }
 
         label { 
@@ -396,16 +483,21 @@ section {
 .cg-signup-page, .cg-login-page, .cg-contact-page, .cg-settings-page {
     
     form {
-        width: 30vmax;
+        width: 40vmax;
         align-items: stretch;
+        font-size: .9em;
 
         label {
-           flex: 0 0 12vmax; 
+           flex: 1 0 30%; 
+        }
+
+        input {
+           flex: 0 0 50%; 
         }
 
         textarea {
             background-color: transparent;
-            flex: 1 0 65%;
+            flex: 1 1 50%;
             border: 0;
             border-bottom: 2px dashed #FFF;
         }
@@ -418,11 +510,26 @@ section {
     padding-top: 10vh;
 
     form {
-        min-height: 50vh;
+        min-height: 80vh;
+        justify-content: center;
+        width: 46% !important;
+        font-size: .9em;
+
+        label {
+            flex: 0 0 40%;
+        }
+
+        input {
+            flex: 0 0 50%;
+        }
+
+        button {
+            margin-top: auto;
+        }
     }
 
     .droppable-area {
-        width: 50%;
+        width: 100%;
         flex-flow: row wrap;
     }
 
@@ -480,140 +587,6 @@ section {
 .cg-password-form {
     border-left: 2px solid #FFF;
     margin-left: 1em;
-}
-
-// Styling the banana game.
-
-#gameBoundingBox, #gameBoundingBox * {
-    display: initial;
-}
-
-
-#gameBoundingBox{
-    position: relative;
-    width: 100%;
-    height: 70vh;
-    margin-top: 10vh;
-    transform: scale(0.7);
-
-}
-
-#gameWithDecoration{
-    position: absolute;
-    background-color: red;
-    width:800px;
-    height:480px;
-    left: 50%;
-    top: 250px; 
-    -webkit-transform: translate(-50%, 0%); 
-    transform: translate(-50%, 0%);
-}
-
-#head{
-    position: absolute;
-    top:350px;
-    width:600px;
-    height:600px;
-    left:50%;
-    -webkit-transform: translate(-50%, 0%); 
-    transform: translate(-50%, -100%);
-    z-index:-1;
-}
-
-#leftHand{
-    position: absolute;
-    left:120px;
-    width:300px;
-    height:300px;
-    -webkit-transform: translate(-100%, 50%); 
-    transform: translate(-100%, 50%);
-    z-index:2;
-}
-
-#rightHand{
-    position: absolute;
-    right:120px;
-    width:300px;
-    height:300px;
-    -webkit-transform: translate(100%, 50%); 
-    transform: translate(100%, 50%);
-    z-index:2;
-}
-
-#gameCanvas{
-    border: 5px solid black;
-    position: absolute;
-    background-color: white;
-    width:100%;
-    height:100%;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%); 
-    transform: translate(-50%, -50%);
-    z-index:1;
-    cursor: grab;
-}
-
-
-.column {
-  float: right;
-  width: 20%;
-  margin-bottom: 16px;
-  padding: 0 29px;
-}
-
-@media (max-width: 650px) {
-  .column {
-    width: 100%;
-    display: block;
-  }
-}
-
-.cgbutton {
-  background-color: #E25054;
-  border: none;
-  padding: 1em;
-  color: white;
-  font-family: regular;
-  border-radius: 5px;
-}
-
-.cgbutton:hover{
-  background-color: #ed9194;
-
-}
-
-.gamestyling{
-  border-bottom: 2px solid black;
-
-}
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);
-  border-radius: 10px;
-  height: 400px;
-  background-color: #e25054;
-}
-
-img {
-    border-radius: 5px 5px 0 0;
-}
-
-.container {
-  padding: 0 16px;
-}
-
-.container::after, .row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-#tagsfilter{
-  height: 30px;
-}
-
-.title {
-  color: white;
 }
 
 // Animations
