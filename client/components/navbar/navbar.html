@@ -1,0 +1,19 @@
+<ng-md-icon class="cg-menu-btn" ng-class="{'menu-is-expanded': nav.menuToggle}" icon="{{nav.menuIcon}}" size="40" ng-click="nav.toggleMenu()"></ng-md-icon> 
+
+<nav class="cg-row" ng-class="{'open': nav.menuToggle}" ng-mouseleave="nav.toggleMenu()">
+  
+  <img src="assets/images/home_button.png" alt="home" ui-sref="main">
+    
+  <ul class="cg-row">
+    <li class="cg-menu-option" ng-repeat="option in nav.menu" ui-sref="{{option.state}}">
+      {{option.title}}
+    </li>
+  </ul>
+  
+  <ul class="cg-row cg-social">
+    <li class="cg-social-option" ng-repeat="option in nav.social">
+       <a href="{{option.link}}"><img src="{{option.img}}" alt="{{option.title}}"></a>
+    </li>
+  </ul>
+  
+</nav>

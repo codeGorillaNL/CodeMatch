@@ -1,0 +1,20 @@
+<section class="cg-login-page cg-col cg-center">
+  <img class="cg-login-logo" src="assets/images/home_button.png" alt="CodeGorila logo">
+  <h5>Please enter your email and password to login.</h5>
+  <form class="cg-col cg-center" name="login" ng-submit="vm.submit(login)">
+    <div class="input-container">
+      <label for="username">&lt; email= </label>
+      <input type="text" ng-model="vm.user.email">
+      <span>&nbsp;/&gt;</span>      
+    </div>
+    <div class="input-container">
+      <label for="username">&lt; password= </label>
+      <input type="password" ng-model="vm.user.password">
+      <span>&nbsp;/&gt;</span>
+    </div>
+    <div class="input-container button-grp">
+      <button type="submit">Login</button>
+      <i><a ui-sref="signup">or register here.</a></i>
+    </div>
+  </form>
+</section>

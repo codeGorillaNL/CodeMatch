@@ -1,0 +1,666 @@
+// Import fonts.
+
+@font-face {
+    font-family: bold;
+    src: url(../assets/fonts/SourceCodePro-Bold.otf);
+}
+
+@font-face {
+    font-family: regular;
+    src: url(../assets/fonts/SourceCodePro-Regular.otf);
+}
+
+// First define the global colors used throughout the page with SASS variables.
+
+$cg-blue: #7dcad6;
+$cg-red: #e15054;
+
+// Define overall reusable styles. Prefix all reusable objects with "cg-".
+
+body {
+    margin: 0;
+    font-family: regular;
+    color: #FFF;
+    background-color: $cg-blue;
+}
+ 
+body * {
+    display: flex;
+}
+
+:focus {
+    outline: 0;
+}
+
+.cg-row {
+    flex-direction: row;
+}
+
+.cg-col {
+    flex-direction: column;
+}
+
+.cg-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.cg-half-height {
+    height: 50% !important;
+    width: auto;
+}
+
+
+.cg-half-width {
+    width: 40% !important;
+    justify-content: flex-start;
+}
+
+section {
+    width: 100vw;
+    height: 100vh;
+}
+
+ p {
+    white-space: pre-line;
+}
+
+// Custom styling in order of appearance
+
+    // Navbar styling.
+    .cg-menu-btn {
+        position: absolute;
+        top: 3vh;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        fill: $cg-red;
+        color: $cg-red;
+        background-color: transparent;
+        width: 40px;
+        height: 40px;
+        font-size: 40px;
+        z-index: 999;
+        transition: all .4s ease-out;
+    }
+
+    .cg-menu-btn.menu-is-expanded {
+        transform: translateY(7.5vh);        
+    }
+
+    nav {
+        position: absolute;
+        top: 0;
+        left: 50vw;
+        right: 50vw;
+        width: 0px;
+        align-items: center;
+        padding: 0 2vh;
+        border-radius: 50%;
+        height: 0px;
+        overflow: hidden;
+        background-color: $cg-red;
+        transition: all .6s ease-out;
+
+        img {
+            height: 8vh;
+            width: auto;
+            cursor: pointer;
+        }
+
+        .cg-menu-option {
+            position: relative;
+            margin: .5em;
+            min-width: 8vmax;
+            padding: .3em;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: .9em;
+            z-index: 1;
+            cursor: pointer;
+        }
+
+        .cg-menu-option:before {
+            position: absolute;
+            border-radius: 5px;
+            content: '';
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-color: $cg-blue;
+            z-index: -1;
+            transition: .4s all ease-in;
+            border-color: $cg-blue;
+        }
+
+        .cg-menu-option:hover:before {
+            position: absolute;
+            border-radius: 2px;
+            content: '';
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            border-top: 2px solid $cg-blue;
+            border-bottom: 2px solid $cg-blue;
+            background-color: transparent;
+            z-index: -1;            
+        }
+
+        .cg-social {
+            margin-left: auto;
+            margin-right: 5vw;
+        }
+
+        .cg-social-option img {
+            height: 3vh;
+            width: 3vh;
+            margin: .5em;
+            cursor: pointer;
+        }
+    }
+
+    nav.open {
+        left: 0;
+        right: 0;
+        width: 100vw;
+        height: 10vh;
+        border-radius: 0;
+    }
+
+    main {
+        transition: all .7s ease-out;
+    }
+
+    main.menu-is-expanded {
+        transform: translateY(10vh);
+    }
+
+// Landing page.
+
+#cg-landing {
+    background-color: $cg-blue;
+
+    p {
+        text-align: center;
+    }
+
+    video {
+        position: relative;
+        height: 50vh;
+        width: auto;
+    }
+
+    .remove-line {
+        position: relative;
+        bottom: 2px;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background-color: $cg-blue;
+    }
+
+    .hand {
+        position: absolute;
+        bottom: -5vh;
+        height: 10vh;
+        width: 10vw;
+        margin: 0;
+        padding: 0;
+
+        .finger {
+            position: relative;
+            top: 5vh;
+            height: 5vh;
+            width: 3vw;
+            margin: 0 .25vw;
+            border-radius: 1.5vw;
+            background-color: #000;
+            animation-name: fingerz;
+            animation-duration: 3s;
+            animation-iteration-count: 2;
+            animation-direction: alternate;
+            animation-fill-mode: forwards;
+            -webkit-animation-name: fingerz;
+            -webkit-animation-duration: 3s;
+            -webkit-animation-iteration-count: 2;
+            -webkit-animation-direction: alternate;
+            -webkit-animation-fill-mode: forwards;
+        }
+    }
+
+    .hand.left {
+        left: 30vw;
+
+        .finger:nth-child(1) { 
+            animation-delay: 4s;
+            -webkit-animation-delay: 4s;
+        }
+
+        .finger:nth-child(2) { 
+            animation-delay: 4.3s;
+            -webkit-animation-delay: 4.3s;
+        }
+
+        .finger:nth-child(3) { 
+            animation-delay: 4.2s;
+            -webkit-animation-delay: 4.2s;
+        }
+
+        .finger:nth-child(4) { 
+            animation-delay: 4.5s;
+            -webkit-animation-delay: 4.5s;
+        }
+    }
+
+    .hand.right {
+        right: 30vw;
+
+        .finger:nth-child(4) { 
+            animation-delay: 4s;
+            -webkit-animation-delay: 4s;
+        }
+
+        .finger:nth-child(3) { 
+            animation-delay: 4.3s;
+            -webkit-animation-delay: 4.3s;
+        }
+
+        .finger:nth-child(2) { 
+            animation-delay: 4.2s;
+            -webkit-animation-delay: 4.2s;
+        }
+
+        .finger:nth-child(1) { 
+            animation-delay: 4.5s;
+            -webkit-animation-delay: 4.5s;
+        }
+    }
+
+    .monkey-animation {
+        position: absolute;
+        top: 100vh;
+        height: 15vh;
+        width: auto;
+        animation-name: monkey;
+        animation-duration: 3s;
+        animation-delay: 4.6s;
+        animation-iteration-count: 2;
+        animation-direction: alternate;
+        animation-fill-mode: forwards;
+        -webkit-animation-name: monkey;
+        -webkit-animation-duration: 3s;
+        -webkit-animation-delay: 4.6s;
+        -webkit-animation-iteration-count: 1;
+        -webkit-animation-direction: alternate;
+        -webkit-animation-fill-mode: forwards;
+    }
+}
+
+// Video page (landing below the fold).
+
+#cg-video-container {
+    background-color: $cg-red;
+
+    video {
+        width: 100vw;
+        height: auto;
+        object-fit: cover;
+    }
+}
+
+// Login & registration pages.
+
+    .cg-login-logo {
+        width: auto;
+        height: 20vmin;
+        margin: 5vh;
+    }
+
+    form {
+        flex-wrap: wrap;
+        width: 30vmax;
+        align-items: stretch;
+
+        h5 {
+            display: inline-block;
+            text-align: center;
+        }
+
+        .input-container {
+            flex: 0 1 100%;
+            margin-bottom: 1em;
+            justify-content: flex-end;
+        }
+
+        label { 
+            display: inline;
+            text-align: right;
+            flex: 0 0 12vmax;
+            margin: .2em .5em .2em 0;
+        }
+
+        input {
+            flex: 1 0 65%;
+            background-color: transparent;
+            border: 0;
+            border-bottom: 2px dashed #FFF;
+            font-family: regular;
+        }
+
+        p {
+            margin: .2em 0 .2em .5em;
+        }
+
+        a {
+            color: #FFF;
+            text-decoration: none;
+            font-style: italic;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+
+        .button-grp {
+            flex: 1 0 auto;
+            align-items: center;
+            justify-content: space-around;
+
+            button {
+                width: 40%;
+                background-color: $cg-red;
+                border: 0;
+                color: #FFF;
+                border-radius: 5px;
+                margin: .5em;
+                min-width: 8vmax;
+                padding: .3em;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: .9em;
+                cursor: pointer;
+            }
+        
+            i {
+                font-size: .8em;
+            }
+        }
+
+    }
+
+.cg-signup-page, .cg-login-page, .cg-contact-page, .cg-settings-page {
+    
+    form {
+        width: 30vmax;
+        align-items: stretch;
+
+        label {
+           flex: 0 0 12vmax; 
+        }
+
+        textarea {
+            background-color: transparent;
+            flex: 1 0 65%;
+            border: 0;
+            border-bottom: 2px dashed #FFF;
+        }
+    }
+}
+
+.cg-settings-page {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding-top: 10vh;
+
+    form {
+        min-height: 50vh;
+    }
+
+    .droppable-area {
+        width: 50%;
+        flex-flow: row wrap;
+    }
+
+    h4 {
+        display: inline;
+        text-align: center;
+        margin: 1em 0;
+        width: 100%;
+    }
+
+    ul[dnd-list] .dndDraggingSource {
+        display: none;
+    }
+
+    ul[dnd-list] .dndPlaceholder {
+        border: 2px dashed #FFF;
+        opacity: .6;
+        display: block;
+        min-height: 1.8em;
+        width: 30%;
+    }
+
+    .caps-list {
+        border: 1px solid #FFF;
+        min-height: 15vh;
+        width: 40%;
+        flex-flow: row wrap;
+        width: 100%;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+        margin: 0 .5em;
+        padding: 0;
+
+        li {
+            max-width: 40%;
+            background-color: yellow;
+            color: #000;
+            justify-content: center;
+            border-radius: 5px;
+            padding: .3em .5em;
+            margin: .5em .3em;
+        }
+
+        li.selected {
+            opacity: .7;
+        }
+    }
+}
+
+.cg-settings-page > .cg-login-logo {
+    margin: 0 40vw;
+}
+
+.cg-password-form {
+    border-left: 2px solid #FFF;
+    margin-left: 1em;
+}
+
+// Styling the banana game.
+
+#gameBoundingBox, #gameBoundingBox * {
+    display: initial;
+}
+
+
+#gameBoundingBox{
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    margin-top: 10vh;
+    transform: scale(0.7);
+
+}
+
+#gameWithDecoration{
+    position: absolute;
+    background-color: red;
+    width:800px;
+    height:480px;
+    left: 50%;
+    top: 250px; 
+    -webkit-transform: translate(-50%, 0%); 
+    transform: translate(-50%, 0%);
+}
+
+#head{
+    position: absolute;
+    top:350px;
+    width:600px;
+    height:600px;
+    left:50%;
+    -webkit-transform: translate(-50%, 0%); 
+    transform: translate(-50%, -100%);
+    z-index:-1;
+}
+
+#leftHand{
+    position: absolute;
+    left:120px;
+    width:300px;
+    height:300px;
+    -webkit-transform: translate(-100%, 50%); 
+    transform: translate(-100%, 50%);
+    z-index:2;
+}
+
+#rightHand{
+    position: absolute;
+    right:120px;
+    width:300px;
+    height:300px;
+    -webkit-transform: translate(100%, 50%); 
+    transform: translate(100%, 50%);
+    z-index:2;
+}
+
+#gameCanvas{
+    border: 5px solid black;
+    position: absolute;
+    background-color: white;
+    width:100%;
+    height:100%;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%); 
+    transform: translate(-50%, -50%);
+    z-index:1;
+    cursor: grab;
+}
+
+
+.column {
+  float: right;
+  width: 20%;
+  margin-bottom: 16px;
+  padding: 0 29px;
+}
+
+@media (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.cgbutton {
+  background-color: #E25054;
+  border: none;
+  padding: 1em;
+  color: white;
+  font-family: regular;
+  border-radius: 5px;
+}
+
+.cgbutton:hover{
+  background-color: #ed9194;
+
+}
+
+.gamestyling{
+  border-bottom: 2px solid black;
+
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  height: 400px;
+  background-color: #e25054;
+}
+
+img {
+    border-radius: 5px 5px 0 0;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#tagsfilter{
+  height: 30px;
+}
+
+.title {
+  color: white;
+}
+
+// Animations
+
+@keyframes fingerz {
+   0%, 10%       { 
+        top: 5vh;
+   }
+   50% {
+        top: 2vh;
+   }
+   90%, 100%     { 
+        top: 2vh;
+   }
+}
+@-webkit-keyframes fingerz {
+   0%, 10%       { 
+        top: 5vh;
+   }
+   50% {
+        top: 2vh;
+   }
+   90%, 100%     { 
+        top: 5vh;
+   }
+}
+
+@keyframes monkey {
+   0%, 30%       { 
+        top: 100vh;
+   }
+   50% {
+        top: 85vh;
+   }
+   70%, 100%     { 
+        top: 100vh;
+   }
+}
+
+@-webkit-keyframes monkey {
+   0%, 30%       { 
+        top: 100vh;
+   }
+   50% {
+        top: 85vh;
+   }
+   70%, 100%     { 
+        top: 100vh;
+   }
+}

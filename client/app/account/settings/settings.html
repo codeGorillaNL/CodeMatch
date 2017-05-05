@@ -1,0 +1,137 @@
+<section class="cg-settings-page cg-row cg-center">
+  <img class="cg-login-logo" src="assets/images/home_button.png" alt="CodeGorila logo">
+
+    <form class="cg-col cg-half-width cg-center" name="settingsForm" ng-submit="vm.saveSettings(settingsForm)" novalidate>
+
+    <h5>Your profile:</h5>
+
+    <div class="input-container" ng-class="{ 'has-success': form.name.$valid && vm.submitted,
+                                        'has-error': form.name.$invalid && vm.submitted }">
+      <label>&lt; First name= </label>
+
+      <input type="text" name="name" ng-model="vm.user.first_name"
+             required/>
+      <span>&nbsp;/&gt;</span>   
+      <p class="help-block" ng-show="form.name.$error.required && vm.submitted">
+        A first name is required
+      </p>
+    </div>
+
+    <div class="input-container" ng-class="{ 'has-success': form.name.$valid && vm.submitted,
+                                        'has-error': form.name.$invalid && vm.submitted }">
+      <label>&lt; Surname prefix= </label>
+
+      <input type="text" name="name" ng-model="vm.user.surname_prefix"/>
+      <span>&nbsp;/&gt;</span>   
+      <p class="help-block" ng-show="form.name.$error.required && vm.submitted">
+        A first name is required
+      </p>
+    </div>
+
+
+    <div class="input-container" ng-class="{ 'has-success': form.name.$valid && vm.submitted,
+                                        'has-error': form.name.$invalid && vm.submitted }">
+      <label>&lt; Last name= </label>
+
+      <input type="text" name="name" ng-model="vm.user.last_name"
+             required/>
+      <span>&nbsp;/&gt;</span>   
+      <p class="help-block" ng-show="form.name.$error.required && vm.submitted">
+        A first name is required
+      </p>
+    </div>
+
+    <div class="input-container" ng-class="{ 'has-success': form.email.$valid && vm.submitted,
+                                        'has-error': form.email.$invalid && vm.submitted }">
+      <label>&lt; email= </label>
+
+      <input type="email" name="email" ng-model="vm.user.email"
+             required
+             mongoose-error/>
+      <span>&nbsp;/&gt;</span>   
+      <p class="help-block" ng-show="form.email.$error.email && vm.submitted">
+        Doesn't look like a valid email.
+      </p>
+      <p class="help-block" ng-show="form.email.$error.required && vm.submitted">
+        What's your email address?
+      </p>
+      <p class="help-block" ng-show="form.email.$error.mongoose">
+        {{ vm.errors.email }}
+      </p>
+    </div>
+    <div class="input-container">
+      <div class="droppable-area" ng-repeat="(name, list) in vm.models.lists">
+        <h4>{{name}}</h4>
+        <ul class="caps-list" dnd-list="list">
+            <li ng-repeat="item in list"
+                dnd-draggable="item"
+                dnd-moved="list.splice($index, 1)"
+                dnd-dragstart="vm.onDragstart(list, event)"
+                dnd-effect-allowed="move"
+                dnd-selected="selected = item"
+                ng-class="{'selected': selected === item}"
+                >
+                {{item}}
+            </li>
+        </ul>
+        {{selected}}
+      </div>
+    </div>
+    <div class="input-container button-grp cg-col">
+      <p class="help-block"> {{ vm.message }} </p>
+      <button class="btn btn-inverse btn-lg btn-register" type="submit">
+        Change profile
+      </button>
+    </div>
+  </form>  
+
+  <form class="cg-col cg-center cg-password-form cg-half-width" name="passwordForm" ng-submit="vm.changePassword(passwordForm)" novalidate>
+
+    <h5>Change password:</h5>
+
+    <div class="input-container" ng-class="{ 'has-success': form.password.$valid && vm.submitted,
+                                        'has-error': form.password.$invalid && vm.submitted }">
+      <label>&lt; Old password= </label>
+
+      <input type="password" name="password" class="form-control" ng-model="vm.user.oldPassword"
+                 mongoose-error/>
+          <p class="help-block" ng-show="form.password.$error.mongoose">
+              {{ vm.errors.other }}
+          </p>
+    </div>
+
+    <div class="input-container" ng-class="{ 'has-success': form.confirmPassword.$valid && vm.submitted,
+                                        'has-error': form.confirmPassword.$invalid && vm.submitted }">
+      <label>&lt; New password= </label>
+      <input type="password" name="newPassword" class="form-control" ng-model="vm.user.newPassword"
+                 ng-minlength="3"
+                 required/>
+          <p class="help-block"
+             ng-show="(form.newPassword.$error.minlength || form.newPassword.$error.required) && (form.newPassword.$dirty || vm.submitted)">
+            Password must be at least 3 characters.
+          </p>
+    </div>
+
+
+    <div class="input-container" ng-class="{ 'has-success': form.confirmPassword.$valid && vm.submitted,
+                                        'has-error': form.confirmPassword.$invalid && vm.submitted }">
+      <label>&lt; Confirm password= </label>
+      <input type="password" name="confirmPassword" class="form-control" ng-model="vm.user.confirmPassword"
+                 match="vm.user.newPassword"
+                 ng-minlength="3"
+                 required=""/>
+          <p class="help-block"
+             ng-show="form.confirmPassword.$error.match && vm.submitted">
+            Passwords must match.
+          </p>
+    </div>
+
+    <div class="input-container button-grp cg-col">
+      <p class="help-block"> {{ vm.message }} </p>
+      <button class="btn btn-inverse btn-lg btn-register" type="submit">
+        Change password
+      </button>
+    </div>
+
+      </form>
+</section>
