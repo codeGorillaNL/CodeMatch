@@ -1,0 +1,64 @@
+<div class="input-container">
+  <span>&lt;</span>  
+  <label for="">Current status</label>
+  <select class="form-control" ng-model="vm.user.currentEmploymentStatus" placeholder="Level">
+      <option ng-value="opt" ng-repeat="opt in vm.options">{{opt}}</option>
+  </select>
+  <span>&nbsp;/&gt;</span>  
+</div>
+<div class="input-container" ng-show="vm.user.currentEmploymentStatus == 'Other'">
+  <div class="radio-group">
+      <label for="">Entitled to benefit</label>
+        <input type="radio" ng-model="vm.user.beneficiary" value="Yes" name="beneficiary">
+          <span>Yes</span>
+        <input type="radio" ng-model="vm.user.beneficiary" value="No" name="beneficiary">
+          <span>No</span>
+  </div>
+</div>
+<div class="input-container"  ng-show="vm.user.beneficiary && vm.user.currentEmploymentStatus == 'Other'">
+  <span>&lt;</span>  
+  <label for="">Benefits agency</label>
+  <select class="form-control" ng-model="vm.user.benefitsAgency">
+      <option ng-value="opt" ng-repeat="opt in vm.benefits">{{opt}}</option>
+  </select>
+  <span>&nbsp;/&gt;</span>  
+</div>
+  <h4 style="margin: 0; margin-left: 2em">Add employers:</h4>
+<div class="input-container">
+  <span>&lt;</span>  
+  <label>Name</label>
+  <input type="text" ng-model="item.name">
+  <span>&nbsp;/&gt;</span>  
+</div>
+<div class="input-container">
+  <span>&lt;</span>  
+  <label>Start year</label>
+  <input type="text" ng-model="item.startYear">
+  <span>&nbsp;/&gt;</span>  
+</div>
+<div class="input-container">
+  <span>&lt;</span>  
+  <label>End year</label>
+  <input type="text" ng-model="item.endYear">
+  <span>&nbsp;/&gt;</span>  
+</div>
+<div class="input-container">
+  <button class="form-btn" ng-click="vm.user.employmentList.push(item); item = {};">
+    Add
+  </button>
+</div>
+<table class="companies">
+    <tr>
+      <th>Company name</th>
+      <th>Start year</th>
+      <th>End year</th>
+    </tr>
+    <tr ng-repeat="employer in vm.user.employmentList">
+      <td>{{employer.name}}</td>
+      <td>{{employer.startYear}}</td>
+      <td>{{employer.endYear}}</td>
+    </tr>
+</table>
+    <button class="form-btn previous" ui-sref="signupForm.education">Previous</button>
+    <button class="form-btn next" ui-sref="signupForm.motivation">Next</button>
+

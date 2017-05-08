@@ -5,7 +5,8 @@
 
     <div class="input-container" ng-class="{ 'has-success': form.name.$valid && vm.submitted,
                                         'has-error': form.name.$invalid && vm.submitted }">
-      <label>&lt; First name= </label>
+      <span>&lt;</span>      
+      <label> First name= </label>
 
       <input type="text" name="name" ng-model="vm.user.first_name"
              required/>
@@ -17,7 +18,8 @@
 
     <div class="input-container" ng-class="{ 'has-success': form.name.$valid && vm.submitted,
                                         'has-error': form.name.$invalid && vm.submitted }">
-      <label>&lt; Surname prefix= </label>
+      <span>&lt;</span>      
+      <label> Surname prefix= </label>
 
       <input type="text" name="name" ng-model="vm.user.surname_prefix"/>
       <span>&nbsp;/&gt;</span>   
@@ -29,7 +31,8 @@
 
     <div class="input-container" ng-class="{ 'has-success': form.name.$valid && vm.submitted,
                                         'has-error': form.name.$invalid && vm.submitted }">
-      <label>&lt; Last name= </label>
+      <span>&lt;</span>      
+      <label> Last name= </label>
 
       <input type="text" name="name" ng-model="vm.user.last_name"
              required/>
@@ -41,7 +44,8 @@
 
     <div class="input-container" ng-class="{ 'has-success': form.email.$valid && vm.submitted,
                                         'has-error': form.email.$invalid && vm.submitted }">
-      <label>&lt; email= </label>
+      <span>&lt;</span>            
+      <label> email= </label>
 
       <input type="email" name="email" ng-model="vm.user.email"
              required
@@ -60,7 +64,8 @@
 
     <div class="input-container" ng-class="{ 'has-success': form.password.$valid && vm.submitted,
                                         'has-error': form.password.$invalid && vm.submitted }">
-      <label>&lt; password= </label>
+      <span>&lt;</span>      
+      <label> password= </label>
 
       <input type="password" name="password" ng-model="vm.user.password"
              ng-minlength="3"
@@ -78,7 +83,8 @@
 
     <div class="input-container" ng-class="{ 'has-success': form.confirmPassword.$valid && vm.submitted,
                                         'has-error': form.confirmPassword.$invalid && vm.submitted }">
-      <label>&lt; confirm password= </label>
+      <span>&lt;</span>      
+      <label> confirm password= </label>
       <input type="password" name="confirmPassword" ng-model="vm.user.confirmPassword"
              match="vm.user.password"
              ng-minlength="3" required/>

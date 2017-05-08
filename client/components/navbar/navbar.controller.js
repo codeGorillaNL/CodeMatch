@@ -12,6 +12,10 @@ class NavbarController {
       'state': 'profiles'
     },    
     {
+      'title': 'Sign up',
+      'state': 'signupForm.persona'
+    },    
+    {
       'title': 'Contact',
       'state': 'contact'
     }

@@ -1,0 +1,94 @@
+  <div class="input-container">
+    <div class="radio-group" ng-model="vm.user.gender">
+    <label for="">Gender</label>
+      <input type="radio" value="Male" name="gender">
+    <span>Male</span>
+      <input type="radio" value="Female" name="gender">
+      <span>Female</span>
+    </div>
+  </div>
+  <div class="input-container">
+    <span>&lt; </span>
+    <label>Initials</label>
+    <input type="text" ng-model="vm.user.initials" required>
+    <span>&nbsp;/&gt;</span>   
+  </div>
+  <div class="input-container">
+    <span>&lt; </span>
+    <label>First name</label>
+    <input type="text" ng-model="vm.user.firstname" required>
+  <span>&nbsp;/&gt;</span>   
+  </div>
+  <div class="input-container">
+    <span>&lt; </span>
+    <label>Surname prefix</label>
+    <input type="text" ng-model="vm.user.surnamePrefix">
+  <span>&nbsp;/&gt;</span>   
+  </div>
+  <div class="input-container">
+    <span>&lt; </span>
+    <label>Last name</label>
+    <input type="text" ng-model="vm.user.lastname" required>
+  <span>&nbsp;/&gt;</span>   
+  </div>
+  <div class="input-container">
+    <span>&lt; </span>
+    <label>BSN number</label>
+    <input type="text" ng-model="vm.user.BSN" required>
+  <span>&nbsp;/&gt;</span>   
+  </div>
+  <div class="input-container">
+    <span>&lt; </span>
+    <label>Phonenumber</label>
+    <input type="text" ng-model="vm.user.phoneNumber" required>
+  <span>&nbsp;/&gt;</span>   
+  </div>
+  <div class="input-container">
+    <span>&lt; </span>
+    <label>Email</label>
+    <input type="email" ng-model="vm.user.email" required>
+  <span>&nbsp;/&gt;</span>   
+  </div>    
+  <div class="input-container date-input">
+    <span>&lt; </span>
+    <label>Date of Birth</label>
+    <input type="text" ng-model="vm.user.DOB" required>
+    <ng-md-icon icon="date_range" ng-click="showDateInput = !showDateInput"></ng-md-icon>
+    <span>&nbsp;/&gt;</span>   
+    <date-picker ng-model="vm.user.DOB" ng-show="showDateInput" on-date-selected="showDateInput = !showDateInput">
+    </date-picker>
+  </div>          
+  <div class="input-container">
+    <span>&lt; </span>
+    <label>Address</label>
+    <input type="text" ng-model="vm.user.address" required>
+  <span>&nbsp;/&gt;</span>   
+  </div>          
+  <div class="input-container">
+    <span>&lt; </span>
+    <label>Number</label>
+    <input type="number" ng-model="vm.user.number" required>
+  <span>&nbsp;/&gt;</span>   
+  </div>          
+  <div class="input-container">
+    <span>&lt; </span>
+    <label>Suffix</label>
+    <input type="text" ng-model="vm.user.suffix">
+  <span>&nbsp;/&gt;</span>   
+  </div>
+  <div class="input-container">
+    <span>&lt; </span>
+    <label>Postal code</label>
+    <input type="text" ng-model="vm.user.postalCode" required>
+  <span>&nbsp;/&gt;</span>   
+  </div>          
+  <div class="input-container">
+    <span>&lt; </span>
+    <label>City</label>
+    <input type="text" ng-model="vm.user.city" required>
+  <span>&nbsp;/&gt;</span>   
+  </div> 
+  <div class="input-container">
+    <p style="color: red"><i>{{vm.errorMessage}}</i></p>
+    <button class="form-btn next" ui-sref="signupForm.education">Next</button>
+  </div> 

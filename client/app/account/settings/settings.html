@@ -6,7 +6,8 @@
 
     <div class="input-container" ng-class="{ 'has-success': form.name.$valid && vm.submitted,
                                         'has-error': form.name.$invalid && vm.submitted }">
-      <label>&lt; First name= </label>
+      <span>&lt; </span>
+      <label>First name= </label>
 
       <input type="text" name="name" ng-model="vm.user.first_name"
              required/>
@@ -18,7 +19,8 @@
 
     <div class="input-container" ng-class="{ 'has-success': form.name.$valid && vm.submitted,
                                         'has-error': form.name.$invalid && vm.submitted }">
-      <label>&lt; Surname prefix= </label>
+      <span>&lt; </span>
+      <label>Surname prefix= </label>
 
       <input type="text" name="name" ng-model="vm.user.surname_prefix"/>
       <span>&nbsp;/&gt;</span>   
@@ -30,7 +32,8 @@
 
     <div class="input-container" ng-class="{ 'has-success': form.name.$valid && vm.submitted,
                                         'has-error': form.name.$invalid && vm.submitted }">
-      <label>&lt; Last name= </label>
+      <span>&lt; </span>
+      <label>Last name= </label>
 
       <input type="text" name="name" ng-model="vm.user.last_name"
              required/>
@@ -42,7 +45,8 @@
 
     <div class="input-container" ng-class="{ 'has-success': form.email.$valid && vm.submitted,
                                         'has-error': form.email.$invalid && vm.submitted }">
-      <label>&lt; email= </label>
+      <span>&lt; </span>
+      <label>email= </label>
 
       <input type="email" name="email" ng-model="vm.user.email"
              required
@@ -89,7 +93,8 @@
 
     <div class="input-container" ng-class="{ 'has-success': form.password.$valid && vm.submitted,
                                         'has-error': form.password.$invalid && vm.submitted }">
-      <label>&lt; Old password= </label>
+      <span>&lt; </span>
+      <label>Old password= </label>
 
       <input type="password" name="password" class="form-control" ng-model="vm.user.oldPassword"
                  mongoose-error/>
@@ -101,7 +106,8 @@
 
     <div class="input-container" ng-class="{ 'has-success': form.confirmPassword.$valid && vm.submitted,
                                         'has-error': form.confirmPassword.$invalid && vm.submitted }">
-      <label>&lt; New password= </label>
+      <span>&lt; </span>
+      <label>New password= </label>
       <input type="password" name="newPassword" class="form-control" ng-model="vm.user.newPassword"
                  ng-minlength="3"
                  required/>
@@ -115,7 +121,8 @@
 
     <div class="input-container" ng-class="{ 'has-success': form.confirmPassword.$valid && vm.submitted,
                                         'has-error': form.confirmPassword.$invalid && vm.submitted }">
-      <label>&lt; Confirm password= </label>
+      <span>&lt; </span>
+      <label>Confirm password= </label>
       <input type="password" name="confirmPassword" class="form-control" ng-model="vm.user.confirmPassword"
                  match="vm.user.newPassword"
                  ng-minlength="3"

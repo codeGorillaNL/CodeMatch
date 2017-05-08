@@ -1,0 +1,62 @@
+<div class="input-container">
+  <h4>Previous education</h4>
+</div>
+<div class="input-container">
+  <span>&lt;</span>  
+  <label>Name of course</label>
+  <input type="text" ng-model="item.nameOfEducation">
+  <span>&nbsp;/&gt;</span>  
+</div>
+<div class="input-container">
+  <span>&lt;</span>  
+  <label for="">Education level</label>
+  <select class="form-control" ng-model="item.levelOfEducation" flex="100" placeholder="Level">
+      <option ng-value="opt" ng-repeat="opt in vm.educations">{{opt}}</option>
+  </select>
+  <span>&nbsp;/&gt;</span>  
+</div>
+<div class="input-container">
+  <span>&lt;</span>  
+  <label>Start year</label>
+  <input type="text" ng-model="item.startYear">
+  <span>&nbsp;/&gt;</span>  
+</div>
+<div class="input-container">
+  <span>&lt;</span>  
+  <label>End year</label>
+  <input type="text" ng-model="item.endYear">
+  <span>&nbsp;/&gt;</span>  
+</div>
+<div class="input-container">
+  <div class="radio-group">
+      <label for="">Completed? </label>
+        <input type="radio" ng-model="item.completed" value="Yes" name="completed">
+          <span>Yes</span>
+        <input type="radio" ng-model="item.completed" value="No" name="completed">
+          <span>No</span>
+  </div>
+</div>
+<div class="input-container">
+  <button class="form-btn" ng-click="vm.user.educationList.push(item); item = {};">
+    Add
+  </button>
+</div>
+<table>
+    <tr>
+      <th>Name of course</th>
+      <th>Level</th>
+      <th>Start year</th>
+      <th>End year</th>
+      <th>Finished</th>
+    </tr>
+    <tr ng-repeat="school in vm.user.educationList">
+      <td>{{school.nameOfEducation}}</td>
+      <td>{{school.levelOfEducation}}</td>
+      <td>{{school.startYear}}</td>
+      <td>{{school.endYear}}</td>
+      <td>{{school.completed}}</td>
+    </tr>
+</table>
+    <button class="form-btn previous" ui-sref="signupForm.persona">Previous</button>
+    <button class="form-btn next" ui-sref="signupForm.experience">Next</button>
+

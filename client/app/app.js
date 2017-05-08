@@ -1,7 +1,8 @@
 'use strict';
 
 angular.module('codeMatchApp', ['codeMatchApp.auth', 'codeMatchApp.admin', 'codeMatchApp.constants',
-    'ngCookies', 'ngResource', 'ngSanitize', 'ui.router', 'validation.match', 'ngMdIcons', 'dndLists'
+    'ngCookies', 'ngResource', 'ngSanitize', 'ui.router', 'validation.match', 'ngMdIcons', 'dndLists',
+    'mp.datePicker'
   ])
   .config(function($urlRouterProvider, $locationProvider) {
     $urlRouterProvider.otherwise('/');

@@ -1,5 +1,21 @@
 $fa-font-path: "../bower_components/font-awesome/fonts";
 @import '../bower_components/font-awesome/scss/font-awesome';
+// Import fonts.
+
+@font-face {
+    font-family: bold;
+    src: url(../assets/fonts/SourceCodePro-Bold.otf);
+}
+
+@font-face {
+    font-family: regular;
+    src: url(../assets/fonts/SourceCodePro-Regular.otf);
+}
+
+// First define the global colors used throughout the page with SASS variables.
+
+$cg-blue: #78c3d8;
+$cg-red: #e15054;
 
 /**
  * App-wide Styles
@@ -23,6 +39,7 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
 /* inject:scss */
 @import 'admin/admin';
 @import 'contact/contact';
+@import 'join/join';
 @import 'main/main';
 @import 'profiles/profiles';
 @import '../components/bananaNinja/bananaNinja';

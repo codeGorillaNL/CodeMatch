@@ -6,13 +6,29 @@ class SettingsController {
   submitted = false;
   models = {
         selected: null,
-        lists: {"Your expertises": [], "Select expertises": ["HTML5", "CSS3", "Javascript", "AngularJS", "PHP", "NodeJS", "MySQL"]}
+        lists: {"Your expertises": [], "Select expertises": []}
   }
 
   constructor(Auth, appConfig) {
+    var vm = this;
     this.Auth = Auth;
     this.user = Auth.getCurrentUser();
-    this.models.lists['Your expertises'] = this.user.caps;
+
+    let capList = ["HTML5", "CSS3", "Javascript", "AngularJS", "PHP", "NodeJS", "MySQL"];
+
+    if (this.user && this.user.caps) {
+      var caps = this.user.caps;
+      capList.map(function(cap) {
+        if (caps.indexOf(cap) !== -1){
+          vm.models.lists['Your expertises'].push(cap);
+        } else {
+          vm.models.lists['Select expertises'].push(cap);
+        }
+      })
+    } else {
+        vm.models.lists['Select expertises'] = capList;
+        vm.models.lists['Your expertises'] = [];
+    }
   }
 
 

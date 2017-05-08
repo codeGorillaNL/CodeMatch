@@ -1,0 +1,39 @@
+section {
+	// min-height: 100vh;
+}
+
+.cg-profile-left {
+	padding-top: 10vh;
+	width: 40vw;
+	overflow: hidden;
+
+	.profile-photo {
+		width: 125%;
+		height: auto;
+	}
+
+	.edu-plan {
+		background-color: $cg-red;
+	}
+}
+
+.cg-profile-right {
+	width: 60vw;
+
+	.profile-details {
+		height: 40vh;
+		width: 100%;
+	}
+
+	.profile-caps {
+		height: 40vh;
+		width: 100%;
+		background-color: $cg-red;
+	}
+
+	.profile-portfolio {
+		min-height: 60vh;
+		width: 100%;
+		background-color: #FFF;
+	}
+}

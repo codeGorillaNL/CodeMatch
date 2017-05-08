@@ -6,7 +6,6 @@ angular.module('codeMatchApp')
       .state('contact', {
         url: '/contact',
         template: '<contact></contact>',
-        controllerAs: 'vm',
-        authenticate: true
+        controllerAs: 'vm'
       });
   });

@@ -1,0 +1,147 @@
+#signup-form {
+  background-color: $cg-blue;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+}
+
+#form-views {
+	width: 100vw;
+	height: 80vh;
+	background-color: #FFF;
+	/*background-color: $cg-blue;*/
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: stretch;
+
+	.input-container {
+		width: 50%;
+		justify-content: center;
+		align-items: center;
+		/*max-height: 5%;*/
+		flex-basis: 10%;
+
+		.radio-group {
+			display: inline-flex;
+			flex-flow: row nowrap;
+			align-items: center;
+			width: 100%;
+
+			label {
+				flex: 0 1 30%;
+			}
+
+			input[type=radio] {
+				flex: 0 1 auto;
+			}
+
+			span {
+				flex: 1 0 auto;
+			}
+		}
+
+		input, select {
+			flex: 0 0 60%;
+			border: 0;
+		    /*-webkit-appearance: none;*/
+		    -webkit-border-radius: 0px;
+			border-radius: 0;
+			background-color: #FFF;
+			border-bottom: 2px dashed #000;
+		}
+
+		select.form-control {
+		    -webkit-appearance: none;
+		    -webkit-border-radius: 0px;
+		    background: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24' height='24' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>");
+		    background-position: 100% 50%;
+		    background-repeat: no-repeat;
+		}
+
+		.angular-date-picker {
+			position: absolute;
+		}
+
+		.angular-date-picker * {
+			display: block;
+		}
+
+		.angular-date-picker span {
+			display: inline;
+		}
+
+		.angular-date-picker > ._month > button {
+			top: calc(50% - 10px)
+		}
+	}
+
+	.date-input {
+
+		input {
+			flex: 0 0 52%;
+		}
+
+		ng-md-icon {
+			justify-content: center;
+			flex: 0 0 8%;
+			margin: 0;
+		}
+
+	}
+
+	.form-btn {
+		background-color: $cg-red;
+		margin: .5em;
+	    min-width: 8vmax;
+	    padding: .3em;
+	    text-align: center;
+	    text-decoration: none;
+	    color: #FFF;
+	    font-family: regular;
+	    justify-content: center;
+	    border: 0;
+	    border-radius: 5px;
+	}
+}
+
+table {
+	font-size: .8em;
+	padding: 1.33em;
+	width: 50%;
+	height: 100%;
+	align-items: flex-start;
+}
+
+tbody {
+	flex-direction: column;
+	width: calc(100% - 3em);
+}
+
+th {
+	margin-bottom: 1em;
+}
+td, th {
+	flex: 0 0 20%;
+}
+
+tr {
+	flex: 0 0 100%;
+	flex-direction: row;
+}
+
+.companies th, .companies td {
+	flex: 0 0 33%;
+}
+
+.previous {
+  position: absolute;
+  bottom: 1em;
+  left: 1em;
+}
+.next {
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+}
