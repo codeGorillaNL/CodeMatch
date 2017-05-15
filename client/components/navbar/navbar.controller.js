@@ -44,22 +44,10 @@ class NavbarController {
     }
   ];
 
-  constructor(Auth) {
+  constructor(Auth, $rootScope) {
     this.isLoggedIn = Auth.isLoggedIn;
     this.isAdmin = Auth.isAdmin;
     this.getCurrentUser = Auth.getCurrentUser;
-    this.menuToggle = false;
-    this.menuIcon = 'menu';
-    this.iconOptions = 
-      {
-        "duration": 375, 
-        "rotation": "none"
-      };
-
-    this.toggleMenu = function toggleMenu() {
-      this.menuToggle = !this.menuToggle;
-      return this.menuIcon = this.menuToggle ? 'keyboard_arrow_up' : 'menu';
-    }
   }
 
 }

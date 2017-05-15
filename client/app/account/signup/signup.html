@@ -19,7 +19,7 @@
     <div class="input-container" ng-class="{ 'has-success': form.name.$valid && vm.submitted,
                                         'has-error': form.name.$invalid && vm.submitted }">
       <span>&lt;</span>      
-      <label> Surname prefix= </label>
+      <label> prefix= </label>
 
       <input type="text" name="name" ng-model="vm.user.surname_prefix"/>
       <span>&nbsp;/&gt;</span>   
@@ -84,7 +84,7 @@
     <div class="input-container" ng-class="{ 'has-success': form.confirmPassword.$valid && vm.submitted,
                                         'has-error': form.confirmPassword.$invalid && vm.submitted }">
       <span>&lt;</span>      
-      <label> confirm password= </label>
+      <label> confirm= </label>
       <input type="password" name="confirmPassword" ng-model="vm.user.confirmPassword"
              match="vm.user.password"
              ng-minlength="3" required/>

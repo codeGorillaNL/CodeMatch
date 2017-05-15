@@ -1,10 +1,13 @@
   <div class="input-container">
     <div class="radio-group" ng-model="vm.user.gender">
     <label for="">Gender</label>
-      <input type="radio" value="Male" name="gender">
+      <input type="radio" value="Male" name="gender" required>
     <span>Male</span>
-      <input type="radio" value="Female" name="gender">
+      <input type="radio" value="Female" name="gender" required>
       <span>Female</span>
+    </div>
+    <div ng-messages="signupForm.gender.$error" role="alert" ng-if="showValidation">
+      <div ng-message="required">You need to select your gender.</div>
     </div>
   </div>
   <div class="input-container">
@@ -88,7 +91,10 @@
     <input type="text" ng-model="vm.user.city" required>
   <span>&nbsp;/&gt;</span>   
   </div> 
-  <div class="input-container">
+  <div class="input-container" ng-if="vm.errorMessage">
     <p style="color: red"><i>{{vm.errorMessage}}</i></p>
-    <button class="form-btn next" ui-sref="signupForm.education">Next</button>
   </div> 
+  <div class="input-container button-grp">
+    <button class="form-btn next disabled" ng-click="showValidation" ng-show="signupForm.$error.required">Next</button>
+    <button class="form-btn next" ui-sref="signupForm.education" ng-show="!signupForm.$error.required">Next</button>
+  </div>

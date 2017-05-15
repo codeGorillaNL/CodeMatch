@@ -4,33 +4,34 @@
   
   <h5>If you fill in this form we will get back to you as soon as possible.</h5>
   
-  <form class="cg-col cg-center" name="contact">
+  <form class="cg-col cg-center" name="contact" ng-submit="ct.submit(contact)">
     
     <div class="input-container">
       <span>&lt;</span>      
       <label for="name"> name= </label>
-      <input type="text" ng-model="user.name">
+      <input type="text" ng-model="ct.user.name" required>
       <span>&nbsp;/&gt;</span>      
     </div>
     
     <div class="input-container">
       <span>&lt;</span>      
       <label for="email"> email= </label>
-      <input type="email" ng-model="user.email">
+      <input type="email" ng-model="ct.user.email" required>
       <span>&nbsp;/&gt;</span>
     </div>
         
     <div class="input-container text-box">
       <span>&lt;</span>      
       <label for="message"> message= </label>
-      <textarea type="email" rows="5" ng-model="user.message"></textarea> 
+      <textarea type="text" rows="5" ng-model="ct.user.message" required></textarea> 
       <span>&nbsp;/&gt;</span>
     </div>
     
     <div class="input-container button-grp">
-      <button ng-click="messageSent = ! messageSent">Submit form</button>
+      <button class="form-btn" type="submit">Submit form</button>
     </div>
-  <h5 ng-show="messageSent">Thanks, we will get in contact with you as soon as possible.</h5>
+  <h5 ng-show="ct.message.success">{{ct.message.success}}</h5>
+  <h5 class="error" ng-show="ct.message.error">{{ct.message.error}}</h5>
 
   </form>
 

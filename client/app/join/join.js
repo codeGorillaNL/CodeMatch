@@ -24,6 +24,10 @@ angular.module('codeMatchApp')
       .state('signupForm.motivation', {
         url: '/motivation',
         templateUrl: 'app/join/motivation.html'
+      })
+      .state('signupForm.success', {
+        url: '/motivation',
+        templateUrl: 'app/join/success.html'
       });
 
       $urlRouterProvider.otherwise('/join');

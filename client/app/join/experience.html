@@ -23,7 +23,7 @@
   </select>
   <span>&nbsp;/&gt;</span>  
 </div>
-  <h4 style="margin: 0; margin-left: 2em">Add employers:</h4>
+  <h4>Add employers:</h4>
 <div class="input-container">
   <span>&lt;</span>  
   <label>Name</label>
@@ -43,11 +43,11 @@
   <span>&nbsp;/&gt;</span>  
 </div>
 <div class="input-container">
-  <button class="form-btn" ng-click="vm.user.employmentList.push(item); item = {};">
+  <button class="form-btn" type="button" ng-click="vm.user.employmentList.push(item); item = {};">
     Add
   </button>
 </div>
-<table class="companies">
+<table class="companies" ng-hide="vm.user.employmentList.length == 0">
     <tr>
       <th>Company name</th>
       <th>Start year</th>
@@ -59,6 +59,8 @@
       <td>{{employer.endYear}}</td>
     </tr>
 </table>
+<div class="input-container button-grp">
     <button class="form-btn previous" ui-sref="signupForm.education">Previous</button>
-    <button class="form-btn next" ui-sref="signupForm.motivation">Next</button>
-
+    <button class="form-btn next disabled" ng-show="vm.user.employmentList.length == 0">Next</button>
+    <button class="form-btn next" type="button" ui-sref="signupForm.motivation" ng-hide="vm.user.employmentList.length == 0">Next</button>
+</div>

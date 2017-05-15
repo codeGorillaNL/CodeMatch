@@ -1,5 +1,6 @@
-<section class="cg-col" style="padding: 5%">
-	<h4>Tell us why we should select you to join the CodeGorilla bootcamp.</h4>
-	<textarea ng-model="vm.user.motivation" id="" style="width: 90%;" rows="30"></textarea>
-	<button class="form-btn next" ng-click="vm.submitForm(vm.user)">Submit</button>
-</section>
+<h4>Tell us why we should select you to join the CodeGorilla bootcamp.</h4>
+<textarea ng-model="vm.user.motivation" id="" style="width: 90%; margin: 0 5% 5% 5%;" rows="30" required></textarea>
+<div class="input-container button-grp">
+	<!-- <button class="form-btn next" ng-click="vm.submitForm(vm.user)">Submit</button> -->
+	<button class="form-btn next" type="submit">Submit</button>
+</div>

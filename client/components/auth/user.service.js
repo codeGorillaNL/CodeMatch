@@ -20,10 +20,14 @@
         params: {
           id: 'me'
         }
+      },
+      list: {
+        method: 'GET',
+        isArray: true
       }
     });
   }
 
-  angular.module('codeMatchApp.auth')
+  angular.module('codeMatchApp')
     .factory('User', UserResource);
 })();

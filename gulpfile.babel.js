@@ -472,7 +472,6 @@ gulp.task('build', cb => {
             'transpile:server'
         ],
         [
-            'build:images',
             'copy:extras',
             'copy:fonts',
             'copy:assets',
@@ -484,7 +483,7 @@ gulp.task('build', cb => {
 
 gulp.task('clean:dist', () => del([`${paths.dist}/!(.git*|.openshift|Procfile)**`], {dot: true}));
 
-gulp.task('build:client', ['styles', 'html', 'constant', 'build:images'], () => {
+gulp.task('build:client', ['styles', 'html', 'constant'], () => {
     var manifest = gulp.src(`${paths.dist}/${clientPath}/assets/rev-manifest.json`);
 
     var appFilter = plugins.filter('**/app.js', {restore: true, dot: true});
@@ -537,21 +536,21 @@ gulp.task('constant', function() {
     .pipe(gulp.dest(`${clientPath}/app/`))
 });
 
-gulp.task('build:images', () => {
-    return gulp.src(paths.client.images)
-        .pipe(plugins.imagemin({
-            optimizationLevel: 5,
-            progressive: true,
-            interlaced: true
-        }))
-        .pipe(plugins.rev())
-        .pipe(gulp.dest(`${paths.dist}/${clientPath}/assets/images`))
-        .pipe(plugins.rev.manifest(`${paths.dist}/${clientPath}/assets/rev-manifest.json`, {
-            base: `${paths.dist}/${clientPath}/assets`,
-            merge: true
-        }))
-        .pipe(gulp.dest(`${paths.dist}/${clientPath}/assets`));
-});
+// gulp.task('build:images', () => {
+//     return gulp.src(paths.client.images)
+//         .pipe(plugins.imagemin({
+//             optimizationLevel: 5,
+//             progressive: true,
+//             interlaced: true
+//         }))
+//         .pipe(plugins.rev())
+//         .pipe(gulp.dest(`${paths.dist}/${clientPath}/assets/images`))
+//         .pipe(plugins.rev.manifest(`${paths.dist}/${clientPath}/assets/rev-manifest.json`, {
+//             base: `${paths.dist}/${clientPath}/assets`,
+//             merge: true
+//         }))
+//         .pipe(gulp.dest(`${paths.dist}/${clientPath}/assets`));
+// });
 
 gulp.task('copy:extras', () => {
     return gulp.src([

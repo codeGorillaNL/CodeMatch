@@ -1,10 +1,11 @@
 <section class="cg-col cg-center" id="cg-landing">
-  	<video src="assets/video/gorilla.webm" autoplay>
-  	</video>
-	<h1>&lt;code&gt;<span style="color: #000;">gorilla</span></h1>
-	<h2>Do you need some code? We’ve got CodeGorillas!</h2>
+  	<img class="gorilla-animation" src="assets/video/animatie-monkey.gif" alt="">
+  	<h1><span>&lt;code&gt;</span>gorilla</h1>
+	<!-- <h1 typewrite text="'<code>'" type-delay="100" initial-delay="1s"></h1> -->
+	<!-- <input style="color: #000;" typewrite text="'<code>gorilla'" type-delay="100" initial-delay="2s" blink-cursor="false"> -->
+	<!-- <h2 ng-if="!$ctrl.mobileVideo">Do you need some code? We’ve got CodeGorillas!</h2> -->
     <p>
-    	CodeGorilla is a bootcamp training company. 
+    	CodeGorilla is a bootcamp training-company. 
     	We transform people without any coding knowledge into 
     	full stack web developers over a course of three months. 
     	As the CodeGorillas state themselves: It’s a way of life!.
@@ -29,7 +30,9 @@
     </ul>
 </section>
 <section id="cg-video-container">
-	<video id="teaser" src="assets/video/code_gorilla.mp4" muted type="video/mp4" cg-video-on-scroll></video>
+	<h3>We made an awesome explainer video for you.</h3>
+	<video id="teaser" poster="assets/images/poster.png" src="assets/video/code_gorilla.mp4" muted type="video/mp4" cg-video-on-scroll></video>
+	<img src="assets/images/home_button.png" alt="" class="gorilla">
 	<div id="video-controls">
 	    <button ng-click="$ctrl.toggleMute()" id="mute"><ng-md-icon icon="{{$ctrl.soundIcon}}"></ng-md-icon></button>
 	    <input type="range" id="volume-bar" min="0" max="1" step="0.1" value="1">
