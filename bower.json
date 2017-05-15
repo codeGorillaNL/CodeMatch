@@ -1,0 +1,24 @@
+{
+  "name": "code-gorilla",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular": "~1.5.0",
+    "json3": "~3.3.1",
+    "es5-shim": "~3.0.1",
+    "angular-resource": "~1.5.0",
+    "angular-cookies": "~1.5.0",
+    "angular-sanitize": "~1.5.0",
+    "font-awesome": ">=4.1.0",
+    "lodash": "~2.4.1",
+    "angular-ui-router": "0.4.0",
+    "angular-validation-match": "~1.5.2",
+    "angular-material": "^1.1.1",
+    "angularMaterialFormBuilder": "angular-material-form-builder#^0.1.1",
+    "angular-scroll": "^1.0.0",
+    "angular-material-icons": "^0.7.1",
+    "svg-morpheus": "^0.3.2"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.5.0"
+  }
+}

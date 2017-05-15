@@ -1,0 +1,30 @@
+h1 {
+	display: none;
+}
+
+.active h1 {
+	display: inline-block;
+}
+
+.line {
+	position: fixed;
+	bottom: 5vh;
+	left:5vw;
+	width: 90vw;
+	height: 2px;
+	background-color: white;
+
+	.dot {
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		background-color: #fff;
+		transform: translateY(-4px);
+	}
+
+	.percentage {
+		position: relative;
+		height:100%;
+		background-color: #000;
+	}
+}

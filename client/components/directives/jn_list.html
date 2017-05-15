@@ -1,0 +1,24 @@
+<md-card class="jn-list">
+  <md-card-content>
+    <h3 class="md-title">{{options.title}}</h3>
+    <md-list ng-cloak>
+      <md-list-item class="list-header" layout="row">
+        <span ng-repeat="(k,v) in options.columns"
+              ng-style="{width: 100/columnCount + '%'}">{{k}}</span>
+      </md-list-item>
+      <md-virtual-repeat-container md-auto-shrink="true" id="scroll-container"
+                                   ng-show="data && data.length > 0"
+                                   ng-style="{height: (data.length * 48) + 'px'}">
+        <md-list-item md-virtual-repeat="item in data" layout="row">
+          <span ng-repeat="(k,v) in options.columns" ng-bind="{{v}}"
+                ng-style="{width: 100/columnCount + '%'}">
+          </span>
+        </md-list-item>
+      </md-virtual-repeat-container>
+      <md-list-item ng-if="data && !data.length" layout="row" class="no-data">
+        <span>{{options.noDataMessage}}</span>
+      </md-list-item>
+    </md-list>
+    <loading-spinner ng-if="loading"></loading-spinner>
+  </md-card-content>
+</md-card>

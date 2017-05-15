@@ -1,0 +1,29 @@
+<ul du-spy-context du-scroll-container="scroll-container" style="position: fixed; top: 0; left: 0; bottom: 0; right: 0; flex-flow: row nowrap;">
+  <li><a href="#red" du-smooth-scroll du-scrollspy>Am i red?</a></li>
+  <li><a href="#green" du-smooth-scroll du-scrollspy>Am i green?</a></li>
+  <li><a href="#blue" du-smooth-scroll du-scrollspy>Am i blue?</a></li>
+</ul>
+<div class="line">
+	<div class="dot">&nbsp;</div>
+	<div class="percentage" ng-style="{ 'width': percentage + '%' }"></div>
+</div>
+<div du-scroll-container style="flex-flow: column nowrap">
+	<section class="red" id="red">
+		<h1>ACTIVE!</h1>
+	</section>
+	<section class="green" id="green">
+		<h1>ACTIVE!</h1>
+	</section>
+	<section class="blue" id="blue">
+		<h1>ACTIVE!</h1>
+	</section>
+	<section class="red" id="red">
+		<h1>ACTIVE!</h1>
+	</section>
+	<section class="green" id="green">
+		<h1>ACTIVE!</h1>
+	</section>
+	<section class="blue" id="blue last">
+		<h1>ACTIVE!</h1>
+	</section>
+</div>

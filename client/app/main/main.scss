@@ -1,0 +1,455 @@
+html, body {
+  width: 100vw;
+  min-height: 100vh;
+  font-family: 'Regular';
+}
+
+:focus {
+  outline: 0;
+}
+
+$dark-red: darken($red, 8%);
+
+div {
+  display: flex;
+}
+
+h3 {
+  font-size: 1.4em;
+}
+
+h3.red{
+  @include long-shadow(text, darken($red, 5), 15, false, false, right);
+}
+
+h3.green{
+  @include long-shadow(text, darken($green, 5), 15, false, false, right);
+}
+
+h3.blue{
+  @include long-shadow(text, darken($blue, 5), 15, false, false, right);
+}
+
+.md-button.test {
+    background-color: $red;
+    border: 4px solid $red;
+    color: #FFF;
+    @include long-shadow(text, darken($red, 5), 20, false, false, right);
+}
+
+.md-button.test:hover {
+  background-color: lighten($red, 3%);
+  @include long-shadow(text, darken($red, 5), 5, false, false, right);
+  transform: scale(1.05);
+}
+
+.md-button a {
+  color: #000;
+  text-decoration: none;
+}
+
+.red {
+  background-color: $red;
+}
+
+.green {
+  background-color: $green;
+}
+
+.blue {
+  background-color: $blue;
+  // margin: 10%;
+}
+
+.margin-contact {
+  padding: 5%;
+}
+
+.startpage {
+  background-color: $blue;
+  height: 100vh;
+  width: 100vw;
+  padding: 10%;
+  position: relative;
+
+  img {
+    // transform: translateX(-3vw);
+  }
+}
+
+.hero {
+  height: 40vh;
+  width: auto;
+
+  p {
+    margin: 0;
+  }
+
+}
+
+.hero-gorilla {
+  margin: auto;
+  width: 25vw;
+  height: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.text {
+  padding: 1.5% 5%;
+}
+
+.quote {
+  position: relative;
+  left: 50%;
+  top: 50%;
+}
+
+.fold1 {
+
+  min-height: 100vh;
+  height: auto;
+  flex-flow: row nowrap;
+  background-color: $red;
+
+  div {
+    padding: 3% 5%;
+  }
+
+  .md-button {
+    width: 40%;
+  }
+
+  .green {
+    background-color: $green;
+  }
+
+  p {
+    line-height: 1.4;
+  }
+
+  // .quote {
+  //   max-width: 100%;
+  //   height: auto;
+  //   align-self: center;
+  //   transform: rotate(3deg);
+  // }
+
+  .quote-text {
+    transform: rotate(3deg);
+    color: #fff;
+  }
+
+  .quote-text-black {
+    transform: rotate(3deg);
+    font-family: 'bold';
+    color: #000;
+  }
+}
+
+.md-button {
+  font-family: Bold;
+  border-radius: 0;
+  margin: 0;
+  margin-top: 1em;
+  padding: 0 1em;
+}
+
+.btn-red {
+  background-color: $red;
+  color: #FFF;
+}
+
+.btn-blue {
+  background-color: $blue;
+  color: #FFF;
+}
+
+.btn-green {
+  background-color: $green;
+  color: #FFF;
+}
+
+.btn-border {
+  border: 2px solid #000;
+  color: #000;
+  margin-top: auto;
+}
+
+img {
+  max-width: 60%;
+  align-self: center;
+  flex: 0 0 100%;
+  // transform: translateX(-3vw);
+}
+
+h1 {
+  font-family: Bold;
+  display: flex;
+  height: 2.9rem;
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-family: Bold;
+  display: flex;
+  height: 2rem;
+  font-size: 2.2rem;
+  margin: .2em 0;
+}
+
+.fold1 h2:first-of-type {
+  margin-bottom: 0;
+}
+
+.fold2 {
+  min-height: 100vh;
+
+  .gorilla {
+    max-height: 10vh;
+    width: auto;
+  }
+
+  .block {
+    display: flex;
+    margin-top: 2.5vh;
+    // margin-left: calc(6.25vw);
+    width: 30vh;
+    height: 30vh;
+    padding: 2%;
+  }
+}
+
+.signup-form {
+  background-color: $red;
+  height: 100vh;
+  width: 100vw;
+}
+
+
+.login-form {
+  background-color: $green;
+  height: 100vh;
+  width: 100vw;
+}
+
+.settings {
+  min-height: 100vh;
+  width: 100vw;
+  padding: 5vw;
+  background-color: $green;
+}
+
+form-view {
+  width: 80%;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.formItem {
+  width: 80%;
+}
+
+.form-tabs {
+  width: 80vw;
+  height: 80vh;
+}
+
+input-view {
+  width: 75%;
+
+  md-input-container {
+    width: 100%;
+  }
+}
+
+.fold2 {
+  padding-right: 0;
+  padding-top: 0;
+}
+
+.contact-form {
+  max-width: 50%;
+}
+
+textarea {
+  background-color: transparent;
+  border-color: transparent;
+  border-bottom-color: rgba(0, 0, 0, 0.117647);
+  font-family: 'Regular';
+}
+
+md-list-item.education::before {
+  display: none !important;
+  min-height: 0px;
+}
+
+md-list-item input, md-list-item h3 {
+  margin-right: .5em;
+}
+
+md-list-item h3 {
+  margin-right: .2em;
+}
+
+md-list-item .md-no-style {
+  padding: 0;
+}
+
+.success {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: $green;
+
+    .success-gorilla {
+      width: 25vw;
+      height: auto;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 50%;
+      left: 0;
+    }
+
+    .success-text {
+      margin-top: 50vh;
+    }
+
+}
+
+md-tabs.md-dynamic-height md-tab-content.md-active {
+  min-height: 70vh;
+
+  md-content {
+    min-height: 70vh;
+  }
+}
+
+md-tab-content {
+  min-height: 100%;
+}
+
+.next {
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+}
+
+@media (max-width: 599px) {
+
+  .startpage {
+    padding: 5%;
+  }
+
+  .hero {
+    height: auto;
+
+    h1 {
+      margin-bottom: 0.67em !important;
+      margin-top: 0.67em !important;
+    }
+  }
+
+  .hero-gorilla {
+    width: 50vw;
+    top: 50%;
+  }
+
+  .md-list-item-inner {
+    max-width: 100vw;
+    flex-flow: row wrap;
+  }
+
+  .fold1 {
+
+    .md-button {
+      width: 50%;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin: 0;
+    }
+  }
+
+  .contact-form {
+    max-width: 80%;
+  }
+
+}
+
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 768px)
+  and (orientation: landscape)
+  {
+
+    .hero {
+      height: 80vh;
+    }
+
+    .hero-gorilla {
+      left: 50%;
+    }
+
+}
+
+@media only screen
+  and (orientation: landscape)
+  and (max-device-width: 768px)
+  and (min-resolution: 192dpi) {
+
+      .hero {
+        height: 100vh;
+      }
+
+      .hero-gorilla {
+        left: 70%;
+      }
+    }
+
+
+.jn-list {
+  #scroll-container {
+    max-height: 200px;
+  }
+  md-list {
+    md-list-item {
+      box-sizing: border-box;
+      height: 40px;
+      padding-top: 10px;
+      border-bottom: 1px solid rgb(236, 236, 236);
+      &.md-no-proxy {
+        padding: 0;
+      }
+      &.no-data {
+        span {
+          width: 100% !important;
+        }
+      }
+      span {
+        font-size: 13px;
+        height: 100%;
+        display: inline-block;
+        &:last-child {
+          width: 48px;
+        }
+      }
+      &.list-header {
+        span {
+          height: auto;
+          font-size: 12px;
+          color: rgba(0, 0, 0, 0.54);
+        }
+      }
+    }
+  }
+}
+
+
+

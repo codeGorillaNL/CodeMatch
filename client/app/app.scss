@@ -1,0 +1,94 @@
+$fa-font-path: "../bower_components/font-awesome/fonts";
+
+@import '../bower_components/font-awesome/scss/font-awesome';
+@import '../assets/mixins/_shadow.scss';
+
+@font-face {
+    font-family: "Regular";
+    src: url("../assets/fonts/sourcecodeproregular.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "Bold";
+    src: url("../assets/fonts/SourceCodePro-Bold.otf") format("truetype");
+}
+
+$blue: #77C4D7;
+$green: #91C24D;
+$red: #E25054;
+
+/**
+ * App-wide Styles
+ */
+
+* {
+  box-sizing: border-box;
+}
+
+section {
+  height: 100vh;
+  width: 100vw;
+}
+
+nav {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	right: 50%;
+	height: 8vh;
+	z-index: 999;
+  transition: all .4s ease-in-out;
+  overflow: hidden;
+
+  ng-md-icon {
+    z-index: 100;
+    position: fixed;
+    top: 3vh;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: transparent;
+    fill: $red;
+  }
+
+	.menu {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+
+		li {
+			font-size: 1.8rem;
+		}
+	}
+}
+
+nav.open {
+	left: 0;
+  right: 0;
+	height: 100vh;
+	background-color: $red;
+
+  .hamburger {
+    fill: #FFF;
+  }
+
+}
+
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}
+
+// Component styles are injected through grunt
+/* inject:scss */
+@import 'admin/admin';
+@import 'contact/contact';
+@import 'main/main';
+@import 'profile/profile';
+@import 'success/success';
+@import 'timeline/timeline';
+@import '../components/footer/footer';
+/* endinject */

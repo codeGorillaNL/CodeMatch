@@ -1,0 +1,27 @@
+<section layout="column" layout-align="center center">
+<section layout="row" layout-align="space-around center">
+  <div class="contact-form" layout="column">
+    <h1 style="font-family: 'Bold';"">Contact</h1>
+    <p>We kunnen ons voorstellen dat je nog vragen hebt, deze kun je stellen via onderstaand contact formulier.</p>
+    <md-input-container>
+      <label>Naam</label>
+      <input type="text" ng-model="form.name">
+    </md-input-container>
+    <md-input-container>
+      <label>Mailadres</label>
+      <input type="email" ng-model="form.mail">
+    </md-input-container>
+    <textarea ng-model="form.message" placeholder="Bericht" rows="8"></textarea>
+    <div ng-show="$ctrl.mailStatus" layout="row" style="color: red;">
+      {{$ctrl.mailStatus}}
+    </div>
+    <md-button ng-click="$ctrl.sendForm(form)" style="max-width: 33%" class="btn-green">Verzenden</md-button>
+  </div>
+  <ul flex="30" layout="column">
+    <li>CodeGorilla</li>
+    <li>Baander 8</li>
+    <li>7811 HJ</li>
+    <li>Emmen</li>
+    <li>0591-123123</li>
+  </ul>
+</section>

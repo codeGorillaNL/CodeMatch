@@ -1,0 +1,17 @@
+<div class="login-form" layout="row" layout-align="center center">
+  <div layout="column" layout-align="center stretch" style="width: 33vw">
+  <div flex="10" layout="row" layout-align="center start">
+    <md-icon style="font-size: 3rem; height: 3rem">https</md-icon>
+  <!-- <p>Inloggen.</p> -->
+  </div>
+  <md-input-container>
+    <label>Mailadres</label>
+    <input type="email" ng-model="vm.user.email">
+  </md-input-container>
+    <md-input-container>
+      <label>Wachtwoord</label>
+      <input type="password" ng-model="vm.user.password">
+    </md-input-container>
+    <md-button class="btn-green" ng-click="vm.login()">Verzenden</md-button>
+  </div>
+</div>
