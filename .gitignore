@@ -1,10 +1,10 @@
+.DS_Store
 node_modules
 public
 .tmp
 .sass-cache
 .idea
 client/bower_components
-client/assets/fonts
 dist
 /server/config/local.env.js
 npm-debug.log
