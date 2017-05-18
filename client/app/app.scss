@@ -39,6 +39,7 @@ navbar {
   z-index: 999;
   transition: all .4s ease-in-out;
 
+
   ng-md-icon {
     display: flex;
     width: 30px;
@@ -78,6 +79,14 @@ navbar {
   .socialmedia {
   	height: 4vh;
     width: auto;
+  }
+
+  .blue-button {
+    width: 20vw;
+  }
+
+  ul {
+    list-style-type: none;
   }
   //
   // .linkbutton {
