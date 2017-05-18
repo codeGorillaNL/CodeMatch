@@ -18,7 +18,7 @@ class NavbarController {
   {
     'title': 'Contact',
     'state': 'contact'
-  }
+  },
   ];
 
   isCollapsed = false;
