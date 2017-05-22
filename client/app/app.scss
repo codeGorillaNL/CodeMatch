@@ -24,11 +24,34 @@ $red: #E25054;
 * {
   box-sizing: border-box;
 }
+//
+// .angular-google-map {
+//   display: block;
+//   margin-top: 10vh;
+//   margin-right: 50vw;
+// }
+
+// #map, .angular-google-map-container {
+//   display: block;
+//   height: 40vh;
+//   width: 50vw;
+//   margin-right: 20vw;
+
+
+}
 
 section {
   height: 100vh;
   width: 100vw;
 }
+
+// .gorillaMap {
+//   margin-left: 50vw;
+//   margin-right: 90vw;
+//   float: center;
+//   position: absolute;
+//   // margin-left: 50vw;
+// }
 
 navbar {
   position: absolute;
@@ -76,18 +99,44 @@ navbar {
     background-color: $red;
   }
 
-  .socialmedia {
-  	height: 4vh;
-    width: auto;
-  }
+
+    .socialButton {
+      margin-top: 15px;
+      margin-right: 15px;
+      height: 3vh;
+      width: auto;
+    }
+
+.socialWrapper {
+  margin-left: 50vw;
+  margin-right: 20vw;
+  position: absolute;
+}
+
+.gorillaMap {
+  position: absolute;
+  margin-right: 10vw;
+  width: 30%;
+  height: 100%;
+}
 
   .blue-button {
-    width: 20vw;
+    width: 10vw;
   }
 
   ul {
     list-style-type: none;
   }
+
+
+  //
+  // .testImage {
+  //   margin-top: 20vh;
+  //   margin-right: 70vw;
+  //   height: 30%;
+  // }
+
+
   //
   // .linkbutton {
   //     background-color: $blue;
