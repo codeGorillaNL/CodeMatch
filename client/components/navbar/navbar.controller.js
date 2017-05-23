@@ -30,13 +30,14 @@ class NavbarController {
     nav.map = {
         center: {
           latitude: 52.781843,
-          longitude: 6.895173
+          longitude: 6.895173,
+          icon: {'/assets/images/codegorilla_icon.png'},
+          position: {latitude: 52.781843, longitude: 6.895173}
         },
         zoom: 16
       }
     nav.options = {
-      icon: {'/assets/images/codegorilla_icon.png'},
-      position: {latitude: 52.781843, longitude: 6.895173},
+
       styles: [
         // geometry is colored CodeGorilla blue
         {elementType: 'geometry', stylers: [{color: '#77C4D7'}]},
