@@ -1,13 +1,17 @@
 'use strict';
 
 class LoginController {
-  constructor(Auth, $state) {
+  constructor(Auth, $state, $rootScope) {
     this.user = {};
     this.errors = {};
     this.submitted = false;
 
     this.Auth = Auth;
     this.$state = $state;
+
+    $rootScope.$on('event:social-sign-in-success', function(event, userDetails) {
+        console.log(userDetails);
+    });
   }
 
   login() {

@@ -6,11 +6,8 @@ angular.module('codeGorillaApp', ['codeGorillaApp.auth', 'codeGorillaApp.admin',
     'socialLogin'
     ])
 
-.config(function($urlRouterProvider, $locationProvider) {
+.config(function($urlRouterProvider, $locationProvider, socialProvider) {
     $urlRouterProvider.otherwise('/');
     $locationProvider.html5Mode(true);
-    });
-
-app.config(function(socialProvider){
     socialProvider.setLinkedInKey("867xyimscli5cm");
     });
