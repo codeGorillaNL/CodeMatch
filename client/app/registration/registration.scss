@@ -1,0 +1,58 @@
+.tussenpagina {
+    background-color: $red;
+    background-image:url('/assets/images/matrix-01.png');
+    background-size: 1920px auto;
+    background-blend-mode: soft-light;
+    height: 100vh;
+    width: 100vw;
+    padding: 0%;
+    position: fixed;
+}
+
+a:link {
+    color: #FFFFFF;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #FFFFFF;
+}
+
+.student {
+    margin-bottom: 8vh;
+    margin-right: 4vw;
+}
+
+.cg-lookwerkgever {
+    margin-left: 20px;
+    margin-top: 4px;
+    height: 66.66%;
+    width: 66.66%;
+}
+
+.cg-lookstudent {
+    margin-top: 35px;
+    margin-right: 38vw;
+    height: 50%;
+    width: 50%;
+}
+
+.responsive {
+    margin-left: 225px;
+    padding: 0 0px;
+    width: 100%;
+}
+
+@media only screen and (max-width: 700px){
+    .responsive {
+        width: 49.99%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .responsive {
+        width: 100%;
+    }
+}
