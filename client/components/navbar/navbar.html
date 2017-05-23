@@ -22,7 +22,13 @@
 
 
     <ui-gmap-google-map
-    center='nav.map.center' zoom='nav.map.zoom' options='nav.options'>
+        center='nav.map.center' zoom='nav.map.zoom' options='nav.options'>
+        <ui-gmap-marker
+          idKey='nav.marker.id'
+          coords='nav.marker.coords'
+          options='nav.marker.options'
+          >
+        </ui-gmap-marker>
     </ui-gmap-google-map>
 
     <p class="gorillaAddress">CodeGorilla</br>Baander 8</br>7811 HJ Emmen</br>

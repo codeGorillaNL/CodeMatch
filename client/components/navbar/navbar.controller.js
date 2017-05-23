@@ -27,107 +27,114 @@ class NavbarController {
 
   constructor(Auth, $rootScope) {
     var nav = this;
+
     nav.map = {
-        center: {
+      center: {
           latitude: 52.781843,
           longitude: 6.895173,
-        icon: {'/assets/images/codegorilla_icon.png'},
-          position: {latitude: 52.781843, longitude: 6.895173}
-        },
-        zoom: 16
-      }
-    nav.options = {
-
-      styles: [
-        // geometry is colored CodeGorilla blue
-        {elementType: 'geometry', stylers: [{color: '#77C4D7'}]},
-        {elementType: 'labels.text.stroke', stylers: [{color: 'white'}]},
-        {elementType: 'labels.text.fill', stylers: [{color: 'white'}]},
-        {
-          featureType: 'administrative.locality',
-          elementType: 'labels.text.fill',
-          stylers: [{color: 'white'}]
-        },
-        {
-          featureType: 'poi',
-          elementType: 'labels.text.fill',
-          stylers: [{color: 'white'}]
-        },
-        {
-          featureType: 'poi.park',
-          elementType: 'geometry',
-          stylers: [{color: '#263c3f'}]
-        },
-        {
-          featureType: 'poi.park',
-          elementType: 'labels.text.fill',
-          stylers: [{color: '#6b9a76'}]
-        },
-        {
-          //roads are colored CodeGorilla red
-          featureType: 'road',
-          elementType: 'geometry',
-          stylers: [{color: '#E25054'}]
-        },
-        {
-          featureType: 'road',
-          elementType: 'geometry.stroke',
-          stylers: [{color: '#212a37'}]
-        },
-        {
-          featureType: 'road',
-          stylers: [{color: 'white'}]
-        },
-        {
-          featureType: 'road.highway',
-          elementType: 'geometry',
-          stylers: [{color: 'white'}]
-        },
-        {
-          featureType: 'road.highway',
-          elementType: 'geometry.stroke',
-          stylers: [{color: '#1f2835'}]
-        },
-        {
-          featureType: 'road.highway',
-          elementType: 'labels.text.fill',
-          stylers: [{color: 'white'}]
-        },
-        {
-          featureType: 'transit',
-          elementType: 'geometry',
-          stylers: [{color: '#2f3948'}]
-        },
-        {
-          featureType: 'transit.station',
-          elementType: 'labels.text.fill',
-          stylers: [{color: '#d59563'}]
-        },
-        {
-          featureType: 'water',
-          elementType: 'geometry',
-          stylers: [{color: '#17263c'}]
-        },
-        {
-          featureType: 'water',
-          elementType: 'labels.text.fill',
-          stylers: [{color: '#515c6d'}]
-        },
-        {
-          featureType: 'water',
-          elementType: 'labels.text.stroke',
-          stylers: [{color: '#17263c'}]
       },
-      {
-        featureType: 'poi.business',
-        stylers: [{color: 'white',}]
-      }
-
-    ]
+      zoom: 16
     }
 
+    nav.options = {
+        styles: [
+          // geometry is colored CodeGorilla blue
+          {elementType: 'geometry', stylers: [{color: '#77C4D7'}]},
+          {elementType: 'labels.text.stroke', stylers: [{color: 'white'}]},
+          {elementType: 'labels.text.fill', stylers: [{color: 'white'}]},
+          {
+            featureType: 'administrative.locality',
+            elementType: 'labels.text.fill',
+            stylers: [{color: 'white'}]
+          },
+          {
+            featureType: 'poi',
+            elementType: 'labels.text.fill',
+            stylers: [{color: 'white'}]
+          },
+          {
+            featureType: 'poi.park',
+            elementType: 'geometry',
+            stylers: [{color: '#263c3f'}]
+          },
+          {
+            featureType: 'poi.park',
+            elementType: 'labels.text.fill',
+            stylers: [{color: '#6b9a76'}]
+          },
+          {
+            //roads are colored CodeGorilla red
+            featureType: 'road',
+            elementType: 'geometry',
+            stylers: [{color: '#E25054'}]
+          },
+          {
+            featureType: 'road',
+            elementType: 'geometry.stroke',
+            stylers: [{color: '#212a37'}]
+          },
+          {
+            featureType: 'road',
+            stylers: [{color: 'white'}]
+          },
+          {
+            featureType: 'road.highway',
+            elementType: 'geometry',
+            stylers: [{color: 'white'}]
+          },
+          {
+            featureType: 'road.highway',
+            elementType: 'geometry.stroke',
+            stylers: [{color: '#1f2835'}]
+          },
+          {
+            featureType: 'road.highway',
+            elementType: 'labels.text.fill',
+            stylers: [{color: 'white'}]
+          },
+          {
+            featureType: 'transit',
+            elementType: 'geometry',
+            stylers: [{color: '#2f3948'}]
+          },
+          {
+            featureType: 'transit.station',
+            elementType: 'labels.text.fill',
+            stylers: [{color: '#d59563'}]
+          },
+          {
+            featureType: 'water',
+            elementType: 'geometry',
+            stylers: [{color: '#17263c'}]
+          },
+          {
+            featureType: 'water',
+            elementType: 'labels.text.fill',
+            stylers: [{color: '#515c6d'}]
+          },
+          {
+            featureType: 'water',
+            elementType: 'labels.text.stroke',
+            stylers: [{color: '#17263c'}]
+        },
+        {
+          featureType: 'poi.business',
+          stylers: [{color: 'white',}]
+        }
+      ]
+    }
 
-
+    nav.marker = {
+      id: 0,
+      coords: {
+        latitude: 52.781843,
+        longitude: 6.895173
+      },
+      options: {
+        draggable: false,
+        icon: '/assets/images/codegorilla_icon.png'
+      }
+    }
 
     nav.isLoggedIn = Auth.isLoggedIn;
     nav.isAdmin = Auth.isAdmin;
