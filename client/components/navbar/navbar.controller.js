@@ -31,7 +31,7 @@ class NavbarController {
         center: {
           latitude: 52.781843,
           longitude: 6.895173,
-          icon: {'/assets/images/codegorilla_icon.png'},
+        icon: {'/assets/images/codegorilla_icon.png'},
           position: {latitude: 52.781843, longitude: 6.895173}
         },
         zoom: 16
