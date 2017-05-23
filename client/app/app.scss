@@ -31,13 +31,12 @@ $red: #E25054;
 //   margin-right: 50vw;
 // }
 
-// #map, .angular-google-map-container {
-//   display: block;
-//   height: 40vh;
-//   width: 50vw;
-//   margin-right: 20vw;
-
-
+ #map, .angular-google-map-container {
+   display: block;
+   height: 40vh;
+   width: 30vw;
+   margin-top: 20vh;
+   margin-left: 10vw;
 }
 
 section {
@@ -45,13 +44,6 @@ section {
   width: 100vw;
 }
 
-// .gorillaMap {
-//   margin-left: 50vw;
-//   margin-right: 90vw;
-//   float: center;
-//   position: absolute;
-//   // margin-left: 50vw;
-// }
 
 navbar {
   position: absolute;
@@ -113,9 +105,10 @@ navbar {
   position: absolute;
 }
 
-.gorillaMap {
+#gorillaMap {
   position: absolute;
-  margin-right: 10vw;
+  margin-right: 5vw;
+  margin-left: 50vw;
   width: 30%;
   height: 100%;
 }
@@ -127,6 +120,7 @@ navbar {
   ul {
     list-style-type: none;
   }
+
 
 
   //
