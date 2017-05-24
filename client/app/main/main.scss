@@ -112,7 +112,8 @@ h3.blue{
   font-family: sans-serif;
   font-size: 1.8rem;
   text-shadow: 1px 1px darken($blue, 30%);
-  color: #ffffff
+  margin-bottom: 10;
+  color: white;
   }
 
 .code1 {
@@ -301,7 +302,8 @@ input-view {
 }
 
 .hmonk {
-margin-top: 44%;
+  margin-top: 18vh;
+  margin-left: 23%;
 
 }
 
@@ -315,6 +317,7 @@ margin-top: 44%;
 }
 
 .hero-gorilla {
+  margin-top: 8vh;
   -webkit-animation: mymove 5s infinite; /* Safari 4.0 - 8.0 */
    -webkit-animation-delay: 2s; /* Safari 4.0 - 8.0 */
    animation: mymove 5s infinite;
@@ -407,8 +410,8 @@ md-tab-content {
   }
 
   .hmonk {
-  margin-top: 45%;
-
+    margin-top: 15vh;
+    margin-left: 28%;
   }
 
   .hero {
@@ -461,6 +464,11 @@ md-tab-content {
   .hero-gorilla {
     width: 35vw;
     top: 50%;
+      }
+
+  .hmonk {
+    margin-top: 32vh;
+    margin-left: 18%;
       }
 
 }
