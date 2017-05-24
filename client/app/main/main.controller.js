@@ -6,6 +6,8 @@
 
     constructor($http) {
       this.$http = $http;
+      moment.locale("nl");
+      this.day = moment("20170418").fromNow();
       // this.awesomeThings = [];
 
     }
