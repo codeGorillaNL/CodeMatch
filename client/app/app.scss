@@ -30,6 +30,8 @@ $red: #E25054;
 //   margin-top: 10vh;
 //   margin-right: 50vw;
 // }
+
+
 .gmnoprint * {
   display: block;
 }
@@ -53,7 +55,7 @@ $red: #E25054;
   margin-left: 70vw;
 }
 
-.gorillaCall {
+ .gorillaCall {
   position: absolute;
   margin-top: 80vh;
   margin-left: 71vw;
@@ -65,7 +67,6 @@ section {
   height: 100vh;
   width: 100vw;
 }
-
 
 navbar {
   position: absolute;
@@ -114,19 +115,19 @@ navbar {
   }
 
 
-    .socialButton {
-      height: 3vh;
-      width: auto;
-    }
+  .socialButton {
+    height: 3vh;
+    width: auto;
+  }
 
-    .socialWrapper {
-      margin-top: 15px;
-      margin-bottom: auto;
-      margin-left: 87vw;
-      margin-right: 3vw;
-      display: block;
-      position: absolute;
-    }
+  .socialWrapper {
+    margin-top: 15px;
+    margin-bottom: auto;
+    margin-left: 87vw;
+    margin-right: 3vw;
+    display: block;
+    position: absolute;
+  }
 
 
 
@@ -138,6 +139,29 @@ navbar {
     list-style-type: none;
   }
 
+
+ li {
+			font-size: 1.8rem;
+		}
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}
+
+// Component styles are injected through grunt
+/* inject:scss */
+@import 'admin/admin';
+@import 'contact/contact';
+@import 'main/main';
+@import 'profile/profile';
+@import 'success/success';
+@import 'timeline/timeline';
+@import '../components/footer/footer';
+/* endinject */
 
 
   //
@@ -174,25 +198,3 @@ navbar {
 	// 	padding: 0;
   //
   //
-		li {
-			font-size: 1.8rem;
-		}
-}
-
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
-}
-
-// Component styles are injected through grunt
-/* inject:scss */
-@import 'admin/admin';
-@import 'contact/contact';
-@import 'main/main';
-@import 'profile/profile';
-@import 'success/success';
-@import 'timeline/timeline';
-@import '../components/footer/footer';
-/* endinject */
