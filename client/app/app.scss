@@ -39,11 +39,11 @@ $red: #E25054;
 }
 
  #map, .angular-google-map-container {
-   display: block;
    height: 40vh;
    width: 32vw;
    margin-top: 20vh;
    margin-left: 10vw;
+   margin-right: 10vw;
 }
 
  .gorillaAddress {
@@ -55,8 +55,8 @@ $red: #E25054;
 
 .gorillaCall {
   position: absolute;
-  margin-top: 75vh;
-  margin-left: 69vw;
+  margin-top: 80vh;
+  margin-left: 70vw;
   height: 10px;
   width: 10px;
 }
@@ -115,25 +115,20 @@ navbar {
 
 
     .socialButton {
-      margin-top: 30px;
-      margin-right: 30px;
       height: 3vh;
       width: auto;
     }
 
-.socialWrapper {
-  margin-left: 50vw;
-  margin-right: 30vw;
-  position: absolute;
-}
+    .socialWrapper {
+      margin-top: 15px;
+      margin-bottom: auto;
+      margin-left: 88vw;
+      margin-right: 5vw;
+      display: block;
+      position: absolute;
+    }
 
-// #gorillaMap {
-//   position: absolute;
-//   margin-right: 5vw;
-//   margin-left: 50vw;
-//   width: 30%;
-//   height: 100%;
-// }
+
 
   .blue-button {
     width: 10vw;

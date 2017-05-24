@@ -33,24 +33,19 @@ class NavbarController {
           latitude: 52.781843,
           longitude: 6.895173,
       },
-      zoom: 16
+      zoom: 17
     }
 
     nav.options = {
         styles: [
           // geometry is colored CodeGorilla blue
           {elementType: 'geometry', stylers: [{color: '#77C4D7'}]},
-          {elementType: 'labels.text.stroke', stylers: [{color: 'white'}]},
-          {elementType: 'labels.text.fill', stylers: [{color: 'white'}]},
+          {elementType: 'labels.text.stroke', stylers: [{color: '#000'}]},
+          {elementType: 'labels.text.fill', stylers: [{visibilty: 'off'}]},
           {
             featureType: 'administrative.locality',
-            elementType: 'labels.text.fill',
-            stylers: [{color: 'black'}]
-          },
-          {
-            featureType: 'poi',
-            elementType: 'labels.text.fill',
-            stylers: [{color: 'white'}]
+            // elementType: 'labels.text.fill',
+            stylers: [{visibilty: 'off'}]
           },
           {
             featureType: 'poi.park',
@@ -71,7 +66,7 @@ class NavbarController {
           {
             featureType: 'road',
             elementType: 'geometry.stroke',
-            stylers: [{color: '#212a37'}]
+            stylers: [{color: '#FFF'}]
           },
           {
             featureType: 'road',
@@ -119,10 +114,11 @@ class NavbarController {
         },
         {
           featureType: 'poi.business',
-          stylers: [{color: 'white',}]
+          stylers: [{visibilty: 'off'}]
         }
       ]
     }
+
 
     nav.marker = {
       id: 0,

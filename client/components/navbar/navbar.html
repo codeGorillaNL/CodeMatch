@@ -1,4 +1,5 @@
 
+                 <!-- Menu-buttons -->
 <nav ng-class="{open: nav.isCollapsed }" layout="column">
    <div layout="row" flex="100" layout-fill>
    <ul class="menu" class="linkbutton" class="test" layout="column" flex="50" layout-align="space-around center">
@@ -7,8 +8,8 @@
      </li>
    </ul>
 
-     <!-- social media buttons -->
-   <div class="socialWrapper" layout="row" flex="50" layout-fill layout-align="end start">
+                     <!-- social media buttons -->
+   <div class="socialWrapper" layout="row" layout-xs="column" flex="50" layout-fill layout-align="end start">
 
      <a ng-href="https://www.facebook.com/CodeGorillaNL/" target="_blank">
        <img class="socialButton" src="../socialmedia/facebook.png"/></a>
@@ -20,7 +21,7 @@
        <img class="socialButton" src="../socialmedia/twitter.png"/></a>
    </div>
 
-
+    <!-- google-maps -->
     <ui-gmap-google-map
         center='nav.map.center' zoom='nav.map.zoom' options='nav.options'>
         <ui-gmap-marker
