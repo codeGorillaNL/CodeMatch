@@ -45,7 +45,7 @@ class NavbarController {
           {
             featureType: 'administrative.locality',
             elementType: 'labels.text.fill',
-            stylers: [{color: 'white'}]
+            stylers: [{color: 'black'}]
           },
           {
             featureType: 'poi',
@@ -75,12 +75,12 @@ class NavbarController {
           },
           {
             featureType: 'road',
-            stylers: [{color: 'white'}]
+            stylers: [{color: 'black'}]
           },
           {
             featureType: 'road.highway',
             elementType: 'geometry',
-            stylers: [{color: 'white'}]
+            stylers: [{color: 'black'}]
           },
           {
             featureType: 'road.highway',
