@@ -9,7 +9,7 @@
    </ul>
 
                      <!-- social media buttons -->
-   <div class="socialWrapper" layout="row" layout-xs="column" flex="50" layout-fill layout-align="end start">
+   <div class="socialWrapper" flex-gt-sm="50" class="red text" flex="auto" layout="column" flex="100">
 
      <a ng-href="https://www.facebook.com/CodeGorillaNL/" target="_blank">
        <img class="socialButton" src="../socialmedia/facebook.png"/></a>
@@ -22,7 +22,8 @@
    </div>
 
     <!-- google-maps -->
-    <ui-gmap-google-map
+
+    <ui-gmap-google-map hide-xs
         center='nav.map.center' zoom='nav.map.zoom' options='nav.options'>
         <ui-gmap-marker
           idKey='nav.marker.id'
@@ -35,7 +36,7 @@
     <p class="gorillaAddress">CodeGorilla</br>Baander 8</br>7811 HJ Emmen</br>
       <a href="tel:+31850608960">085-0608960</a></p>
 <a href="tel:+31850608960" class="gorillaCall">
-    <img src="/assets/images/phone.png" height="1000%" width="1000%"> </img>
+    <img src="/assets/images/phone.png" height="800%" width="800%"> </img>
   </a>
 
 
