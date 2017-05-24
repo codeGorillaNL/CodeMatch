@@ -12,6 +12,16 @@
 
     }
 
+    $(document).ready(function () {
+          setTimeout(function (10) {
+            $('.load-delay').each(function () {
+                var imagex = $(this);
+                var imgOriginal = imagex.data('original');
+                $(imagex).attr('src', imgOriginal);
+            });
+        }, 3000);
+    });
+
     // $onInit() {
     //   this.$http.get('/api/things')
     //     .then(response => {

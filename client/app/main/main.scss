@@ -99,8 +99,8 @@ h3.blue{
 }
 
 .video-row {
-  height: 59vh;
-  max-height: 59vh;
+  height: 64vh;
+  max-height: 64vh;
   background-color: black;
 
   video {
@@ -300,6 +300,11 @@ input-view {
   padding-top: 0;
 }
 
+.hmonk {
+margin-top: 44%;
+
+}
+
 .test {
   text-align: left;
   line-height: 0.1rem;
@@ -307,6 +312,13 @@ input-view {
 
 .contact-form {
   max-width: 50%;
+}
+
+.hero-gorilla {
+  -webkit-animation: mymove 5s infinite; /* Safari 4.0 - 8.0 */
+   -webkit-animation-delay: 2s; /* Safari 4.0 - 8.0 */
+   animation: mymove 5s infinite;
+   animation-delay: 2s;
 }
 
 textarea {
@@ -394,6 +406,11 @@ md-tab-content {
     padding: 5%;
   }
 
+  .hmonk {
+  margin-top: 45%;
+
+  }
+
   .hero {
     height: auto;
 
@@ -439,8 +456,13 @@ md-tab-content {
 
       video {
         height: auto;
-      }
+    }
   }
+  .hero-gorilla {
+    width: 35vw;
+    top: 50%;
+      }
+
 }
 //
 // @media only screen
