@@ -63,6 +63,37 @@ h3.blue{
   text-decoration: none;
 }
 
+#linkedin_button{
+    background: url(../../assets/images/Sign-In-Small---Default.png) no-repeat;
+    background-size: contain;
+    background-position: center;
+    cursor: pointer;
+    border: none;
+    width: 290px;
+    height: 80px;
+    position: relative;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+}
+
+#linkedin_button:hover{
+    background: url(../../assets/images/Sign-In-Small---Hover.png) no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+#linkedin_button:active{
+    background: url(../../assets/images/Sign-In-Small---Active.png) no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+#linkedin{
+    margin-top: 15px;
+    position: center;
+}
+
 .red {
   background-color: $red;
 }
