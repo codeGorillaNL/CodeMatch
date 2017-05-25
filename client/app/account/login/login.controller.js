@@ -1,13 +1,29 @@
 'use strict';
 
 class LoginController {
-  constructor(Auth, $state) {
-    this.user = {};
+  constructor(Auth, $state, $rootScope, $http) {
+    this.user = {
+        Bedrijf: {}
+    };
     this.errors = {};
     this.submitted = false;
 
     this.Auth = Auth;
     this.$state = $state;
+
+    var vm = this;
+
+    $rootScope.$on('event:social-sign-in-success', function(event, userDetails) {
+        userDetails.positions.values.forEach(function(value) {
+            if (value.isCurrent == true && angular.equals({}, vm.user.Bedrijf)) {
+                vm.user.Bedrijf = value;
+            }
+        });
+        $http.get("https://api.linkedin.com/v1/companies/" + vm.user.Bedrijf.id + "?format=json")
+            .then(function(res){
+                console.log(res.data);
+            })
+    });
   }
 
   login() {
