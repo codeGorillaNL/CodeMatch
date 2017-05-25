@@ -1,0 +1,57 @@
+
+                 <!-- Menu-buttons -->
+<nav ng-class="{open: nav.isCollapsed }" layout="column">
+   <div layout="row" flex="100" layout-fill>
+   <ul class="menu" class="linkbutton" class="test" layout="column" flex="50" layout-align="space-around center">
+     <li flex="10" ng-repeat="item in nav.menu" ui-sref="{{item.state}}">
+       <md-button class="blue-button">{{item.title}}</md-button>
+     </li>
+   </ul>
+
+                     <!-- social media buttons -->
+   <div class="socialWrapper" flex-gt-sm="50" class="red text" flex="auto" layout="column" flex="100">
+
+     <a ng-href="https://www.facebook.com/CodeGorillaNL/" target="_blank">
+       <img class="socialButton" src="../socialmedia/facebook.png"/></a>
+     <a ng-href="https://www.linkedin.com/company-beta/17908501/" target="_blank">
+       <img class="socialButton" src="../socialmedia/linkedin.png"/></a>
+     <a ng-href="https://www.youtube.com/channel/UCs1QNZLADeK7EIQtfzQkgMw" target="_blank">
+       <img class="socialButton" src="../socialmedia/youtube.png"/></a>
+     <a ng-href="https://twitter.com/search?q=codegorilla&src=typd&lang=nl" target="_blank">
+       <img class="socialButton" src="../socialmedia/twitter.png"/></a>
+   </div>
+
+    <!-- google-maps (hidden on smaller devices) -->
+
+    <ui-gmap-google-map hide-xs
+        center='nav.map.center' zoom='nav.map.zoom' options='nav.options'>
+        <ui-gmap-marker
+          idKey='nav.marker.id'
+          coords='nav.marker.coords'
+          options='nav.marker.options'
+          >
+        </ui-gmap-marker>
+    </ui-gmap-google-map>
+
+<!--The address is clickable on smaller devices and points to a Google Map on the CodeGorilla Location-->
+
+    <p class="gorillaAddressShown">CodeGorilla</br>Baander 8</br>7811 HJ Emmen</br>
+      <a href="tel:+31850608960">085-0608960</a>
+    </p>
+
+    <p class="gorillaAddressHidden">
+      <a href="http://www.google.com/maps/place/52.781843,6.895173">
+        CodeGorilla</br>Baander 8</br>7811 HJ Emmen</br> </a>
+      <a href="tel:+31850608960">085-0608960</a>
+    </p>
+
+
+    <a href="tel:+31850608960" class="gorillaCall">
+    <img src="/assets/images/phone.png" height="800%" width="800%"> </img>
+    </a>
+
+
+
+</nav>
+
+<ng-md-icon icon="{{nav.clickIcon}}" ng-click="nav.expandMenu()" size="36"></ng-md-icon>
