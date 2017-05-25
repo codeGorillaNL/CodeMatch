@@ -48,11 +48,43 @@ $red: #E25054;
    margin-right: 10vw;
 }
 
- .gorillaAddress {
+ .gorillaAddressShown {
   font-weight: bold;
   position: absolute;
   margin-top: 65vh;
   margin-left: 70vw;
+}
+
+.gorillaAddressHidden {
+ font-weight: bold;
+ position: absolute;
+ margin-top: 65vh;
+ margin-left: 70vw;
+}
+//
+// @media (min-width: 599px) {
+//     .hideLink {
+//     display: none;
+//     }
+//
+//   }
+//
+// @media (max-width: 599px) {
+//   .showLink {
+//     display: none;
+//   }
+// }
+
+@media (min-width: 599px) {
+  .gorillaAddressHidden {
+    display: none;
+  }
+}
+
+@media (max-width: 599px) {
+  .gorillaAddressShown {
+    display: none;
+  }
 }
 
  .gorillaCall {
