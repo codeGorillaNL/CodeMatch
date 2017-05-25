@@ -6,6 +6,5 @@ angular.module('codeGorillaApp', ['codeGorillaApp.auth', 'codeGorillaApp.admin',
   ])
   .config(function($urlRouterProvider, $locationProvider) {
     $urlRouterProvider.otherwise('/');
-
     $locationProvider.html5Mode(true);
-  });
+    });

@@ -4,6 +4,37 @@ html, body {
   font-family: 'Regular';
 }
 
+.tosti {
+font-family: sans-serif;
+font-size: 1.2em;
+text-shadow: 1px 1px darken($red, 30%);
+color: #ffffff
+}
+
+.brood {
+font-family: sans-serif;
+font-size: 1.2rem;
+text-shadow: 1px 1px darken($green, 30%);
+color: #ffffff
+}
+
+.stokbrood {
+font-family: sans-serif;
+font-size: 1.2rem;
+text-shadow: 1px 1px darken($blue, 30%);
+color: #ffffff
+}
+
+.stokbrood1 {
+border-top-style: solid;
+border-width: 2px;
+border-color: $blue;
+font-family: sans-serif;
+font-size: 0.9rem;
+text-shadow: 1px 1px darken($blue, 30%);
+color: #ffffff
+}
+
 :focus {
   outline: 0;
 }
@@ -15,7 +46,7 @@ div {
 }
 
 h3 {
-  font-size: 1.4em;
+  font-size: 1.8em;
 }
 
 h3.red{
@@ -30,37 +61,54 @@ h3.blue{
   @include long-shadow(text, darken($blue, 5), 15, false, false, right);
 }
 
-.md-button.red-button {
+.md-button.test {
     background-color: $red;
     border: 4px solid $red;
-    border-radius: 5px;
+    border-radius:5px;
     color: #FFF;
     @include long-shadow(text, darken($red, 5), 20, false, false, right);
 }
 
-.md-button.red-button:hover {
+.md-button.test:hover {
   background-color: lighten($red, 3%);
   @include long-shadow(text, darken($red, 5), 5, false, false, right);
-  transform: scale(1.05);
-}
-
-.md-button.blue-button {
-    background-color: $blue;
-    border: 4px solid $blue;
-    border-radius: 5px;
-    color: #FFF;
-    @include long-shadow(text, darken($blue, 5), 20, false, false, right);
-}
-
-.md-button.blue-button:hover {
-  background-color: lighten($blue, 3%);
-  @include long-shadow(text, darken($blue, 5), 5, false, false, right);
   transform: scale(1.05);
 }
 
 .md-button a {
   color: #000;
   text-decoration: none;
+}
+
+#linkedin_button{
+    background: url(../../assets/images/Sign-In-Small---Default.png) no-repeat;
+    background-size: contain;
+    background-position: center;
+    cursor: pointer;
+    border: none;
+    width: 290px;
+    height: 80px;
+    position: relative;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+}
+
+#linkedin_button:hover{
+    background: url(../../assets/images/Sign-In-Small---Hover.png) no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+#linkedin_button:active{
+    background: url(../../assets/images/Sign-In-Small---Active.png) no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+#linkedin{
+    margin-top: 15px;
+    position: center;
 }
 
 .red {
@@ -82,35 +130,43 @@ h3.blue{
 
 .startpage {
   background-color: $blue;
+  background-image:url(/assets/images/matrix-01.png);
+  background-size: 1920px auto;
+  background-blend-mode: soft-light;
   height: 100vh;
   width: 100vw;
   padding: 10%;
   position: relative;
+}
 
-  img {
-    // transform: translateX(-3vw);
+.video-row {
+  height: 64vh;
+  max-height: 64vh;
+  background-color: black;
+
+  video {
+    height: 100%;
   }
 }
 
-.hero {
-  height: 40vh;
-  width: auto;
-
-  p {
-    margin: 0;
+.code{
+  font-family: sans-serif;
+  font-size: 1.8rem;
+  text-shadow: 1px 1px darken($blue, 30%);
+  margin-bottom: 10;
+  color: white;
   }
 
+.code1 {
+    font-family: source code pro;
+    color: black;
+    font-size: 2.5em;
+    font-weight: bold;
 }
 
-.hero-gorilla {
-  margin: auto;
-  width: 25vw;
-  height: auto;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+span {
+  color: white;
+  font-weight: normal;
 }
 
 .text {
@@ -194,12 +250,13 @@ h3.blue{
   margin-top: auto;
 }
 
-.foto {
-  max-width: 60%;
-  align-self: center;
-  flex: 0 0 100%;
-  // transform: translateX(-3vw);
-}
+
+// img {
+//   max-width: 60%;
+//   align-self: center;
+//   flex: 0 0 100%;
+//   // transform: translateX(-3vw);
+// }
 
 h1 {
   font-family: Bold;
@@ -287,8 +344,31 @@ input-view {
   padding-top: 0;
 }
 
+.hmonk {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  opacity: 0.1;
+
+}
+
+.test {
+  text-align: left;
+  line-height: 0.1rem;
+}
+
 .contact-form {
   max-width: 50%;
+}
+
+.hero-gorilla {
+  margin-top: 8vh;
+  -webkit-animation: mymove 5s infinite; /* Safari 4.0 - 8.0 */
+   -webkit-animation-delay: 2s; /* Safari 4.0 - 8.0 */
+   animation: mymove 5s infinite;
+   animation-delay: 2s;
 }
 
 textarea {
@@ -356,13 +436,32 @@ md-tab-content {
   right: 1em;
 }
 
+@media (max-width: 600px) {
 
+  .video-row {
+    max-height: initial;
+    height: auto;
 
+    video {
+      height: auto;
+    }
 
-@media (max-width: 599px) {
+    .green-text {
+    max-height: initial;
+    height: Auto;
+    }
+  }
 
   .startpage {
     padding: 5%;
+  }
+
+  .hmonk {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
   }
 
   .hero {
@@ -402,42 +501,61 @@ md-tab-content {
 
 }
 
-@media only screen
-  and (min-device-width: 375px)
-  and (max-device-width: 768px)
-  and (orientation: landscape)
-  {
+@media (max-width: 769px) and (min-width: 600px) {
 
-    .hero {
-      height: 80vh;
+  .video-row {
+    max-height: initial;
+    height: auto;
+
+      video {
+        height: auto;
     }
 
-    .hero-gorilla {
-      left: 50%;
-    }
+  }
+  .hero-gorilla {
+    width: 35vw;
+    top: 50%;
+      }
+
+  .hmonk {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+      }
 
 }
-
+//
 // @media only screen
-// and (max-device-width: 599px) {
-//     .gorillaAddress
-//       display: none;
+//   and (min-device-width: 375px)
+//   and (max-device-width: 768px)
+//   and (orientation: landscape)
+//   {
+//
+//     .hero {
+//       height: 80vh;
+//     }
+//
+//     .hero-gorilla {
+//       left: 50%;
+//     }
+//
 // }
-
-
-@media only screen
-  and (orientation: landscape)
-  and (max-device-width: 768px)
-  and (min-resolution: 192dpi) {
-
-      .hero {
-        height: 100vh;
-      }
-
-      .hero-gorilla {
-        left: 70%;
-      }
-    }
+//
+// @media only screen
+//   and (orientation: landscape)
+//   and (max-device-width: 768px)
+//   and (min-resolution: 192dpi) {
+//
+//       .hero {
+//         height: 100vh;
+//       }
+//
+//       .hero-gorilla {
+//         left: 70%;
+//       }
+//     }
 
 
 .jn-list {

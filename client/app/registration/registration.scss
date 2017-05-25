@@ -1,0 +1,39 @@
+registration {
+  background-color: $red;
+  background-image:url('/assets/images/matrix-01.png');
+  background-size: 1920px auto;
+  background-blend-mode: soft-light;
+  width: 100vw;
+  height: 100vh;
+}
+
+.tussenpagina {
+  height: 50vh;
+  margin-top: 25vh;
+
+  img {
+    max-width: 50%;
+    align-self: center;
+    cursor: pointer;
+  }
+
+  h3 {
+    cursor: pointer;
+    color: #FFFFFF;
+    text-shadow: 1px 1px darken($blue, 30%);
+  }
+}
+
+@media (max-width: 600px) {
+  .tussenpagina {
+
+    img {
+      max-width: 35%;
+    }
+
+    h3 {
+      font-size: 1.2em;
+    }
+  }
+
+}

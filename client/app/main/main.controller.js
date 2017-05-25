@@ -4,18 +4,23 @@
 
   class MainController {
 
-    constructor($http) {
+    constructor($http, $timeout) {
       this.$http = $http;
-      // this.awesomeThings = [];
+      this.$timeout = $timeout;
+      moment.locale("nl");
+      this.day = moment("20170418").fromNow();
+
+      var vm = this;
+      vm.image = '/assets/images/aap.png';
+
+      vm.$timeout(function () {
+        vm.image = '/assets/images/aap.gif'
+      }, 800);
 
     }
 
-    // $onInit() {
-    //   this.$http.get('/api/things')
-    //     .then(response => {
-    //       this.awesomeThings = response.data;
-    //     });
-    // }
+    $onInit() {
+    }
 
     sendForm(form) {
       console.log(form);
