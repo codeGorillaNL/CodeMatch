@@ -24,6 +24,12 @@ angular.module('codeGorillaApp')
         controller: 'SignupController',
         controllerAs: 'vm'
       })
+      .state('signupwg', {
+        url: '/signupwg',
+        templateUrl: 'app/account/signupwg/signupwg.html',
+        controller: 'SignupwgController',
+        controllerAs: 'vm'
+      })
       .state('settings', {
         url: '/settings',
         templateUrl: 'app/account/settings/settings.html',

@@ -12,13 +12,13 @@ class NavbarController {
     'state': 'login'
   },
   {
-    'title': 'Aanmelden',
-    'state': 'signup'
+    'title': 'Registratie',
+    'state': 'registration'
   },
   {
     'title': 'Contact',
     'state': 'contact'
-  },
+  }
   ];
 
   isCollapsed = false;

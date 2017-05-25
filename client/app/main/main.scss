@@ -30,31 +30,16 @@ h3.blue{
   @include long-shadow(text, darken($blue, 5), 15, false, false, right);
 }
 
-.md-button.red-button {
+.md-button.test {
     background-color: $red;
     border: 4px solid $red;
-    border-radius: 5px;
     color: #FFF;
     @include long-shadow(text, darken($red, 5), 20, false, false, right);
 }
 
-.md-button.red-button:hover {
+.md-button.test:hover {
   background-color: lighten($red, 3%);
   @include long-shadow(text, darken($red, 5), 5, false, false, right);
-  transform: scale(1.05);
-}
-
-.md-button.blue-button {
-    background-color: $blue;
-    border: 4px solid $blue;
-    border-radius: 5px;
-    color: #FFF;
-    @include long-shadow(text, darken($blue, 5), 20, false, false, right);
-}
-
-.md-button.blue-button:hover {
-  background-color: lighten($blue, 3%);
-  @include long-shadow(text, darken($blue, 5), 5, false, false, right);
   transform: scale(1.05);
 }
 
@@ -194,12 +179,12 @@ h3.blue{
   margin-top: auto;
 }
 
-img {
-  max-width: 60%;
-  align-self: center;
-  flex: 0 0 100%;
-  // transform: translateX(-3vw);
-}
+// img {
+//   max-width: 60%;
+//   align-self: center;
+//   flex: 0 0 100%;
+//   // transform: translateX(-3vw);
+// }
 
 h1 {
   font-family: Bold;
