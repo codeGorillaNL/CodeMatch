@@ -1,6 +1,7 @@
 $fa-font-path: "../bower_components/font-awesome/fonts";
 
 @import '../bower_components/font-awesome/scss/font-awesome';
+
 @import '../assets/mixins/_shadow.scss';
 
 @font-face {
@@ -16,10 +17,6 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
 $blue: #77C4D7;
 $green: #91C24D;
 $red: #E25054;
-
-/**
- * App-wide Styles
- */
 
 * {
   box-sizing: border-box;
