@@ -1,0 +1,41 @@
+profile {
+  background-color: $blue;
+  padding-top: 10vh;
+
+  .card {
+
+    margin: 2.5%;
+    background-color: $red;
+    height: 30vw;
+    position: relative;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+
+    h5 {
+      position: relative;
+      top: 40%;
+      margin: 0;
+      z-index: 1;
+      color: #fff;
+      text-align: right;
+      padding-right: 1em;
+    }
+
+    img {
+      max-width: 20vw;
+      max-height: 13.3vw;
+      flex: 0 1 100%;
+    }
+
+    .card-content {
+      padding: 1em;
+      margin-top: 60%;
+      overflow: hidden;
+    }
+
+    .card-content h4 {
+      margin: 0;
+    }
+  }
+
+}

@@ -4,30 +4,23 @@
 
   class MainController {
 
-    constructor($http) {
+    constructor($http, $timeout) {
       this.$http = $http;
+      this.$timeout = $timeout;
       moment.locale("nl");
       this.day = moment("20170418").fromNow();
-      // this.awesomeThings = [];
+
+      var vm = this;
+      vm.image = '/assets/images/aap.png';
+
+      vm.$timeout(function () {
+        vm.image = '/assets/images/aap.gif'
+      }, 800);
 
     }
 
-    $(document).ready(function () {
-          setTimeout(function (10) {
-            $('.load-delay').each(function () {
-                var imagex = $(this);
-                var imgOriginal = imagex.data('original');
-                $(imagex).attr('src', imgOriginal);
-            });
-        }, 3000);
-    });
-
-    // $onInit() {
-    //   this.$http.get('/api/things')
-    //     .then(response => {
-    //       this.awesomeThings = response.data;
-    //     });
-    // }
+    $onInit() {
+    }
 
     sendForm(form) {
       console.log(form);

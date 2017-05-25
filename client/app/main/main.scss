@@ -25,6 +25,16 @@ text-shadow: 1px 1px darken($blue, 30%);
 color: #ffffff
 }
 
+.stokbrood1 {
+border-top-style: solid;
+border-width: 2px;
+border-color: $blue;
+font-family: sans-serif;
+font-size: 0.9rem;
+text-shadow: 1px 1px darken($blue, 30%);
+color: #ffffff
+}
+
 :focus {
   outline: 0;
 }
@@ -302,8 +312,12 @@ input-view {
 }
 
 .hmonk {
-  margin-top: 18vh;
-  margin-left: 23%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  opacity: 0.1;
 
 }
 
@@ -410,8 +424,11 @@ md-tab-content {
   }
 
   .hmonk {
-    margin-top: 15vh;
-    margin-left: 28%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
   }
 
   .hero {
@@ -467,8 +484,11 @@ md-tab-content {
       }
 
   .hmonk {
-    margin-top: 32vh;
-    margin-left: 18%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
       }
 
 }
