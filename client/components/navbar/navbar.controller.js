@@ -16,6 +16,10 @@ class NavbarController {
     'state': 'signup'
   },
   {
+    'title': 'Profielen',
+    'state': 'Profielen'
+  },
+  {
     'title': 'Contact',
     'state': 'contact'
   },

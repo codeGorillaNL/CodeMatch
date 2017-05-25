@@ -42,21 +42,21 @@
           <md-input-container flex="100" layout-fill>
             <label>Mailadres</label>
             <input type="email" ng-model="user.Mailadres" required>
-          </md-input-container>    
+          </md-input-container>
         </div>
         <div flex="100" flex-gt-sm="50" layout="row" layout-wrap layout-padding>
           <md-input-container flex="100">
             <label>Geboortedatum</label>
             <input type="text" ng-model="user.Geboortedatum" placeholder="DD-MM-YYYY" required>
-          </md-input-container>          
+          </md-input-container>
           <md-input-container flex="100">
             <label>Straatnaam</label>
             <input type="text" ng-model="user.Straatnaam" required>
-          </md-input-container>          
+          </md-input-container>
           <md-input-container flex="50" flex-xs="100">
             <label>Huisnummer</label>
             <input type="number" ng-model="user.Huisnummer" required>
-          </md-input-container>          
+          </md-input-container>
           <md-input-container flex="50" flex-xs="100">
             <label>Toevoeging</label>
             <input type="text" ng-model="user.Toevoeging">
@@ -64,15 +64,15 @@
           <md-input-container flex="40" flex-xs="100">
             <label>Postcode</label>
             <input type="text" ng-model="user.Postcode" required>
-          </md-input-container>          
+          </md-input-container>
           <md-input-container flex="60" flex-xs="100">
             <label>Plaatsnaam</label>
             <input type="text" ng-model="user.Plaatsnaam" required>
-          </md-input-container> 
+          </md-input-container>
           <md-input-container flex="100" layout="row" layout-align="end center">
             <p style="color: red"><i>{{vm.errorMessage}}</i></p>
             <md-button class="btn-green next" ng-click="vm.nextPage(user)">Volgende</md-button>
-          </md-input-container> 
+          </md-input-container>
         </form>
         </div>
       </md-content>
@@ -101,7 +101,7 @@
             <md-button style="margin-top: 0;" flex layout-align="center center" ng-click="user.Opleidingen.push(item); item = {};">
               Toevoegen
             </md-button>
-        </form>        
+        </form>
       <md-list flex="100" flex-gt-sm="60" hide-xs layout="column" layout-align="start stretch" ng-init="user.Opleidingen = [];">
           <md-list-item layout="row" layout-align="center space-around" flex="10">
             <h5 flex="auto" flex-xs="100">Opleiding</h5>
@@ -136,7 +136,7 @@
           </md-input-container>
         </div>
         <div layout="column" ng-show="user.Dienstverband == 'Overig'" layout-wrap>
-          <md-switch md-invert flex="50" flex-xs="100" ng-if="true" class="md-primary" md-no-ink aria-label="Uitkering" ng-model="user.Uitkering">Uitkeringsgerechtigd?</md-switch>          
+          <md-switch md-invert flex="50" flex-xs="100" ng-if="true" class="md-primary" md-no-ink aria-label="Uitkering" ng-model="user.Uitkering">Uitkeringsgerechtigd?</md-switch>
             <md-input-container flex="30" flex-xs="80" ng-show="user.Uitkering == true">
             <md-select ng-model="user.SoortUitkering" placeholder="Uitkerende instantie">
               <!-- <md-select-label>Huidige situatie</md-select-label> -->
@@ -159,7 +159,7 @@
               <label>Einde dienstverband</label>
               <input type="text" ng-model="emp.Einde">
             </md-input-container>
-            <md-button style="margin-top: 0;" flex layout-align="center center" ng-click="user.Werkgevers.push(emp); emp = {};">Toevoegen</md-button>            
+            <md-button style="margin-top: 0;" flex layout-align="center center" ng-click="user.Werkgevers.push(emp); emp = {};">Toevoegen</md-button>
           <!-- </div> -->
         </div>
         </form>
