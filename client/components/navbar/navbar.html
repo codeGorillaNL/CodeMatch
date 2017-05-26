@@ -1,14 +1,14 @@
 <!-- Menu-buttons -->
 <nav ng-class="{open: nav.isCollapsed }" layout="column">
    <div layout="row" flex="100" layout-fill>
-   <ul class="menu" class="linkbutton" class="test" layout="column" flex="50" layout-align="space-around center">
-     <li flex="10" ng-repeat="item in nav.menu" ui-sref="{{item.state}}">
-       <md-button class="blue-button">{{item.title}}</md-button>
+   <ul class="menu" class="linkbutton" class="test" layout="column" flex="100" flex-gt-sm="50" layout-align="space-around center">
+     <li flex="10" ng-repeat="item in nav.menu" ui-sref="{{item.state}}" layout-align-xs="center">
+       <md-button flex="60" class="blue-button">{{item.title}}</md-button>
      </li>
    </ul>
 
    <!-- social media buttons -->
-   <div class="socialWrapper" flex-gt-sm="50" class="red text" flex="auto" layout="column" flex="100">
+   <div class="socialWrapper" flex-gt-sm="50" class="red text" flex="auto" layout="column" flex="100" layout-no-wrap>
 
      <a ng-href="https://www.facebook.com/CodeGorillaNL/" target="_blank">
        <img class="socialButton" src="assets/images/facebook.png"/></a>

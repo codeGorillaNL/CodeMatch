@@ -57,7 +57,6 @@
   }
 }
 
-
 .tosti {
   font-family: sans-serif;
   font-size: 1.2em;
@@ -417,9 +416,18 @@ md-tab-content {
 
 @media (max-width: 600px) {
 
-  .cg-text-block {
-    min-height: auto;
-  }
+
+.cg-text-block.green-bg {
+    min-height: 70vh !important;
+}
+
+.cg-text-block.blue-bg {
+    min-height: 60vh !important;
+}
+
+  // .cg-text-block {
+  //   min-height: auto;
+  // }
 
   .video-row {
     max-height: initial;

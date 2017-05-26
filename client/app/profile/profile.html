@@ -1,7 +1,7 @@
 <div class="card-container" flex="100" layout="row" layout-wrap layout-fill>
-  <div class="card" ng-repeat="profile in $ctrl.profiles" flex="20" layout="column">
+  <div class="card" ng-repeat="profile in $ctrl.profiles" flex-gt-sm="20" flex="100" layout="column" layout-align="center stretch" layout-wrap>
     <img src="assets/images/profiles/{{profile.image}}" alt="">
-    <h5>{{profile.jobTitle}}</h5>
+    <h5 hide-xs>{{profile.jobTitle}}</h5>
     <div class="card-content" layout="column">
       <h4>{{profile.name}}</h4>
       <ul>

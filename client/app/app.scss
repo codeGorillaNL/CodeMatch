@@ -140,14 +140,20 @@ navbar {
     .socialWrapper {
       margin-top: 15px;
       margin-bottom: auto;
-      margin-left: 87vw;
+      margin-left: 80vw;
       margin-right: 3vw;
       display: block;
       position: absolute;
     }
 
     .blue-button {
-      width: 10vw;
+      width: 20vw;
+    }
+
+    a {
+      color: #Fff;
+      list-style-type: none;
+      text-decoration: none;
     }
 
     ul {
@@ -195,6 +201,7 @@ nav.open {
 // Menu styling
 
 .gorillaAddressShown {
+      color: #FFF;
   font-weight: bold;
   position: absolute;
   margin-top: 65vh;
@@ -225,8 +232,37 @@ nav.open {
 }
 
 @media (max-width: 599px) {
+
+  navbar nav .blue-button {
+    width: 80vw;
+  }
+
   .gorillaAddressShown {
     display: none;
+  }
+
+  .menu {
+    li {
+      width: 80vw;
+      margin-left: 10vw;
+    }
+  }
+
+  navbar nav .socialWrapper {
+    margin: 0 !important;
+    top: 15%;
+    left: 80%;
+    width: 18vw;
+    right: 2vw;
+    height: auto;
+    display: flex;
+    position: absolute;
+
+    .socialButton {
+      height: 5vh;
+      width: 5vh;
+      margin-bottom: 5vh;
+    }
   }
 }
 

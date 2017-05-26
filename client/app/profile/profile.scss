@@ -39,3 +39,18 @@ profile {
   }
 
 }
+
+@media (max-width: 600px) {
+
+  profile {
+    .card {
+      img {
+        max-height: 100%;
+        max-width: 50%;
+      }
+    }
+    .card-content {
+      font-size: .8em;
+    }
+  }
+}
