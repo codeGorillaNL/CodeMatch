@@ -230,7 +230,7 @@ class SignupController {
   }
 
   nextPage(user) {
-      this.errorMessage = 'Niet alle verplichte velden zijn ingevuld.';
+      this.errorMessage = 'Niet alle verplichte velden zijn ingevuld. \n Vul de velden met een * in.';
 
     if (this.selectedTab == 0 && !this.signupForm1.$valid) {
       return this.errorMessage;

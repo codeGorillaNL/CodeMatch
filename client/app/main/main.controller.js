@@ -7,6 +7,7 @@
     constructor($http, $timeout) {
       this.$http = $http;
       this.$timeout = $timeout;
+      this.progressBar = 0;
       moment.locale("nl");
       this.day = moment("20170418").fromNow();
 
@@ -16,6 +17,16 @@
       vm.$timeout(function () {
         vm.image = '/assets/images/aap.gif'
       }, 800);
+
+      var updateCounter = function() {
+        if (vm.progressBar < 100) {
+          vm.progressBar++;
+        } else {
+          vm.progressBar = 1;
+        }
+        $timeout(updateCounter, 100);
+      };
+      updateCounter();
 
     }
 
@@ -39,19 +50,6 @@
               }
           });
     }
-
-    // addThing() {
-    //   if (this.newThing) {
-    //     this.$http.post('/api/things', {
-    //       name: this.newThing
-    //     });
-    //     this.newThing = '';
-    //   }
-    // }
-
-    // deleteThing(thing) {
-    //   this.$http.delete('/api/things/' + thing._id);
-    // }
   }
 
   angular.module('codeGorillaApp')

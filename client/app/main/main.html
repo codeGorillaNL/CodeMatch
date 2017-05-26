@@ -38,12 +38,19 @@
       leren en doen? Brainstormen, overleggen, kennisdelen, plannen,
       scrummen, pitchen, coderen, veel lachen, kortom, (gezonde) werkdruk
       waardoor wij optimaal leren presteren als collectief. </p>
+      <img class="signature" src="assets/images/handtekening_vera.png" alt="">
   </div>
     <video flex-gt-sm="60" flex="100" controls muted src="assets/images/film.mp4" alt="">
 </div>
 
 <div flex="100" layout-gt-sm="row" layout="column">
-  <img flex-gt-sm="60" flex="100" src="assets/images/under-01-01.jpg" alt="in progress">
+  <div class="progress-wrapper" flex-gt-sm="60" flex="100">
+    <img src="assets/images/monkey_programming.jpg" alt="in progress">
+    <div class="progress">
+      <span>{{$ctrl.progressBar + '%'}}</span>
+      <div class="bar" ng-style="{ width : $ctrl.progressBar + '%'}">&nbsp;</div>
+    </div>
+  </div>
    <div flex-gt-sm="auto" flex="100" class="cg-text-block blue-bg" flex="auto" layout="column">
      <h3 class="blue">Under Construction</h3>
        <p class="stokbrood">De Gorilla’s zijn {{$ctrl.day}} gestart bij CodeGorilla

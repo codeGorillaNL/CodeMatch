@@ -57,6 +57,44 @@
   }
 }
 
+.signature {
+  width: 30%;
+  height: auto;
+  margin-left: auto;
+}
+
+.progress-wrapper {
+
+  position: relative;
+
+  .progress {
+    background-color: #FFF;
+    border: 2px solid #000;
+    height: 28px;
+    border-radius: 14px;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    right: 5%;
+
+    span {
+      margin-left: auto;
+      margin-right: 20px;
+      color: #000;
+    }
+  }
+
+  .bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    border-radius: 14px;
+    background-color: $red;
+  }
+
+}
+
 .tosti {
   font-family: sans-serif;
   font-size: 1.2em;
@@ -161,7 +199,6 @@ h3.blue{
 
   video {
     height: 100%;
-    z-index: 999;
   }
 }
 
@@ -410,7 +447,7 @@ md-tab-content {
 
 .next {
   position: absolute;
-  bottom: 1em;
+  bottom: 0;
   right: 1em;
 }
 
@@ -424,10 +461,6 @@ md-tab-content {
 .cg-text-block.blue-bg {
     min-height: 60vh !important;
 }
-
-  // .cg-text-block {
-  //   min-height: auto;
-  // }
 
   .video-row {
     max-height: initial;
