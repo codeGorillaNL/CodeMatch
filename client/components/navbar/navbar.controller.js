@@ -17,7 +17,7 @@ class NavbarController {
   },
   {
     'title': 'Profielen',
-    'state': 'Profielen'
+    'state': 'profile'
   },
   {
     'title': 'Contact',

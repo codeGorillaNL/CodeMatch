@@ -1,16 +1,16 @@
-<div class="startpage" flex="100" layout="column" layout-align="center center">
-  <img flex="55" flex-xs="35" flex-sm="35" class="hero-gorilla" src="{{$ctrl.image}}" alt="picture Code Gorilla">
-  <p class="code1"><span>&lt;code&gt;</span>gorilla</p>
-  <p class="code">Do you need code? We've got CodeGorillas</p>
-  <div>
-      <img class="hmonk" flex-gt-sm="15" flex="40" flex-xs="40" src="assets/images/hangende monkey-01.png"layout="center center" src="" alt="">
-    </div>
+<!-- Startpage (above the fold) -->
+
+<div class="cg-startpage" flex="100" layout="column" layout-align="center center">
+  <img class="cg-gorilla-animated" flex="35" flex-gt-sm="55" src="{{$ctrl.image}}" alt="animated CodeGorilla logo">
+  <p class="cg-title"><span>&lt;code&gt;</span>gorilla</p>
+  <p class="cg-tag">Do you need code? We've got CodeGorillas</p>
+  <img class="cg-hidden-monkey" src="assets/images/hanging_monkey.png">
 </div>
 
-<div flex="100" layout-gt-sm="row" layout="column">
-  <img flex-gt-sm="60"src="assets/images/coding.jpg" alt="" flex="100">
-  <div flex-gt-sm="40" class="red text" flex="auto" layout="column" flex="100">
-    <h3 class="red" style="color: #fff;">Wie is CodeGorilla</h3>
+<div flex="100" layout="row" layout-wrap>
+<div class="cg-mbp" flex-gt-sm="60" flex="100">&nbsp;</div>
+  <div flex-gt-sm="40" class="cg-text-block red-bg" flex="auto" layout="column" flex="100">
+    <h3 class="red">Wat is CodeGorilla</h3>
     <div class="tosti">
       <p>Wij leiden deelnemers op om over de 21st century skills te beschikken.
       Kunnen programmeren is hier maar een klein onderdeel van. Veel belangrijker
@@ -24,10 +24,10 @@
       beide handen vastgrijpt.</p>
     </div>
   </div>
-</div>
+<!-- </div> -->
 <div class="video-row" flex="100" layout-gt-sm="row" layout="column" layout-sm="column">
-  <div flex-gt-sm="40" flex="auto" class="green text" layout="column" flex="100">
-    <h3 class="green" style="color: #fff;">Day one</h3>
+  <div flex-gt-sm="auto" flex="100" class="cg-text-block green-bg" layout="column" flex="100">
+    <h3 class="green">Day one</h3>
     <p class="brood">Voordat de bootcamp begon waren wij al bezig. Eerst werden we
       uitgedaagd met een onmogelijke casus die wij binnen een week moesten
       oplossen. Vervolgens werden we in het diepe gegooid tijdens
@@ -39,14 +39,13 @@
       scrummen, pitchen, coderen, veel lachen, kortom, (gezonde) werkdruk
       waardoor wij optimaal leren presteren als collectief. </p>
   </div>
-    <video flex-gt-sm="60" flex-sm="auto" flex="100" controls muted
-     src="assets/images/film.mp4" alt="">
+    <video flex-gt-sm="60" flex="100" controls muted src="assets/images/film.mp4" alt="">
 </div>
 
 <div flex="100" layout-gt-sm="row" layout="column">
-  <img flex-gt-sm="60" flex="100"src="assets/images/under-01-01.jpg" alt="">
-   <div flex-gt-sm="40" flex="100" class="blue text" flex="auto" layout="column">
-     <h3 class="blue" style="color: #fff;">Under Construction</h3>
+  <img flex-gt-sm="60" flex="100" src="assets/images/under-01-01.jpg" alt="in progress">
+   <div flex-gt-sm="auto" flex="100" class="cg-text-block blue-bg" flex="auto" layout="column">
+     <h3 class="blue">Under Construction</h3>
        <p class="stokbrood">De Gorilla’s zijn {{$ctrl.day}} gestart bij CodeGorilla
          met het leren coderen in o.a. HTML 5, CSS, JavaScript, PHP, Unity en
          MongoDB, in een Agile en ondernemend-leren leeromgeving.velen zijn vanuit
@@ -54,6 +53,7 @@
          en is nog deels “under contruction”. Met doorzettingsvermogen,
          team spirit, “out of the box” denken en passie voor het coderen hebben
          wij deze website ontwikkeld en zijn zeker nog niet klaar.</p>
+  </div>
   </div>
 </div>
 

@@ -1,52 +1,92 @@
-html, body {
+// Main page above fold
+
+.cg-startpage {
+  background-color: $blue;
+  background-image: url(/assets/images/matrix-01.png);
+  background-size: contain;
+  background-blend-mode: soft-light;
+  height: 100vh;
   width: 100vw;
-  min-height: 100vh;
-  font-family: 'Regular';
+  padding: 10%;
+  position: relative;
+
+
+  p {
+    margin: 0.5em;
+  }
+
+  .cg-title {
+    font-family: 'Bold';
+    color: black;
+    font-size: 2.5em;
+    font-weight: bold;
+  }
+
+  .cg-tag{
+    font-family: 'Regular';
+    font-size: 1.8rem;
+    text-shadow: 1px 1px darken($blue, 30%);
+    color: #FFF;
+  }
+
+  .cg-hidden-monkey {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    opacity: 0.1;
+    max-width: 15vmax;
+  }
 }
 
+// Main page below fold
+
+.cg-mbp {
+  min-height: 30vh;
+  background: url('/assets/images/coding.jpg');
+  background-size: 100% auto;
+  background-position: top center;
+}
+
+.cg-text-block {
+  padding: 5%;
+
+  h3 {
+    margin-top: 0;
+  }
+}
+
+
 .tosti {
-font-family: sans-serif;
-font-size: 1.2em;
-text-shadow: 1px 1px darken($red, 30%);
-color: #ffffff
+  font-family: sans-serif;
+  font-size: 1.2em;
+  text-shadow: 1px 1px darken($red, 30%);
+  color: #ffffff;
 }
 
 .brood {
-font-family: sans-serif;
-font-size: 1.2rem;
-text-shadow: 1px 1px darken($green, 30%);
-color: #ffffff
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  text-shadow: 1px 1px darken($green, 30%);
+  color: #ffffff;
 }
 
 .stokbrood {
-font-family: sans-serif;
-font-size: 1.2rem;
-text-shadow: 1px 1px darken($blue, 30%);
-color: #ffffff
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  text-shadow: 1px 1px darken($blue, 30%);
+  color: #ffffff;
 }
 
 .stokbrood1 {
-border-top-style: solid;
-border-width: 2px;
-border-color: $blue;
-font-family: sans-serif;
-font-size: 0.9rem;
-text-shadow: 1px 1px darken($blue, 30%);
-color: #ffffff
-}
-
-:focus {
-  outline: 0;
-}
-
-$dark-red: darken($red, 8%);
-
-div {
-  display: flex;
-}
-
-h3 {
-  font-size: 1.8em;
+  border-top-style: solid;
+  border-width: 2px;
+  border-color: $blue;
+  font-family: sans-serif;
+  font-size: 0.9rem;
+  text-shadow: 1px 1px darken($blue, 30%);
+  color: #ffffff;
 }
 
 h3.red{
@@ -111,32 +151,8 @@ h3.blue{
     position: center;
 }
 
-.red {
-  background-color: $red;
-}
-
-.green {
-  background-color: $green;
-}
-
-.blue {
-  background-color: $blue;
-  // margin: 10%;
-}
-
 .margin-contact {
   padding: 5%;
-}
-
-.startpage {
-  background-color: $blue;
-  background-image:url(/assets/images/matrix-01.png);
-  background-size: 1920px auto;
-  background-blend-mode: soft-light;
-  height: 100vh;
-  width: 100vw;
-  padding: 10%;
-  position: relative;
 }
 
 .video-row {
@@ -146,31 +162,13 @@ h3.blue{
 
   video {
     height: 100%;
+    z-index: 999;
   }
-}
-
-.code{
-  font-family: sans-serif;
-  font-size: 1.8rem;
-  text-shadow: 1px 1px darken($blue, 30%);
-  margin-bottom: 10;
-  color: white;
-  }
-
-.code1 {
-    font-family: source code pro;
-    color: black;
-    font-size: 2.5em;
-    font-weight: bold;
 }
 
 span {
   color: white;
   font-weight: normal;
-}
-
-.text {
-  padding: 1.5% 5%;
 }
 
 .quote {
@@ -288,7 +286,6 @@ h2 {
   .block {
     display: flex;
     margin-top: 2.5vh;
-    // margin-left: calc(6.25vw);
     width: 30vh;
     height: 30vh;
     padding: 2%;
@@ -344,16 +341,6 @@ input-view {
   padding-top: 0;
 }
 
-.hmonk {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  opacity: 0.1;
-
-}
-
 .test {
   text-align: left;
   line-height: 0.1rem;
@@ -361,14 +348,6 @@ input-view {
 
 .contact-form {
   max-width: 50%;
-}
-
-.hero-gorilla {
-  margin-top: 8vh;
-  -webkit-animation: mymove 5s infinite; /* Safari 4.0 - 8.0 */
-   -webkit-animation-delay: 2s; /* Safari 4.0 - 8.0 */
-   animation: mymove 5s infinite;
-   animation-delay: 2s;
 }
 
 textarea {
@@ -471,11 +450,6 @@ md-tab-content {
       margin-bottom: 0.67em !important;
       margin-top: 0.67em !important;
     }
-  }
-
-  .hero-gorilla {
-    width: 50vw;
-    top: 50%;
   }
 
   .md-list-item-inner {

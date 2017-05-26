@@ -1,10 +1,10 @@
-<div class="card-container" layout="row" layout-wrap>
-  <div class="card md-whiteframe-z3" ng-repeat="profile in $ctrl.profiles" flex="20" layout="column" ng-style="{'background-image':'url({{profile.picture}}'}">
-    <!-- <img ng-src="{{profile.picture}}" alt=""> -->
-    <h5 class="title">{{profile.jobTtitle}}</h5>
+<div class="card-container" flex="100" layout="row" layout-wrap layout-fill>
+  <div class="card" ng-repeat="profile in $ctrl.profiles" flex="20" layout="column">
+    <img src="assets/images/profiles/{{profile.image}}" alt="">
+    <h5>{{profile.jobTitle}}</h5>
     <div class="card-content" layout="column">
       <h4>{{profile.name}}</h4>
-      <ul class="skill-list">
+      <ul>
         <li ng-repeat="skill in profile.skills track by $index">{{skill}}</li>
       </ul>
     </div>

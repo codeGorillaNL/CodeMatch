@@ -10,10 +10,11 @@ profile {
     position: relative;
     background-size: 100% auto;
     background-repeat: no-repeat;
+    border-radius: 5px;
 
     h5 {
       position: relative;
-      top: 40%;
+      top: -5%;
       margin: 0;
       z-index: 1;
       color: #fff;
@@ -23,13 +24,12 @@ profile {
 
     img {
       max-width: 20vw;
-      max-height: 13.3vw;
+      max-height: 50%;
       flex: 0 1 100%;
     }
 
     .card-content {
       padding: 1em;
-      margin-top: 60%;
       overflow: hidden;
     }
 

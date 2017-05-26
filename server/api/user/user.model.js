@@ -21,6 +21,9 @@ var UserSchema = new Schema({
     required: true
   },
   provider: String,
+  image: String,
+  skills: [],
+  jobTitle: String,
   salt: String
 });
 

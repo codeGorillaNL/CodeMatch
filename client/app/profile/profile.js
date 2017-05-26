@@ -5,6 +5,6 @@ angular.module('codeGorillaApp')
     $stateProvider
       .state('profile', {
         url: '/profile',
-        template: '<profile></profile>'
+        template: '<profile layout-fill></profile>'
       });
   });

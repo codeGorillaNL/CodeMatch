@@ -1,27 +1,35 @@
-<section flex=layout="column" layout-align="center center">
-<section layout="row" layout-align="space-around center">
-  <div class="contact-form" layout="column">
-    <h1 style="font-family": 'Bold' >"contact" </h1>
-    <p>We kunnen ons voorstellen dat je nog vragen hebt, deze kun je stellen via onderstaand contact formulier.</p>
+<section layout-gt-sm="row" layout="column">
+
+  <div class="contact-form" flex="50" flex-gt-sm="50" layout="column" layout-align="space-around stretch">
+    <h1 style="font-family: 'Bold';">Contact</h1>
+    <span><p>We kunnen ons voorstellen dat je nog vragen hebt, deze kun je stellen via onderstaand contact formulier. <br>Natuurlijk ben je ook van harte
+    welkom op ons bezoekadres.</p></span>
     <md-input-container>
-      <label>Naam</label>
+      <label><span>Naam</label>
       <input type="text" ng-model="form.name">
     </md-input-container>
     <md-input-container>
-      <label>Mailadres</label>
+      <label><span>Mailadres</label>
       <input type="email" ng-model="form.mail">
     </md-input-container>
     <textarea ng-model="form.message" placeholder="Bericht" rows="8"></textarea>
-    <div ng-show="$ctrl.mailStatus" layout="row" style="color: red;" flex="1">
+    <div ng-show="$ctrl.mailStatus" layout="row" style="color: red;">
       {{$ctrl.mailStatus}}
     </div>
-    <md-button ng-click="$ctrl.sendForm(form)" style="max-width: 33%" class="btn-green">Verzenden</md-button>
+    <!-- <md-button ng-click="$ctrl.sendForm(form)" class="red-button">Verzenden</md-button> -->
+    <a class="send-btn" href="#">Verzenden</a>
   </div>
-<section flex="30" layout="row" layout-align="center end">
-  <div>
-    <div>
 
+  <div class="contact-right" flex="50" flex-gt-sm="50" layout="column" layout-align="center space-between">
+   <video  flex="50" src="/assets/images/contact-film.mp4" alt="" autoplay loop></video>
+   <div class="images-contact" flex="30" layout="row" layout-align="space-between center">
+     <img flex="30" src="assets/images/impression1.png" alt="">
+     <img flex="30" src="assets/images/impression2.png" alt="">
+     <img flex="30" src="assets/images/impression3.png" alt="">
+   </div>
+    <div flex="10" layout="row">
+      <p><span> CodeGorilla Baander 8 7811 MJ Emmen <ng-md-icon icon="phone"></ng-md-icon> 0591-123456</p>
     </div>
-    <p> CodeGorilla Baander 8 7811 MJ Emmen<ng-md-icon icon="phone"></ng-md-icon>0591-123456</p>
   </div>
+
 </section>

@@ -1,3 +1,5 @@
+// Font imports
+
 $fa-font-path: "../bower_components/font-awesome/fonts";
 
 @import '../bower_components/font-awesome/scss/font-awesome';
@@ -5,29 +7,174 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
 @import '../assets/mixins/_shadow.scss';
 
 @font-face {
-    font-family: "Regular";
-    src: url("../assets/fonts/sourcecodeproregular.otf") format("truetype");
+  font-family: "Regular";
+  src: url("../assets/fonts/sourcecodeproregular.otf") format("truetype");
 }
 
 @font-face {
-    font-family: "Bold";
-    src: url("../assets/fonts/SourceCodePro-Bold.otf") format("truetype");
+  font-family: "Bold";
+  src: url("../assets/fonts/SourceCodePro-Bold.otf") format("truetype");
 }
+
+// SCSS variables
 
 $blue: #77C4D7;
 $green: #91C24D;
 $red: #E25054;
+$dark-red: darken($red, 8%);
+
+// Global styles
 
 * {
   box-sizing: border-box;
 }
-//
-// .angular-google-map {
-//   display: block;
-//   margin-top: 10vh;
-//   margin-right: 50vw;
-// }
 
+html, body {
+  width: 100vw;
+  min-height: 100vh;
+  font-family: 'Regular';
+}
+
+:focus {
+  outline: 0;
+}
+
+div {
+  display: flex;
+}
+
+h3 {
+  font-size: 1.8em;
+  color: #FFF;
+}
+
+section {
+  height: 100vh;
+  width: 100vw;
+}
+
+.red-bg {
+  background-color: $red;
+}
+
+.green-bg {
+  background-color: $green;
+}
+
+.blue-bg {
+  background-color: $blue;
+}
+
+navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8vh;
+  z-index: 999;
+  transition: all .4s ease-in-out;
+
+  ng-md-icon {
+    display: flex;
+    width: 36px;
+    height: 36px;
+    font-size: 36px;
+    z-index: 999;
+    margin: auto;
+    margin-top: 2.5vh;
+    background-color: transparent;
+    fill: #FFF;
+  }
+
+  nav {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    height: 0;
+    transition: all .4s ease-in-out;
+    border-radius: 50%;
+    overflow: hidden;
+
+    .menu {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      padding-top: 10vh;
+
+      .md-button.red-button {
+        background-color: $red;
+        border: 4px solid $red;
+        border-radius: 5px;
+        color: #FFF;
+        @include long-shadow(text, darken($red, 5), 20, false, false, right);
+      }
+
+      .md-button.red-button:hover {
+        background-color: lighten($red, 3%);
+        @include long-shadow(text, darken($red, 5), 5, false, false, right);
+        transform: scale(1.05);
+      }
+
+      .md-button.blue-button {
+        background-color: $blue;
+        border: 4px solid $blue;
+        border-radius: 5px;
+        color: #FFF;
+        @include long-shadow(text, darken($blue, 5), 20, false, false, right);
+      }
+
+      .md-button.blue-button:hover {
+        background-color: lighten($blue, 3%);
+        @include long-shadow(text, darken($blue, 5), 5, false, false, right);
+        transform: scale(1.05);
+      }
+    }
+
+    .socialButton {
+      height: 3vh;
+      width: auto;
+    }
+
+    .socialWrapper {
+      margin-top: 15px;
+      margin-bottom: auto;
+      margin-left: 87vw;
+      margin-right: 3vw;
+      display: block;
+      position: absolute;
+    }
+
+    .blue-button {
+      width: 10vw;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+
+    li {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+nav.open {
+  left: 0;
+  right: 0;
+  height: 100vh;
+  border-radius: 0;
+  background-color: $red;
+
+  .hamburger {
+    fill: #FFF;
+  }
+
+}
+
+// Google Maps
 
 .gmnoprint * {
   display: block;
@@ -37,15 +184,17 @@ $red: #E25054;
   display: none;
 }
 
- #map, .angular-google-map-container {
-   height: 40vh;
-   width: 32vw;
-   margin-top: 20vh;
-   margin-left: 10vw;
-   margin-right: 10vw;
+#map, .angular-google-map-container {
+  height: 40vh;
+  width: 32vw;
+  margin-top: 20vh;
+  margin-left: 10vw;
+  margin-right: 10vw;
 }
 
- .gorillaAddressShown {
+// Menu styling
+
+.gorillaAddressShown {
   font-weight: bold;
   position: absolute;
   margin-top: 65vh;
@@ -58,19 +207,16 @@ $red: #E25054;
  margin-top: 65vh;
  margin-left: 70vw;
 }
-//
-// @media (min-width: 599px) {
-//     .hideLink {
-//     display: none;
-//     }
-//
-//   }
-//
-// @media (max-width: 599px) {
-//   .showLink {
-//     display: none;
-//   }
-// }
+
+.gorillaCall {
+  position: absolute;
+  margin-top: 80vh;
+  margin-left: 71vw;
+  height: 10px;
+  width: 10px;
+}
+
+// Media queries
 
 @media (min-width: 599px) {
   .gorillaAddressHidden {
@@ -84,97 +230,7 @@ $red: #E25054;
   }
 }
 
- .gorillaCall {
-  position: absolute;
-  margin-top: 80vh;
-  margin-left: 71vw;
-  height: 10px;
-  width: 10px;
-}
-
-section {
-  height: 100vh;
-  width: 100vw;
-}
-
-nav {
-	position: absolute;
-	top: 0;
-	left: 50%;
-	right: 50%;
-	height: 8vh;
-	z-index: 999;
-  transition: all .4s ease-in-out;
-  overflow: hidden;
-
-
-  ng-md-icon {
-    z-index: 100;
-    position: fixed;
-    top: 3vh;
-    left: 0;
-    right: 0;
-    margin: auto;
-    background-color: transparent;
-    fill: white;
-  }
-
-	.menu {
-		list-style-type: none;
-		margin: 0;
-		padding: 0;
-
-
-  .socialButton {
-    height: 3vh;
-    width: auto;
-  }
-
-  .socialWrapper {
-    margin-top: 15px;
-    margin-bottom: auto;
-    margin-left: 87vw;
-    margin-right: 3vw;
-    display: block;
-    position: absolute;
-  }
-
-
-
-  .blue-button {
-    width: 10vw;
-  }
-
-  ul {
-    list-style-type: none;
-  }
-
-
- li {
-			font-size: 1.8rem;
-		}
-}
-
-nav.open {
-	left: 0;
-  right: 0;
-	height: 100vh;
-	background-color: $red;
-
-  .hamburger {
-    fill: #FFF;
-  }
-
-}
-
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
-}
-
-// Component styles are injected through grunt
+// Component styles are injected through gulp
 /* inject:scss */
 @import 'admin/admin';
 @import 'contact/contact';

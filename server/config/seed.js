@@ -43,15 +43,58 @@ User.find({}).remove()
   .then(() => {
     User.create({
       provider: 'local',
-      name: 'Test User',
-      email: 'test@example.com',
-      password: 'test'
+      role: 'user',
+      name: 'Cor Oldenhuis',
+      image: 'c_oldenhuis.jpg',
+      email: 'c.oldenhuis@codegorilla.nl',
+      password: 'test',
+      skills: ['HTML', 'CSS', 'JavaScript', 'AngularJS'],
+      jobTitle: 'Junior Developer'
     }, {
       provider: 'local',
-      role: 'admin',
-      name: 'Admin',
-      email: 'admin@example.com',
-      password: 'admin'
+      role: 'user',
+      name: 'Bjorn de Jong',
+      image: 'b_dejong.jpg',
+      email: 'b.dejong@codegorilla.nl',
+      password: 'test',
+      skills: ['HTML', 'CSS', 'JavaScript', 'AngularJS'],
+      jobTitle: 'Junior Developer'
+    }, {
+      provider: 'local',
+      role: 'user',
+      name: 'Ramon Horst',
+      image: 'r_horst.jpg',
+      email: 'r.horst@codegorilla.nl',
+      password: 'test',
+      skills: ['HTML', 'CSS', 'JavaScript', 'AngularJS'],
+      jobTitle: 'Junior Developer'
+    }, {
+      provider: 'local',
+      role: 'user',
+      name: 'Hamster van Koll',
+      image: 'h_vankoll.jpg',
+      email: 'r.vankoll@codegorilla.nl',
+      password: 'test',
+      skills: ['HTML', 'CSS', 'JavaScript', 'AngularJS'],
+      jobTitle: 'Junior Developer'
+    }, {
+      provider: 'local',
+      role: 'user',
+      name: 'Dennis Weda',
+      image: 'd_weda.jpg',
+      email: 'd.weda@codegorilla.nl',
+      password: 'test',
+      skills: ['HTML', 'CSS', 'JavaScript', 'AngularJS'],
+      jobTitle: 'Junior Developer'
+    }, {
+      provider: 'local',
+      role: 'user',
+      name: 'Harco Wittendorp',
+      image: 'h_wittendorp.jpg',
+      email: 'h.wittendorp@codegorilla.nl',
+      password: 'test',
+      skills: ['HTML', 'CSS', 'JavaScript', 'AngularJS'],
+      jobTitle: 'Junior Developer'
     })
     .then(() => {
       console.log('finished populating users');

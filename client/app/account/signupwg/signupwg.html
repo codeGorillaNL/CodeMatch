@@ -1,6 +1,48 @@
 <div class="signup-form" layout="column" layout-align="center center">
 <md-content class="form-tabs" ng-init="vm.selectedTab = 0">
   <md-tabs md-stretch-tabs="auto" md-dynamic-height="true" md-selected="vm.selectedTab">
+
+
+    <md-tab label="Bedrijfs gegevens">
+      <md-content class="md-padding" layout="row" flex="100" layout-wrap>
+        <div flex="100" flex-gt-sm="50" layout="row" layout-wrap layout-padding>
+        <form name="vm.signupwgForm1" layout="row" layout-wrap>
+          <md-input-container flex="100" flex-xs="100">
+            <label>Bedrijf</label>
+            <input type="text" ng-model="user.Bedrijf" required>
+          </md-input-container>
+          <md-input-container flex="100">
+            <label>Soort bedrijf</label>
+            <input type="text" ng-model="user.Soort_Bedrijf" required>
+          </md-input-container>
+          <md-input-container flex="100">
+            <label>Gevestigd in</label>
+            <input type="text" ng-model="user.Gevestigd_In" required>
+          </md-input-container>
+          <md-input-container flex="100">
+            <label>Afdeling</label>
+            <input type="text" ng-model="user.Afdeling" required>
+          </md-input-container>
+          <md-input-container flex="100">
+            <label>Functie</label>
+            <input type="text" ng-model="user.Functie" required>
+          </md-input-container>
+          <md-input-container flex="100">
+            <label>Website</label>
+            <input type="text" ng-model="user.Website" required>
+          </md-input-container>
+        </div>
+        <div flex="100" flex-gt-sm="50" layout="column" layout-align="end end" layout-padding>
+          <md-input-container flex="auto" layout="column" layout-align="end end">
+            <md-button class="btn-green next" ng-click="vm.nextPage(user)">Volgende</md-button>
+          </md-input-container>
+          <label flex="5" style="color: red"><i>{{vm.errorMessage}}</i></label>
+        </form>
+        </div>
+      </md-content>
+    </md-tab>
+
+
     <md-tab label="Persoonlijke gegevens">
       <md-content class="md-padding" layout="row" flex="100" layout-wrap>
         <div flex="100" flex-gt-sm="50" layout="row" layout-wrap layout-padding>
@@ -20,7 +62,7 @@
             <input type="text" ng-model="user.Voorletters" required>
           </md-input-container>
           <md-input-container flex="66">
-            <label>Roepnaam</label>
+            <label>Voornaam</label>
             <input type="text" ng-model="user.Voornaam" required>
           </md-input-container>
           <md-input-container flex="33">
@@ -31,20 +73,6 @@
             <label>Achternaam</label>
             <input type="text" ng-model="user.Achternaam" required>
           </md-input-container>
-          <md-input-container flex="100" flex-gt-xs="40">
-            <label>BSN Nummer</label>
-            <input type="text" ng-model="user.BSN_Nummer" required>
-          </md-input-container>
-          <md-input-container flex="100" flex-gt-xs="60">
-            <label>Telefoonnummer</label>
-            <input type="text" ng-model="user.Telefoonnummer" required>
-          </md-input-container>
-          <md-input-container flex="100" layout-fill>
-            <label>Mailadres</label>
-            <input type="email" ng-model="user.Mailadres" required>
-          </md-input-container>
-        </div>
-        <div flex="100" flex-gt-sm="50" layout="row" layout-wrap layout-padding>
           <md-input-container flex="100">
             <label>Geboortedatum</label>
             <input type="text" ng-model="user.Geboortedatum" placeholder="DD-MM-YYYY" required>
@@ -61,6 +89,8 @@
             <label>Toevoeging</label>
             <input type="text" ng-model="user.Toevoeging">
           </md-input-container>
+        </div>
+        <div flex="100" flex-gt-sm="50" layout="row" layout-wrap layout-padding>
           <md-input-container flex="40" flex-xs="100">
             <label>Postcode</label>
             <input type="text" ng-model="user.Postcode" required>
@@ -69,130 +99,41 @@
             <label>Plaatsnaam</label>
             <input type="text" ng-model="user.Plaatsnaam" required>
           </md-input-container>
-          <md-input-container flex="100" layout="row" layout-align="end center">
-            <p style="color: red"><i>{{vm.errorMessage}}</i></p>
-            <md-button class="btn-green next" ng-click="vm.nextPage(user)">Volgende</md-button>
-          </md-input-container>
-        </form>
-        </div>
-      </md-content>
-    </md-tab>
-    <md-tab label="Opleiding">
-      <md-content layout-padding layout-wrap layout-fill layout="row" layout-xs="column" flex="100">
-        <form name="vm.signupForm3" layout-fill flex="100" flex-gt-sm="40" layout="row" layout-wrap>
-        Voeg je opleiding(en) toe.
           <md-input-container flex="100">
-            <label>Naam van de opleiding</label>
-            <input type="text" ng-model="item.school">
+            <label>Land</label>
+            <input type="text" ng-model="user.Land" required>
           </md-input-container>
-<!--           <input layout="row" flex="35" flex-xs="100" type="text" ng-model="item.school" placeholder="Naam van de opleiding"></input> -->
-            <md-select ng-model="item.OpleidingsNiveau" flex="100" placeholder="Niveau">
-              <md-option ng-value="opt" ng-repeat="opt in vm.educations">{{opt}}</md-option>
-            </md-select>
-            <md-input-container flex="50">
-              <label>Startjaar</label>
-              <input type="text" ng-model="item.Startjaar">
-            </md-input-container>
-            <md-input-container flex="50">
-              <label>Eindjaar</label>
-              <input type="text" ng-model="item.Eindjaar">
-            </md-input-container>
-            <md-switch flex="100" ng-true-value="'Ja'" ng-false-value="'Nee'" class="md-primary" md-no-ink aria-label="Afgerond" ng-model="item.Afgerond">Opleiding afgerond?</md-switch>
-            <md-button style="margin-top: 0;" flex layout-align="center center" ng-click="user.Opleidingen.push(item); item = {};">
-              Toevoegen
-            </md-button>
+          <md-input-container flex="100" flex-gt-xs="50">
+            <label>Telefoonnummer</label>
+            <input type="text" ng-model="user.Telefoonnummer" required>
+          </md-input-container>
+          <md-input-container flex="100" flex-gt-xs="50">
+            <label>Mobiel</label>
+            <input type="text" ng-model="user.Mobiel" required>
+          </md-input-container>
+          <md-input-container flex="100">
+            <label>Emailadres</label>
+            <input type="email" ng-model="user.Emailadres" required>
+          </md-input-container>
+          <md-input-container flex="100" layout="row" layout-align="end center">
+            <div flex="auto" layout="row" layout-align="end end" layout-fill>
+              <span ng-show="vm.mailStatus">{{vm.mailStatus}}</span>
+              <md-button class="btn-green next" ng-click="vm.sendSignupwgForm(user)">Verzenden</md-button>
+            </div>
+          </md-input-container>
         </form>
-      <md-list flex="100" flex-gt-sm="60" hide-xs layout="column" layout-align="start stretch" ng-init="user.Opleidingen = [];">
-          <md-list-item layout="row" layout-align="center space-around" flex="10">
-            <h5 flex="auto" flex-xs="100">Opleiding</h5>
-            <h5 hide-xs flex="25">Niveau</h5>
-            <h5 hide-xs flex="15">Van</h5>
-            <h5 hide-xs flex="15">Tot</h5>
-            <h5 hide-xs flex="15">Afgerond</h5>
-          </md-list-item>
-          <md-list-item flex="10" layout="row" ng-repeat="e in user.Opleidingen" layout-wrap>
-            <span flex="auto">{{e.school}}</span>
-            <span flex="25">{{e.OpleidingsNiveau}}</span>
-            <span flex="15">{{e.Startjaar}}</span>
-            <span flex="15">{{e.Eindjaar}}</span>
-            <span flex="15">{{e.Afgerond}}</span>
-          </md-list-item>
-        </md-list>
-        <div flex="auto" layout="row" layout-align="end end" layout-fill>
-          <md-button class="btn-green next" ng-click="vm.selectedTab = vm.selectedTab + 1">Volgende</md-button>
         </div>
       </md-content>
     </md-tab>
-    <md-tab label="Werkgever(s)">
-      <md-content layout-padding layout-wrap layout-fill layout="row" layout-xs="column">
-        <form name="vm.signupForm4" flex="100" flex-gt-sm="40" ng-init="user.Werkgevers = [];">
-        <div layout="column">
-          <h3>Huidig dienstverband</h3>
-          <md-input-container flex="10">
-            <md-select ng-model="user.Dienstverband" placeholder="Dienstverband" required>
-              <!-- <md-select-label>Huidige situatie</md-select-label> -->
-              <md-option ng-value="opt" ng-repeat="opt in vm.options">{{ opt }}</md-option>
-            </md-select>
-          </md-input-container>
-        </div>
-        <div layout="column" ng-show="user.Dienstverband == 'Overig'" layout-wrap>
-          <md-switch md-invert flex="50" flex-xs="100" ng-if="true" class="md-primary" md-no-ink aria-label="Uitkering" ng-model="user.Uitkering">Uitkeringsgerechtigd?</md-switch>
-            <md-input-container flex="30" flex-xs="80" ng-show="user.Uitkering == true">
-            <md-select ng-model="user.SoortUitkering" placeholder="Uitkerende instantie">
-              <!-- <md-select-label>Huidige situatie</md-select-label> -->
-              <md-option ng-value="opt" ng-repeat="opt in vm.uitkeringen">{{ opt }}</md-option>
-            </md-select>
-          </md-input-container>
-        </div>
-        <div layout="row" layout-wrap>
-          <h3 flex="100">Werkgever toevoegen</h3>
-          <md-input-container flex="60">
-            <label>Naam werkgever</label>
-            <input type="text" ng-model="emp.Werkgever">
-          </md-input-container>
-            <md-switch flex="40" ng-true-value="'Ja'" ng-false-value="'Nee'" class="md-primary" md-no-ink aria-label="Huidig" ng-model="emp.Huidig">Huidig</md-switch>
-            <md-input-container flex="50">
-              <label>Start dienstverband</label>
-              <input type="text" ng-model="emp.Aanvang">
-            </md-input-container>
-            <md-input-container flex="50">
-              <label>Einde dienstverband</label>
-              <input type="text" ng-model="emp.Einde">
-            </md-input-container>
-            <md-button style="margin-top: 0;" flex layout-align="center center" ng-click="user.Werkgevers.push(emp); emp = {};">Toevoegen</md-button>
-          <!-- </div> -->
-        </div>
-        </form>
-        <div flex="100" flex-gt-sm="60" layout="column" hide-xs>
-          <md-list>
-            <md-list-item layout="row">
-              <h5 flex="auto">Werkgever</h5>
-              <h5 flex="15">Huidig</h5>
-              <h5 flex="15">Van</h5>
-              <h5 flex="15">Tot</h5>
-            </md-list-item>
-            <md-list-item layout="row" ng-repeat="i in user.Werkgevers">
-              <h5 flex="auto">{{i.Werkgever}}</h5>
-              <h5 flex="15">{{i.Huidig}}</h5>
-              <h5 flex="15">{{i.Aanvang}}</h5>
-              <h5 flex="15">{{i.Einde}}</h5>
-            </md-list-item>
-          </md-list>
-        </div>
-        <div flex="auto" layout="row" layout-align="end end" layout-fill>
-          <md-button class="btn-green next" ng-click="vm.selectedTab = vm.selectedTab + 1">Volgende</md-button>
-        </div>
-      </md-content>
-    </md-tab>
-    <md-tab label="Motivatie">
-      <md-content layout-padding layout-wrap layout-fill>
-        <p>Schrijf een korte motivatie waarom je deel wilt nemen aan de CodeGorilla Bootcamp.</p>
-        <textarea ng-model="user.Motivatie" style="width: 90%" rows="12" required></textarea>
-        <div flex="auto" layout="row" layout-align="end end" layout-fill>
+
+
+        <!-- <div flex="auto" layout="row" layout-align="end end" layout-fill>
           <span ng-show="vm.mailStatus">{{vm.mailStatus}}</span>
-          <md-button class="btn-green next" ng-click="vm.sendSignupForm(user)">Verzenden</md-button>
-        </div>
-      </md-tab>
+          <md-button class="btn-green next" ng-click="vm.sendSignupwgForm(user)">Verzenden</md-button>
+        </div>  -->
+
+
+
   </md-tabs>
 </md-content>
 </div>
