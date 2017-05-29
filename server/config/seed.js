@@ -44,15 +44,6 @@ User.find({}).remove()
     User.create({
       provider: 'local',
       role: 'user',
-      name: 'Cor Oldenhuis',
-      image: 'c_oldenhuis.jpg',
-      email: 'c.oldenhuis@codegorilla.nl',
-      password: 'test',
-      skills: ['HTML', 'CSS', 'JavaScript', 'AngularJS'],
-      jobTitle: 'Junior Developer'
-    }, {
-      provider: 'local',
-      role: 'user',
       name: 'Bjorn de Jong',
       image: 'b_dejong.jpg',
       email: 'b.dejong@codegorilla.nl',
@@ -62,18 +53,18 @@ User.find({}).remove()
     }, {
       provider: 'local',
       role: 'user',
-      name: 'Ramon Horst',
-      image: 'r_horst.jpg',
-      email: 'r.horst@codegorilla.nl',
+      name: 'Cor Oldenhuis',
+      image: 'cor_oldenhuis.jpg',
+      email: 'c.oldenhuis@codegorilla.nl',
       password: 'test',
-      skills: ['HTML', 'CSS', 'JavaScript', 'AngularJS'],
+      skills: ['HTML', 'CSS', 'ui-ux', 'AngularJS'],
       jobTitle: 'Junior Developer'
     }, {
       provider: 'local',
       role: 'user',
-      name: 'Hamster van Koll',
-      image: 'h_vankoll.jpg',
-      email: 'r.vankoll@codegorilla.nl',
+      name: 'Harco Wittendorp',
+      image: 'harco_wittendorp.jpg',
+      email: 'h.wittendorp@codegorilla.nl',
       password: 'test',
       skills: ['HTML', 'CSS', 'JavaScript', 'AngularJS'],
       jobTitle: 'Junior Developer'
@@ -81,7 +72,7 @@ User.find({}).remove()
       provider: 'local',
       role: 'user',
       name: 'Dennis Weda',
-      image: 'd_weda.jpg',
+      image: 'dennis_weda.jpg',
       email: 'd.weda@codegorilla.nl',
       password: 'test',
       skills: ['HTML', 'CSS', 'JavaScript', 'AngularJS'],
@@ -89,12 +80,95 @@ User.find({}).remove()
     }, {
       provider: 'local',
       role: 'user',
-      name: 'Harco Wittendorp',
-      image: 'h_wittendorp.jpg',
-      email: 'h.wittendorp@codegorilla.nl',
+      name: 'Ramon Horst',
+      image: 'ramon_horst.jpg',
+      email: 'r.horst@codegorilla.nl',
       password: 'test',
       skills: ['HTML', 'CSS', 'JavaScript', 'AngularJS'],
       jobTitle: 'Junior Developer'
+    }, {
+      provider: 'local',
+      role: 'user',
+      name: 'Ramon van Koll',
+      image: 'ramonvankoll.jpg',
+      email: 'r.vankoll@codegorilla.nl',
+      password: 'test',
+      skills: ['HTML', 'CSS', 'JavaScript', 'AngularJS'],
+      jobTitle: 'Junior Developer'
+    }, {
+      provider: 'local',
+      role: 'user',
+      name: 'Arjan Warrink',
+      image: 'arjan_warrink.jpg',
+      email: 'a.warrink@codegorilla.nl',
+      password: 'test',
+      skills: ['HTML', 'CSS', 'JavaScript', 'AngularJS'],
+      jobTitle: 'Junior Developer'
+    }, {
+      provider: 'local',
+      role: 'user',
+      name: 'Robin Schoemaker',
+      image: 'robin_schoemaker.jpg',
+      email: 'r.schoemaker@codegorilla.nl',
+      password: 'test',
+      skills: ['HTML', 'CSS', 'JavaScript', 'AngularJS'],
+      jobTitle: 'Junior Developer'
+    }, {
+      provider: 'local',
+      role: 'user',
+      name: 'Vera Hoving',
+      image: 'vera_hoving.jpg',
+      email: 'v.hoving@codegorilla.nl',
+      password: 'test',
+      skills: ['HTML', 'CSS', 'JavaScript', 'AngularJS'],
+      jobTitle: 'Junior Developer'
+    }, {
+      provider: 'local',
+      role: 'user',
+      name: 'Stephan Wolbers',
+      image: 'stephan_wolbers',
+      email: 's.wolbers@codegorilla.nl',
+      password: 'test',
+      skills: ['HTML', 'CSS', 'JavaScript', 'AngularJS'],
+      jobTitle: 'Junior Developer'
+    }, {
+      provider: 'local',
+      role: 'user',
+      name: 'Paul van de Laan',
+      image: 'paul_vandelaan.jpg',
+      email: 'p.vandelaan@codegorilla.nl',
+      password: 'test',
+      skills: ['HTML', 'CSS', 'JavaScript', 'AngularJS'],
+      jobTitle: 'Junior Developer'
+    }, {
+      provider: 'local',
+      role: 'user',
+      name: 'Rabin Jiawan',
+      image: 'rabin_jiawan.jpg',
+      email: 'r.jiawan@codegorilla.nl',
+      password: 'test',
+      skills: ['HTML', 'CSS', 'JavaScript', 'AngularJS'],
+      jobTitle: 'Junior Developer'
+    }, {
+      provider: 'local',
+      role: 'user',
+      name: 'Rene de Groot',
+      image: 'rene_degrootjpg',
+      email: 'r.degroot@codegorilla.nl',
+      password: 'test',
+      skills: ['HTML', 'CSS', 'JavaScript', 'AngularJS'],
+      jobTitle: 'Junior Developer'
+    }, {
+      provider: 'local',
+      role: 'user',
+      name: 'Danny Bieleveld',
+      image: 'danny_bieleveldjpg',
+      email: 'd.bieleveld@codegorilla.nl',
+      password: 'test',
+      skills: ['HTML', 'CSS', 'JavaScript', 'AngularJS'],
+      jobTitle: 'Junior Developer'
+    }, {
+
     })
     .then(() => {
       console.log('finished populating users');

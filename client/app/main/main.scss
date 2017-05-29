@@ -2,7 +2,6 @@
 
 .cg-startpage {
   background-color: $blue;
-  background-image: url(/assets/images/matrix-01.png);
   background-size: contain;
   background-blend-mode: soft-light;
   height: 100vh;
@@ -45,7 +44,8 @@
 .cg-mbp {
   min-height: 30vh;
   background: url('/assets/images/coding.jpg');
-  background-size: 100% auto;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   background-position: top center;
 }
 
@@ -283,14 +283,6 @@ span {
   color: #000;
   margin-top: auto;
 }
-
-
-// img {
-//   max-width: 60%;
-//   align-self: center;
-//   flex: 0 0 100%;
-//   // transform: translateX(-3vw);
-// }
 
 h1 {
   font-family: Bold;

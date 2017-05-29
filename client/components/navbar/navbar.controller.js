@@ -20,6 +20,10 @@ class NavbarController {
     'state': 'profile'
   },
   {
+    'title': 'Over ons',
+    'state': 'main({\'#\': \'about\'})'
+  },
+  {
     'title': 'Contact',
     'state': 'contact'
   }
@@ -155,12 +159,7 @@ class NavbarController {
             nav.clickIcon = 'menu';
       })
     }
-
-
-
 }
-
-
 
 angular.module('codeGorillaApp')
   .controller('NavbarController', NavbarController);
