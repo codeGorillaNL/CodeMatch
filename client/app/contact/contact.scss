@@ -5,13 +5,13 @@ section {
   background-color: $green;
 }
 
+
 .contact-form {
   padding: 100px 50px;
 }
 
 .contact-right {
-  padding: 0% 2%;
-  margin-top: 10vh;
+  padding: 100px 30px 20px 30px;
 }
 
 .images-contact {
@@ -37,7 +37,7 @@ input {
   @include long-shadow(text, darken($green, 5), 15, true, true, right);
 }
 
-::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
     color:    #FFF;
 }
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
@@ -55,16 +55,54 @@ input {
    color:    #FFF;
 }
 
-// @media (max-width: 600px){
-//   section {
-//     height: auto;
-//   }
-//
-//   .images-contact {
-//     margin-top: 3%;
-//   }
-//
-// }
+@media only screen and (max-width:1280px) {
+	section {
+		height: auto;
+
+    .images-contact {
+    margin-top: 1.5%;
+    }
+
+    .contact-form {
+      padding: 90px 45px;
+    }
+
+    .contact-right {
+      padding: 90px 30px 20px 30px;
+    }
+
+    p {
+      font-size: 1.2em;
+    }
+
+    .contact-footer {
+      font-size: 1.2em;
+    }
+
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color:    #FFF;
+        font-size: 1.2em;
+    }
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+       color:    #FFF;
+       opacity:  1;
+       font-size: 1.2em;
+    }
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+       color:    #FFF;
+       opacity:  1;
+       font-size: 1.2em;
+    }
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+       color:    #FFF;
+       font-size: 1.2em;
+    }
+    ::-ms-input-placeholder { /* Microsoft Edge */
+       color:    #FFF;
+       font-size: 1.2em;
+    }
+	}
+}
 
 @media only screen and (max-width:1024px) {
 	section {
@@ -75,15 +113,46 @@ input {
     }
 
     .contact-form {
-      padding: 10% 5%;
+      padding: 80px 40px;
     }
 
     .contact-right {
-      padding: 0% 2%;
-      margin-top: 10vh;
+      padding: 80px 25px 20px 25px;
+    }
+
+    p {
+      font-size: 1.1em;
+    }
+
+    .contact-footer {
+      font-size: 1.1em;
+    }
+
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color:    #FFF;
+        font-size: 1.1em;
+    }
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+       color:    #FFF;
+       opacity:  1;
+       font-size: 1.1em;
+    }
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+       color:    #FFF;
+       opacity:  1;
+       font-size: 1.1em;
+    }
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+       color:    #FFF;
+       font-size: 1.1em;
+    }
+    ::-ms-input-placeholder { /* Microsoft Edge */
+       color:    #FFF;
+       font-size: 1.1em;
     }
 	}
 }
+
 @media only screen and (max-width:768px) {
 	section {
 		height: auto;
@@ -93,12 +162,42 @@ input {
     }
 
     .contact-form {
-      padding: 10% 5%;
+      padding: 70px 35px;
     }
 
     .contact-right {
-      padding: 0% 2%;
-      margin-top: 6vh;
+      padding: 70px 20px 15px 20px;
+    }
+
+    p {
+      font-size: 1em;
+    }
+
+    .contact-footer {
+      font-size: 0.9em;
+    }
+
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color:    #FFF;
+        font-size: 0.9em;
+    }
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+       color:    #FFF;
+       opacity:  1;
+       font-size: 0.9em;
+    }
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+       color:    #FFF;
+       opacity:  1;
+       font-size: 0.9em;
+    }
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+       color:    #FFF;
+       font-size: 0.9em;
+    }
+    ::-ms-input-placeholder { /* Microsoft Edge */
+       color:    #FFF;
+       font-size: 0.9em;
     }
 	}
 }
@@ -111,16 +210,42 @@ input {
     }
 
     .contact-form {
-      padding: 9% 3%;
+      padding: 60px 30px;
     }
 
     .contact-right {
-      padding: 0% 1%;
-      margin-top: 4vh;
+      padding: 60px 15px 10px 15px;
+    }
+
+    p {
+      font-size: 0.8em;
     }
 
     .contact-footer {
-      font-size: 0.7em;
+      font-size: 0.8em;
+    }
+
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color:    #FFF;
+        font-size: 0.8em;
+    }
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+       color:    #FFF;
+       opacity:  1;
+       font-size: 0.8em;
+    }
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+       color:    #FFF;
+       opacity:  1;
+       font-size: 0.8em;
+    }
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+       color:    #FFF;
+       font-size: 0.8em;
+    }
+    ::-ms-input-placeholder { /* Microsoft Edge */
+       color:    #FFF;
+       font-size: 0.8em;
     }
 	}
 }
@@ -133,16 +258,47 @@ input {
     }
 
     .contact-form {
-      padding: 8% 2%;
+      padding: 50px 10px;
     }
 
     .contact-right {
-      padding: 0% 0.5%;
-      margin-top: 4vh;
+      padding: 50px 10px 5px 10px;
+    }
+
+    p {
+      font-size: 0.7em;
+    }
+
+    label {
+      font-size: 0.7em;
     }
 
     .contact-footer {
-      font-size: 0.7em;
+      font-size: 0.55em;
     }
+
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color:    #FFF;
+        font-size: 0.7em;
+    }
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+       color:    #FFF;
+       opacity:  1;
+       font-size: 0.7em;
+    }
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+       color:    #FFF;
+       opacity:  1;
+       font-size: 0.7em;
+    }
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+       color:    #FFF;
+       font-size: 0.7em;
+    }
+    ::-ms-input-placeholder { /* Microsoft Edge */
+       color:    #FFF;
+       font-size: 0.7em;
+    }
+
 	}
 }
