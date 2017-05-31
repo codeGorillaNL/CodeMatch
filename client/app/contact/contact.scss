@@ -5,13 +5,13 @@ section {
   background-color: $green;
 }
 
-
 .contact-form {
   padding: 100px 50px;
 }
 
 .contact-right {
-  padding: 100px 30px 20px 30px;
+  padding: 100px 50px;
+  margin-top: 10vh;
 }
 
 .images-contact {
@@ -55,6 +55,8 @@ input {
    color:    #FFF;
 }
 
+
+
 @media only screen and (max-width:1280px) {
 	section {
 		height: auto;
@@ -68,7 +70,8 @@ input {
     }
 
     .contact-right {
-      padding: 90px 30px 20px 30px;
+      padding: 0% 2%;
+      margin-top: 10vh;
     }
 
     p {
@@ -117,7 +120,8 @@ input {
     }
 
     .contact-right {
-      padding: 80px 25px 20px 25px;
+      padding: 0% 2%;
+      margin-top: 10vh;
     }
 
     p {
@@ -166,11 +170,12 @@ input {
     }
 
     .contact-right {
-      padding: 70px 20px 15px 20px;
+      padding: 0% 2%;
+      margin-top: 7vh;
     }
 
     p {
-      font-size: 1em;
+      font-size: 0.9em;
     }
 
     .contact-footer {
@@ -214,7 +219,8 @@ input {
     }
 
     .contact-right {
-      padding: 60px 15px 10px 15px;
+      padding: 0% 1%;
+      margin-top: 6vh;
     }
 
     p {
@@ -258,11 +264,12 @@ input {
     }
 
     .contact-form {
-      padding: 50px 10px;
+      padding: 40px 10px;
     }
 
     .contact-right {
-      padding: 50px 10px 5px 10px;
+      padding: 1% 5%;
+      margin-top: 4vh;
     }
 
     p {
