@@ -35,6 +35,10 @@ html, body {
   font-family: 'Regular';
 }
 
+div[ui-view] {
+  min-height: 100vh;
+}
+
 :focus {
   outline: 0;
 }
@@ -74,7 +78,7 @@ navbar {
   z-index: 999;
   transition: all .4s ease-in-out;
 
-  ng-md-icon {
+  & > ng-md-icon {
     display: flex;
     width: 36px;
     height: 36px;
@@ -101,7 +105,11 @@ navbar {
       list-style-type: none;
       margin: 0;
       padding: 0;
-      padding-top: 10vh;
+
+      li {
+        margin: .5em 0;
+        display: flex;
+      }
 
       .md-button.red-button {
         background-color: $red;
@@ -133,21 +141,36 @@ navbar {
     }
 
     .socialButton {
-      height: 3vh;
+      height: 3vmax;
       width: auto;
     }
 
+    .social-buttons {
+
+      width: 32vw;
+
+      a {
+        margin: 0 auto;
+      }
+    }
+
     .socialWrapper {
-      margin-top: 15px;
-      margin-bottom: auto;
-      margin-left: 80vw;
-      margin-right: 3vw;
-      display: block;
-      position: absolute;
+
+      ng-md-icon {
+        margin: 0 !important;
+      }
+
+    }
+
+    .cg-address {
+      margin-left: 9vw;
+      color: #fff;
     }
 
     .blue-button {
-      width: 20vw;
+      margin: 1em auto;
+      font-size: 16px;
+      width: 35vw;
     }
 
     a {
@@ -193,32 +216,32 @@ nav.open {
 #map, .angular-google-map-container {
   height: 40vh;
   width: 32vw;
-  margin-top: 20vh;
-  margin-left: 10vw;
-  margin-right: 10vw;
+  // margin-top: 20vh;
+  // margin-left: 10vw;
+  // margin-right: 10vw;
 }
 
 // Menu styling
 
 .gorillaAddressShown {
-      color: #FFF;
+  color: #FFF;
   font-weight: bold;
-  position: absolute;
-  margin-top: 65vh;
-  margin-left: 70vw;
+  // position: absolute;
+  // margin-top: 65vh;
+  // margin-left: 70vw;
 }
 
 .gorillaAddressHidden {
  font-weight: bold;
- position: absolute;
- margin-top: 65vh;
- margin-left: 70vw;
+ // position: absolute;
+ // margin-top: 65vh;
+ // margin-left: 70vw;
 }
 
 .gorillaCall {
-  position: absolute;
-  margin-top: 80vh;
-  margin-left: 71vw;
+  // position: absolute;
+  // margin-top: 80vh;
+  // margin-left: 71vw;
   height: 10px;
   width: 10px;
 }
@@ -237,14 +260,10 @@ nav.open {
     width: 80vw;
   }
 
-  .gorillaAddressShown {
-    display: none;
-  }
-
-  .menu {
+  navbar nav .menu {
     li {
       width: 80vw;
-      margin-left: 10vw;
+      margin: 0;
     }
   }
 
@@ -257,12 +276,12 @@ nav.open {
     height: auto;
     display: flex;
     position: absolute;
+  }
 
-    .socialButton {
-      height: 5vh;
-      width: 5vh;
-      margin-bottom: 5vh;
-    }
+  navbar nav .socialButton {
+    height: 5vmax;
+    width: auto;
+    margin: 2vmax 0;
   }
 }
 

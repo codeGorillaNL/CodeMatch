@@ -4,9 +4,9 @@ profile {
 
   .card {
 
-    margin: 2.5%;
-    background-color: $red;
-    height: 30vw;
+    margin: 2.5vmin;
+    flex: 1 1 20%;
+    height: 30vmax;
     position: relative;
     background-size: 100% auto;
     background-repeat: no-repeat;
@@ -23,12 +23,13 @@ profile {
     }
 
     img {
-      max-width: 20vw;
-      max-height: 50%;
+      max-width: 100%;
+      width: 100%;
       flex: 0 1 100%;
     }
 
     .card-content {
+      background-color: $red;
       padding: 1em;
       overflow: hidden;
     }
@@ -40,17 +41,48 @@ profile {
 
 }
 
+@media ( min-width: 600px ) and ( max-width: 960px ) {
+
+  profile {
+    .card {
+      flex: 0 1 45%;
+      height: 40vmax;
+    }
+  }
+}
+
 @media (max-width: 600px) {
 
   profile {
     .card {
-      img {
-        max-height: 100%;
-        max-width: 50%;
+
+      flex: 1 1 100%;
+      flex-direction: row;
+      max-height: 33.75vmin;
+      background: linear-gradient(to right, $blue, $red, $red);
+
+      .card-image {
+
+        display: block;
+        max-width: 45vmin;
+        width: 45vmin;
+
+        img {
+          max-height: 33.75vmin;
+          max-width: 100%;
+          border-top-left-radius: 5px;
+          border-bottom-left-radius: 5px;
+        }
+      }
+
+      .card-content {
+        height: 100%;
+        min-height: 100%;
+        font-size: .8em;
       }
     }
-    .card-content {
-      font-size: .8em;
+    .card * {
+      flex-wrap: nowrap;
     }
   }
 }

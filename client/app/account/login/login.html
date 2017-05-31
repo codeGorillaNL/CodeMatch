@@ -1,23 +1,23 @@
-<div class="login-form" layout="row" layout-align="center center">
-
-  <div flex="33" layout="column" layout-align="center stretch">
+<div class="login-form" layout="column" layout-align="center center">
 
     <div flex="10" layout="row" layout-align="center start">
         <md-icon style="font-size: 3rem; height: 3rem">https</md-icon>
     </div>
 
-    <md-input-container>
-    <label>Mailadres</label>
+    <div flex="nogrow" layout="column" layout-align="center stretch">
+
+      <md-input-container>
+        <label>Mailadres</label>
         <input type="email" ng-model="vm.user.email">
-    </md-input-container>
+      </md-input-container>
 
-    <md-input-container>
+      <md-input-container>
         <label>Wachtwoord</label>
-            <input type="password" ng-model="vm.user.password">
-    </md-input-container>
+        <input type="password" ng-model="vm.user.password">
+      </md-input-container>
 
-    <md-button class="btn-green" ng-click="vm.login()">Verzenden</md-button>
-    <!-- <button flex="10"  id="linkedin_button" linked-in type="button" type="submit" value=""></button> -->
+      <md-button class="btn-green" ng-click="vm.login()">Verzenden</md-button>
 
-  </div>
+    </div>
+
 </div>

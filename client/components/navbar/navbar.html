@@ -1,53 +1,62 @@
 <!-- Menu-buttons -->
-<nav ng-class="{open: nav.isCollapsed }" layout="column">
-   <div layout="row" flex="100" layout-fill>
-   <ul class="menu" class="linkbutton" class="test" layout="column" flex="100" flex-gt-sm="50" layout-align="space-around center">
-     <li flex="10" ng-repeat="item in nav.menu" ui-sref="{{item.state}}" layout-align-xs="center">
-       <md-button flex="60" class="blue-button">{{item.title}}</md-button>
-     </li>
-   </ul>
+<nav ng-class="{open: nav.isCollapsed }" flex="100" layout="row">
 
-   <!-- social media buttons -->
-   <div class="socialWrapper" flex-gt-sm="50" class="red text" flex="auto" layout="column" flex="100" layout-no-wrap>
+<div layout="row" flex="50" flex-xs="80" layout-align="space-around stretch">
+  <ul class="menu" class="linkbutton" class="test" layout="column" flex="100" flex-gt-sm="50" layout-align="center center">
+    <li ng-repeat="item in nav.menu" ui-sref="{{item.state}}" ui-sref-opts="{reload: true}" layout-align-xs="center stretch">
+    <md-button flex="60" class="blue-button">{{item.title}}</md-button>
+    </li>
+  </ul>
+</div>
 
-     <a ng-href="https://www.facebook.com/CodeGorillaNL/" target="_blank">
-       <img class="socialButton" src="assets/images/facebook.png"/></a>
-     <a ng-href="https://www.linkedin.com/company-beta/17908501/" target="_blank">
-       <img class="socialButton" src="assets/images/linkedin.png"/></a>
-     <a ng-href="https://www.youtube.com/channel/UCs1QNZLADeK7EIQtfzQkgMw" target="_blank">
-       <img class="socialButton" src="assets/images/youtube.png"/></a>
-     <a ng-href="https://twitter.com/search?q=codegorilla&src=typd&lang=nl" target="_blank">
-       <img class="socialButton" src="assets/images/twitter.png"/></a>
-   </div>
+<div layout="column" flex="50" flex-xs="20" layout-align="space-around center">
 
-    <!-- google-maps (hidden on smaller devices) -->
-    <ui-gmap-google-map hide-xs
-        center='nav.map.center' zoom='nav.map.zoom' options='nav.options'>
-        <ui-gmap-marker
-          idKey='nav.marker.id'
-          coords='nav.marker.coords'
-          options='nav.marker.options'
-          >
-        </ui-gmap-marker>
+  <!-- social media buttons -->
+  <div flex="20" class="social-buttons" layout="row" layout-xs="column" layout-align="space-around center" layout-no-wrap>
+    <a ng-href="https://www.facebook.com/CodeGorillaNL/" target="_blank">
+      <img class="socialButton" src="assets/images/facebook.png"/></a>
+    <a ng-href="https://www.linkedin.com/company-beta/17908501/" target="_blank">
+      <img class="socialButton" src="assets/images/linkedin.png"/></a>
+    <a ng-href="https://www.youtube.com/channel/UCs1QNZLADeK7EIQtfzQkgMw" target="_blank">
+      <img class="socialButton" src="assets/images/youtube.png"/></a>
+    <a ng-href="https://twitter.com/search?q=codegorilla&src=typd&lang=nl" target="_blank">
+      <img class="socialButton" src="assets/images/twitter.png"/></a>
+  </div>
+
+  <!-- google-maps (hidden on smaller devices) -->
+  <div class="map" flex="40" hide-xs>
+    <ui-gmap-google-map center='nav.map.center' zoom='nav.map.zoom' options='nav.options'>
+      <ui-gmap-marker idKey='nav.marker.id' coords='nav.marker.coords' options='nav.marker.options'></ui-gmap-marker>
     </ui-gmap-google-map>
+  </div>
 
-    <!--The address is clickable on smaller devices and points to a Google Map on the CodeGorilla Location-->
+  <!--The address is clickable on smaller devices and points to a Google Map on the CodeGorilla Location-->
+  <div class="cg-address" hide-xs flex="40" layout="row" layout-align="start center" layout-wrap>
+    <h4 flex="100">CodeGorilla</h4>
+    <ng-md-icon flex="10" icon="add_location"></ng-md-icon>
+    <span flex="90">Baander 8</span>
+    <span flex="10"></span>
+    <span flex="90">7811 HJ, Emmen</span>
+    <ng-md-icon flex="10" icon="phone"></ng-md-icon>
+    <span flex="90">085-0608960</span>
+    <ng-md-icon flex="10" icon="mail"></ng-md-icon>
+    <span flex="90">info@codegorilla.nl</span>
 
-    <p class="gorillaAddressShown">CodeGorilla</br>Baander 8</br>7811 HJ Emmen</br>
+    <!-- <p class="gorillaAddressShown">CodeGorilla</br>Baander 8</br>7811 HJ Emmen</br>
       <a href="tel:+31850608960">085-0608960</a>
     </p>
 
-    <p class="gorillaAddressHidden">
-      <a href="http://www.google.com/maps/place/52.781843,6.895173">
-        CodeGorilla</br>Baander 8</br>7811 HJ Emmen</br> </a>
-      <a href="tel:+31850608960">085-0608960</a>
-    </p>
+  <p class="gorillaAddressHidden">
+    <a href="http://www.google.com/maps/place/52.781843,6.895173">
+      CodeGorilla</br>Baander 8</br>7811 HJ Emmen</br> </a>
+    <a href="tel:+31850608960">085-0608960</a>
+  </p>
 
 
-    <a href="tel:+31850608960" class="gorillaCall">
-    <img src="/assets/images/phoneblue.png" height="600%" width="600%"> </img>
-    </a>
-
+  <a href="tel:+31850608960" class="gorillaCall">
+  <img src="/assets/images/phoneblue.png" height="600%" width="600%"> </img>
+  </a> -->
+  </div>
 </nav>
 
 <ng-md-icon icon="{{nav.clickIcon}}" ng-click="nav.expandMenu()" size="36"></ng-md-icon>

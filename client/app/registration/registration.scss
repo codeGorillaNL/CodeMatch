@@ -1,18 +1,10 @@
-registration {
+.tussenpagina {
   background-color: $red;
-  background-image:url('/assets/images/matrix-01.png');
-  background-size: 1920px auto;
-  background-blend-mode: soft-light;
   width: 100vw;
   height: 100vh;
-}
-
-.tussenpagina {
-  height: 50vh;
-  margin-top: 25vh;
 
   img {
-    max-width: 50%;
+    max-width: 30vmin;
     align-self: center;
     cursor: pointer;
   }
@@ -24,12 +16,23 @@ registration {
   }
 }
 
+.tussenpagina .div {
+  height: 100%;
+}
+
+@media (max-width: 960px) {
+
+  .tussenpagina {
+    // padding-top: 15vh;
+  }
+
+  .tussenpagina .div {
+    height: 42.5%;
+  }
+}
+
 @media (max-width: 600px) {
   .tussenpagina {
-
-    img {
-      max-width: 35%;
-    }
 
     h3 {
       font-size: 1.2em;
