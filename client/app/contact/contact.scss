@@ -55,55 +55,6 @@ input {
 }
 
 
-@media only screen and (max-width:1280px) {
-	section {
-		height: auto;
-
-    .images-contact {
-    margin-top: 1.5%;
-    }
-
-    .contact-form {
-      padding: 90px 45px;
-    }
-
-    .contact-right {
-      padding: 90px 45px 45px;
-    }
-
-    p {
-      font-size: 1.2em;
-    }
-
-    .contact-footer {
-      font-size: 1.2em;
-    }
-
-    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-        color:    #FFF;
-        font-size: 1.2em;
-    }
-    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-       color:    #FFF;
-       opacity:  1;
-       font-size: 1.2em;
-    }
-    ::-moz-placeholder { /* Mozilla Firefox 19+ */
-       color:    #FFF;
-       opacity:  1;
-       font-size: 1.2em;
-    }
-    :-ms-input-placeholder { /* Internet Explorer 10-11 */
-       color:    #FFF;
-       font-size: 1.2em;
-    }
-    ::-ms-input-placeholder { /* Microsoft Edge */
-       color:    #FFF;
-       font-size: 1.2em;
-    }
-	}
-}
-
 @media only screen and (max-width:1024px) {
 	section {
 		height: auto;
@@ -113,19 +64,23 @@ input {
     }
 
     .contact-form {
-      padding: 80px 40px;
+      padding: 80px 30px;
     }
 
     .contact-right {
-      padding: 80px 40px 40px;
+      padding: 80px 30px 40px 30px;
     }
 
     p {
       font-size: 1.1em;
     }
 
-    .contact-footer {
+    label {
       font-size: 1.1em;
+    }
+
+    .contact-footer {
+      font-size: 0.9em;
     }
 
     ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -166,10 +121,14 @@ input {
     }
 
     .contact-right {
-      padding: 70px 35px 35px;
+      padding: 70px 35px 30px 35px;
     }
 
     p {
+      font-size: 0.9em;
+    }
+
+    label {
       font-size: 0.9em;
     }
 
@@ -215,15 +174,19 @@ input {
     }
 
     .contact-right {
-      padding: 60px 30px 30px;
+      padding: 60px 30px 20px 30px;
     }
 
     p {
       font-size: 0.8em;
     }
 
-    .contact-footer {
+    label {
       font-size: 0.8em;
+    }
+
+    .contact-footer {
+      font-size: 0.7em;
     }
 
     ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -264,7 +227,7 @@ input {
     }
 
     .contact-right {
-      padding: 50px 25px 25px;
+      padding: 50px 25px 15px 25px;
     }
 
     p {
@@ -276,7 +239,7 @@ input {
     }
 
     .contact-footer {
-      font-size: 0.55em;
+      font-size: 0.6em;
     }
 
     ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
