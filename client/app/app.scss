@@ -79,6 +79,7 @@ navbar {
   transition: all .4s ease-in-out;
 
   & > ng-md-icon {
+    cursor: pointer;
     display: flex;
     width: 36px;
     height: 36px;

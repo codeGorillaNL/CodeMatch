@@ -1,41 +1,67 @@
 <!-- Startpage (above the fold) -->
 
 <div class="cg-startpage" flex="100" layout="column" layout-align="center center">
-  <img class="cg-gorilla-animated" flex="35" src="{{$ctrl.image}}" alt="animated CodeGorilla logo">
+  <img class="cg-gorilla-animated" flex="35" flex-gt-sm="55" src="{{$ctrl.image}}" alt="animated CodeGorilla logo">
   <p class="cg-title"><span>&lt;code&gt;</span>gorilla</p>
   <p class="cg-tag">Do you need code? We've got CodeGorillas</p>
   <img class="cg-hidden-monkey" src="assets/images/hanging_monkey.png">
 </div>
 
-<div class="cg-below-fold">
-  <div class="cg-mbp">&nbsp;</div>
-  <div class="cg-text-block red-bg">
+<div flex="100" layout="row" layout-wrap id="about">
+<div class="cg-mbp" flex-gt-sm="60" flex="100">&nbsp;</div>
+  <div flex-gt-sm="40" class="cg-text-block red-bg" flex="auto" layout="column" flex="100">
     <h3 class="red">Over CodeGorilla</h3>
     <div class="tosti">
-      <p>Codegorilla leidt mensen op die over de 21st century skills beschikken. Programmeren is maar een van de vele onderdelen. Naast technische kennis is de capaciteit om zelfstandig, zelfgestuurd en ondernemend te kunnen leren dat wat het verschil maakt. Door te richten op blijvend leervermogen, creativiteit, kritisch en logisch denkvermogen, samenwerking en communicatieve vaardigheden, worden de Codegorillas uitgerust met een levenslange leercapaciteit waar je als bedrijf op kunt bouwen.Bij Codegorilla vinden wij geslacht, leeftijd, ervaring of afkomst niet belangrijk. Wat wij belangrijk vinden is dat iemand kansen ziet in de IT-wereld en die met beide handen vastgrijpt.</p>
+      <p>Wij leiden deelnemers op om over de 21st century skills te beschikken.
+      Kunnen programmeren is hier maar een klein onderdeel van. Veel belangrijker
+      dan kennis is de capaciteit om zelfstandig, zelfgestuurd en ondernemend te
+      kunnen leren. Door te richten op blijvend leervermogen, creativiteit, kritisch
+      en logisch denkvermogen, samenwerking en communicatieve vaardigheden, worden
+      CodeGorilla deelnemers uitgerust met een levenslange leercapaciteit waar je
+      als bedrijf op kunt bouwen.
+      Bij CodeGorilla vinden wij geslacht, leeftijd, ervaring of afkomst niet zo belangrijk.
+      Wat wij belangrijk vinden is dat iemand kansen ziet in de IT-wereld en die met
+      beide handen vastgrijpt.</p>
     </div>
   </div>
-
-  <div class="cg-text-block green-bg">
+<!-- </div> -->
+<div class="video-row" flex="100" layout-gt-sm="row" layout="column" layout-sm="column">
+  <div flex-gt-sm="auto" flex="100" class="cg-text-block green-bg" layout="column" flex="100">
     <h3 class="green">Day one</h3>
-    <p class="brood">&#34;Voordat de bootcamp begon waren wij al bezig. Eerst werden we uitgedaagd met een onmogelijke casus die wij binnen een week moesten oplossen. Vervolgens werden we in het diepe gegooid tijdens een 30-urige hackathon. Zware proeven om te bepalen wie wel en niet mee mochten doen. We dachten even op adem te kunnenkomen, toch niet. We gingen gelijk aan de slag met het bouwen van een website. Deze website. Wat moesten we daarvoor leren en doen? Brainstormen, overleggen, kennisdelen, plannen, scrummen, pitchen, coderen, veel lachen, kortom, (gezonde) werkdruk waardoor wij optimaal leren presteren als collectief.&#34;</p>
+    <p class="brood">&#34;Voordat de bootcamp begon waren wij al bezig. Eerst werden we
+      uitgedaagd met een onmogelijke casus die wij binnen een week moesten
+      oplossen. Vervolgens werden we in het diepe gegooid tijdens
+      een 30-urige hackathon. Zware proeven om te bepalen wie wel
+      en niet mee mochten doen. We dachten even op adem te kunnen
+      komen, toch niet. We gingen gelijk aan de slag met het bouwen
+      van een website. Deze website. Wat moesten we daarvoor
+      leren en doen? Brainstormen, overleggen, kennisdelen, plannen,
+      scrummen, pitchen, coderen, veel lachen, kortom, (gezonde) werkdruk
+      waardoor wij optimaal leren presteren als collectief.&#34;</p>
       <p>Vera Hoving
-          <img class="signature" src="assets/images/handtekening_vera.png" alt="">
       </p>
   </div>
-  <div class="cg-video-container">
-    <video controls muted src="assets/images/film.mp4" alt=""></video>
-  </div>
+    <video flex-gt-sm="60" flex="100" controls muted src="assets/images/film.mp4" alt="">
+</div>
 
-  <div class="progress-wrapper">
+<div flex="100" layout-gt-sm="row" layout="column">
+  <div class="progress-wrapper" flex-gt-sm="60" flex="100">
+    <img src="assets/images/monkey_programming.jpg" alt="in progress">
     <div class="progress">
       <span>{{$ctrl.progressBar + '%'}}</span>
       <div class="bar" ng-style="{ width : $ctrl.progressBar + '%'}">&nbsp;</div>
     </div>
   </div>
-   <div class="cg-text-block blue-bg">
+   <div flex-gt-sm="auto" flex="100" class="cg-text-block blue-bg" flex="auto" layout="column">
      <h3 class="blue">Under Construction</h3>
-       <p class="stokbrood">De Codegorillas zijn {{$ctrl.day}} dagen geleden gestart bij Codegorilla met het leren coderen in o.a. HTML 5, CSS, JavaScript, PHP, Unity en MongoDB volgens de agile werkmethodes en het ondernemende leren. Deze site is gemaakt door alle Codegorillasen is nog “under contruction”. Met doorzettingsvermogen, team spirit, out-of-the-box denken en passie voor het coderen zijn wij deze website elke dag verder aan het ontwikkelen.</p>
+       <p class="stokbrood">De Gorilla’s zijn {{$ctrl.day}} gestart bij CodeGorilla
+         met het leren coderen in o.a. HTML 5, CSS, JavaScript, PHP, Unity en
+         MongoDB, in een Agile en ondernemend-leren leeromgeving.velen zijn vanuit
+         het niets  begonnen met coderen. Deze site is gemaakt door alle gorilla’s
+         en is nog deels “under contruction”. Met doorzettingsvermogen,
+         team spirit, “out of the box” denken en passie voor het coderen hebben
+         wij deze website ontwikkeld en zijn zeker nog niet klaar.</p>
+  </div>
   </div>
 </div>
 

@@ -143,6 +143,24 @@ User.find({}).remove()
     }, {
       provider: 'local',
       role: 'user',
+      name: 'Danny Bieleveld',
+      image: 'danny_bieleveld.png',
+      email: 'd.Bieleveld@codegorilla.nl',
+      password: 'test',
+      skills: ['HTML', 'CSS', 'JavaScript', 'AngularJS'],
+      jobTitle: 'Junior Developer'
+    }, {
+      provider: 'local',
+      role: 'user',
+      name: 'Rene de Groot',
+      image: 'rene_degroot.png',
+      email: 'r.degroot@codegorilla.nl',
+      password: 'test',
+      skills: ['HTML', 'CSS', 'JavaScript', 'AngularJS'],
+      jobTitle: 'Junior Developer'
+    }, {
+      provider: 'local',
+      role: 'user',
       name: 'Rabin Jiawan',
       image: 'rabin-jiawan.png',
       email: 'r.jiawan@codegorilla.nl',
