@@ -89,7 +89,7 @@ User.find({}).remove()
     }, {
       provider: 'local',
       role: 'user',
-      name: 'Ramon "Hamster" van Koll',
+      name: 'Ramon van Koll',
       image: 'ramon-vankoll.png',
       email: 'r.vankoll@codegorilla.nl',
       password: 'test',
