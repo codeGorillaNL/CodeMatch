@@ -154,16 +154,17 @@
 
 .stokbrood1 {
   border-top-style: solid;
-  border-width: 2px;
+  border-width: 0px;
   border-color: $blue;
   font-family: sans-serif;
   font-size: 0.9rem;
   text-shadow: 1px 1px darken($blue, 30%);
-  color: #ffffff;
+  color: #77C4D7;
 }
 
 h3.red{
   @include long-shadow(text, darken($red, 5), 15, false, false, right);
+
 }
 
 h3.green{
