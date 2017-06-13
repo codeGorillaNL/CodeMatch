@@ -39,7 +39,7 @@
             <label>Telefoonnummer</label>
             <input type="text" ng-model="user.Telefoonnummer" required>
           </md-input-container>
-          <md-input-container flex="100" layout-fill>
+          <md-input-container flex="100">
             <label>Mailadres</label>
             <input type="email" ng-model="user.Mailadres" required>
           </md-input-container>
@@ -118,7 +118,7 @@
             <span flex="15">{{e.Afgerond}}</span>
           </md-list-item>
         </md-list>
-        <div flex="auto" layout="row" layout-align="end end" layout-fill>
+        <div flex="auto" layout="row" layout-align="end end">
           <md-button class="btn-green next" ng-click="vm.selectedTab = vm.selectedTab + 1">Volgende</md-button>
         </div>
       </md-content>
@@ -179,7 +179,7 @@
             </md-list-item>
           </md-list>
         </div>
-        <div flex="auto" layout="row" layout-align="end end" layout-fill>
+        <div flex="auto" layout="row" layout-align="end end">
           <md-button class="btn-green next" ng-click="vm.selectedTab = vm.selectedTab + 1">Volgende</md-button>
         </div>
       </md-content>
@@ -188,7 +188,7 @@
       <md-content layout-padding layout-wrap layout-fill>
         <p>Schrijf een korte motivatie waarom je deel wilt nemen aan de CodeGorilla Bootcamp.</p>
         <textarea ng-model="user.Motivatie" style="width: 90%" rows="12" required></textarea>
-        <div flex="auto" layout="row" layout-align="end end" layout-fill>
+        <div flex="auto" layout="row" layout-align="end end">
           <span ng-show="vm.mailStatus">{{vm.mailStatus}}</span>
           <md-button class="btn-green next" ng-click="vm.sendSignupForm(user)">Verzenden</md-button>
         </div>
