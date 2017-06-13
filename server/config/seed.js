@@ -134,9 +134,9 @@ User.find({}).remove()
     }, {
       provider: 'local',
       role: 'user',
-      name: 'Paul van de Laan',
-      image: 'paul-vandelaan.png',
-      email: 'p.vandelaan@codegorilla.nl',
+      name: 'Paul van der Laan',
+      image: 'paul-vanderlaan.png',
+      email: 'p.vanderlaan@codegorilla.nl',
       password: 'test',
       skills: ['HTML', 'CSS', 'JavaScript', 'AngularJS'],
       jobTitle: 'Junior Developer'
