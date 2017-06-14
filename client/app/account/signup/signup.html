@@ -90,11 +90,11 @@
               <md-option ng-value="opt" ng-repeat="opt in vm.educations">{{opt}}</md-option>
             </md-select>
             <md-input-container flex="50">
-              <label>Startjaar</label>
+              <label>Startjaar(jaartal)</label>
               <input type="text" ng-model="item.Startjaar">
             </md-input-container>
             <md-input-container flex="50">
-              <label>Eindjaar</label>
+              <label>Eindjaar(jaartal)</label>
               <input type="text" ng-model="item.Eindjaar">
             </md-input-container>
             <md-switch flex="100" ng-true-value="'Ja'" ng-false-value="'Nee'" class="md-primary" md-no-ink aria-label="Afgerond" ng-model="item.Afgerond">Opleiding afgerond?</md-switch>
@@ -154,11 +154,11 @@
           </md-input-container>
             <md-switch flex="40" ng-true-value="'Ja'" ng-false-value="'Nee'" class="md-primary" md-no-ink aria-label="Huidig" ng-model="emp.Huidig">Huidig</md-switch>
             <md-input-container flex="50">
-              <label>Start dienstverband</label>
+              <label>Start dienstverband (jaartal)</label>
               <input type="text" ng-model="emp.Aanvang">
             </md-input-container>
             <md-input-container flex="50">
-              <label>Einde dienstverband</label>
+              <label>Einde dienstverband (jaartal)</label>
               <input type="text" ng-model="emp.Einde">
             </md-input-container>
             <md-button style="margin-top: 0;" flex layout-align="center center" ng-click="user.Werkgevers.push(emp); emp = {};">Toevoegen</md-button>
