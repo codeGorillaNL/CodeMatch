@@ -129,21 +129,23 @@
         <div layout="column">
           <h3>Huidig dienstverband</h3>
           <md-input-container flex="10">
-            <md-select ng-model="user.Dienstverband" placeholder="Dienstverband" required>
+            <md-select ng-model="emp.Dienstverband" placeholder="Dienstverband" required>
               <!-- <md-select-label>Huidige situatie</md-select-label> -->
               <md-option ng-value="opt" ng-repeat="opt in vm.options">{{ opt }}</md-option>
             </md-select>
           </md-input-container>
         </div>
+    <!-- This functie isn't used anywhere
+    
         <div layout="column" ng-show="user.Dienstverband == 'Overig'" layout-wrap>
           <md-switch md-invert flex="50" flex-xs="100" ng-if="true" class="md-primary" md-no-ink aria-label="Uitkering" ng-model="user.Uitkering">Uitkeringsgerechtigd?</md-switch>
             <md-input-container flex="30" flex-xs="80" ng-show="user.Uitkering == true">
             <md-select ng-model="user.SoortUitkering" placeholder="Uitkerende instantie">
-              <!-- <md-select-label>Huidige situatie</md-select-label> -->
+              <md-select-label>Huidige situatie</md-select-label>
               <md-option ng-value="opt" ng-repeat="opt in vm.uitkeringen">{{ opt }}</md-option>
             </md-select>
           </md-input-container>
-        </div>
+      </div> -->
         <div layout="row" layout-wrap>
           <h3 flex="100">Werkgever toevoegen</h3>
           <md-input-container flex="60">
@@ -160,18 +162,19 @@
               <input type="text" ng-model="emp.Einde">
             </md-input-container>
             <md-button style="margin-top: 0;" flex layout-align="center center" ng-click="user.Werkgevers.push(emp); emp = {};">Toevoegen</md-button>
-          <!-- </div> -->
         </div>
         </form>
         <div flex="100" flex-gt-sm="60" layout="column" hide-xs>
           <md-list>
             <md-list-item layout="row">
+              <h5 flex="auto">Dienstverband</h5>
               <h5 flex="auto">Werkgever</h5>
               <h5 flex="15">Huidig</h5>
               <h5 flex="15">Van</h5>
               <h5 flex="15">Tot</h5>
             </md-list-item>
             <md-list-item layout="row" ng-repeat="i in user.Werkgevers">
+              <h5 flex="auto">{{i.Dienstverband}}</h5>
               <h5 flex="auto">{{i.Werkgever}}</h5>
               <h5 flex="15">{{i.Huidig}}</h5>
               <h5 flex="15">{{i.Aanvang}}</h5>
