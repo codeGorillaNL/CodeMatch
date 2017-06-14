@@ -35,6 +35,10 @@ html, body {
   font-family: 'Regular';
 }
 
+body.noscroll{
+    overflow: hidden;
+}
+
 div[ui-view] {
   min-height: 100vh;
 }
@@ -262,6 +266,7 @@ nav.open {
 
 // Component styles are injected through gulp
 /* inject:scss */
+@import 'account/signup/signup';
 @import 'admin/admin';
 @import 'contact/contact';
 @import 'main/main';
@@ -270,5 +275,4 @@ nav.open {
 @import 'success/success';
 @import 'timeline/timeline';
 @import '../components/footer/footer';
-@import 'account/signup/signup';
 /* endinject */
