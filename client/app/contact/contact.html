@@ -12,7 +12,10 @@
       <label><span>Mailadres</label>
       <input type="email" ng-model="form.mail">
     </md-input-container>
-    <textarea ng-model="form.message" placeholder="Bericht" rows="8"></textarea>
+    <md-input-container>
+    <label><span>Bericht</label>
+    <textarea ng-model="form.message" rows="8"></textarea>
+    </md-input-container>
     <div ng-show="$ctrl.mailStatus" layout="row" style="color: red;">
       {{$ctrl.mailStatus}}
     </div>
