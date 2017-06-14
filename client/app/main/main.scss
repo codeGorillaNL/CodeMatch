@@ -1,5 +1,11 @@
 // Main page above fold
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 .cg-startpage {
   background-color: $blue;
   background-size: contain;
@@ -49,7 +55,7 @@
   .cg-video-container {
     max-width: 60vw;
     width: 60vw;
-    height: auto;
+    height: 100%;
     background-color: #000;
 
     video {
@@ -238,7 +244,6 @@ h3.blue{
 }
 
 span {
-  color: white;
   font-weight: normal;
 }
 
