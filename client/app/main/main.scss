@@ -6,6 +6,10 @@ input::-webkit-inner-spin-button {
     margin: 0;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 .cg-startpage {
   background-color: $blue;
   background-size: contain;
